@@ -42,7 +42,7 @@ p{margin:0;}
 .wrap{max-width:var(--container);margin:0 auto;padding:0 32px;}
 
 /* Nav */
-.nav{padding:20px 0;position:sticky;top:0;z-index:50;background:#EBEEF2;border-bottom:1px solid transparent;transition:border-color .2s ease;}
+.nav{padding:20px 0;position:sticky;top:0;z-index:50;background:rgba(235,238,242,0.8);-webkit-backdrop-filter:saturate(180%) blur(16px);backdrop-filter:saturate(180%) blur(16px);border-bottom:1px solid transparent;transition:border-color .2s ease;}
 .nav.scrolled{border-bottom-color:var(--line);}
 .nav-inner{max-width:var(--container);margin:0 auto;padding:0 32px;display:flex;align-items:center;justify-content:space-between;}
 .nav-name{font-family:var(--font-display);font-weight:600;font-size:15px;letter-spacing:-0.01em;line-height:1;}
@@ -198,7 +198,15 @@ p{margin:0;}
   :root{--gap-block:72px;}
   .wrap,.nav-inner{padding:0 20px;}
   .nav-links{display:none;}
-  .nav-toggle{display:flex;}
+  .nav{position:fixed;top:0;left:auto;right:0;padding:12px 16px;background:transparent;-webkit-backdrop-filter:none;backdrop-filter:none;border:0;pointer-events:none;}
+  .nav.scrolled{border:0;}
+  .nav-inner{padding:0;justify-content:flex-end;}
+  .nav-name{display:none;}
+  .nav-toggle{display:flex;pointer-events:auto;width:48px;height:48px;border-radius:50%;align-items:center;gap:4px;background:rgba(255,255,255,.72);-webkit-backdrop-filter:saturate(180%) blur(16px);backdrop-filter:saturate(180%) blur(16px);border:1px solid rgba(0,0,0,.06);box-shadow:0 6px 20px rgba(20,30,40,.12);}
+  .nav-toggle span{width:18px;height:1.5px;}
+  .nav-mobile{pointer-events:auto;position:absolute;top:70px;right:16px;width:220px;padding:6px 20px;border-radius:18px;background:rgba(255,255,255,.72);-webkit-backdrop-filter:saturate(180%) blur(16px);backdrop-filter:saturate(180%) blur(16px);border:1px solid rgba(0,0,0,.06);box-shadow:0 6px 20px rgba(20,30,40,.12);background:rgba(255,255,255,.92);}
+  .nav-mobile a{color:var(--text);}
+  .nav-mobile a:last-child{border-bottom:0;}
   .hero{padding:48px 0 0;grid-template-columns:1fr;gap:40px;}
   .hero-photo{display:none;}
   .hero-mini{display:block;}
