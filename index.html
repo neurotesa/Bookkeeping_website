@@ -11,26 +11,26 @@
 <meta property="og:description" content="Remote bookkeeper for small US businesses. QuickBooks Online certified.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{
-  --bg:        #FAFAF8;
+  --bg:        #F5F5F7;
   --surface:   #FFFFFF;
-  --surface-2: #F2F3EF;
-  --line:      #E4E6E1;
-  --text:      #151715;
-  --text-mute: #5C625D;
-  --text-faint:#9AA09B;
+  --surface-2: #F5F5F7;
+  --line:      #E5E5EA;
+  --text:      #1D1D1F;
+  --text-mute: #6E6E73;
+  --text-faint:#86868B;
   --accent:    #2F6B4F;
-  --accent-bg: #E7F0EA;
-  --font-display: 'Manrope', sans-serif;
-  --font-body: 'Inter', sans-serif;
+  --accent-bg: #E8F3EE;
+  --font-display: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Helvetica Neue', Inter, Arial, sans-serif;
+  --font-body: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Inter, Arial, sans-serif;
   --container: 980px;
   --gap-block: 120px;
 }
 *,*::before,*::after{box-sizing:border-box;}
 html{scroll-behavior:smooth;}
-body{margin:0;background:var(--bg);color:var(--text);font-family:var(--font-body);-webkit-font-smoothing:antialiased;}
+body{margin:0;letter-spacing:-0.01em;background:var(--bg);color:var(--text);font-family:var(--font-body);-webkit-font-smoothing:antialiased;}
 a{color:inherit;text-decoration:none;}
 h1,h2,h3,h4{font-family:var(--font-display);margin:0;}
 p{margin:0;}
@@ -38,7 +38,7 @@ p{margin:0;}
 .wrap{max-width:var(--container);margin:0 auto;padding:0 32px;}
 
 /* Nav */
-.nav{padding:20px 0;position:sticky;top:0;z-index:50;background:rgba(250,250,248,0.8);backdrop-filter:blur(10px);border-bottom:1px solid transparent;transition:border-color .2s ease;}
+.nav{padding:20px 0;position:sticky;top:0;z-index:50;background:rgba(245,245,247,0.8);backdrop-filter:blur(10px);border-bottom:1px solid transparent;transition:border-color .2s ease;}
 .nav.scrolled{border-bottom-color:var(--line);}
 .nav-inner{max-width:var(--container);margin:0 auto;padding:0 32px;display:flex;align-items:center;justify-content:space-between;}
 .nav-name{font-family:var(--font-display);font-weight:600;font-size:15px;letter-spacing:-0.01em;line-height:1;}
@@ -64,13 +64,14 @@ p{margin:0;}
 @keyframes heroIn{from{opacity:0;transform:translateY(14px);}to{opacity:1;transform:translateY(0);}}
 .status-pill{display:inline-flex;align-items:center;gap:8px;font-size:13px;color:var(--text-mute);background:var(--surface);border:1px solid var(--line);padding:7px 14px 7px 10px;border-radius:100px;margin-bottom:28px;}
 .status-dot{width:7px;height:7px;border-radius:50%;background:#22C55E;box-shadow:0 0 0 3px rgba(34,197,94,0.15);}
-.hero h1{font-size:clamp(36px,5.2vw,56px);font-weight:700;letter-spacing:-0.03em;line-height:1.05;margin-bottom:22px;}
+.hero h1{font-size:clamp(36px,4.6vw,52px);font-weight:700;letter-spacing:-0.03em;line-height:1.05;margin-bottom:22px;}
 .hero h1 em{font-style:normal;color:var(--accent);}
+@media (max-width:760px){.br-d{display:none;}}
 .hero-sub{font-size:18px;line-height:1.6;color:var(--text-mute);max-width:500px;}
 .hero-cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:32px;}
-.btn{display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:600;padding:13px 22px;border-radius:12px;}
+.btn{display:inline-flex;align-items:center;gap:8px;font-size:15px;font-weight:500;padding:12px 22px;border-radius:980px;}
 .btn-primary{background:var(--text);color:#fff;}
-.btn-primary:hover{background:#2a2d2a;}
+.btn-primary:hover{background:#000000;}
 .btn-ghost{border:1px solid var(--line);color:var(--text-mute);background:var(--surface);}
 .btn-ghost:hover{border-color:var(--text-faint);color:var(--text);}
 .hero-proof{display:flex;align-items:center;gap:14px;margin-top:36px;padding-top:24px;border-top:1px solid var(--line);}
@@ -116,18 +117,19 @@ p{margin:0;}
 .case-tags span{font-size:13px;color:var(--text-mute);background:var(--surface-2);border:1px solid var(--line);padding:8px 16px;border-radius:8px;}
 .case-copy h3{font-size:30px;font-weight:700;letter-spacing:-0.01em;margin-bottom:16px;line-height:1.15;overflow-wrap:break-word;}
 .case-metric-inline{font-size:18px;line-height:1.5;color:var(--text-mute);margin-bottom:28px;}
-.case-btn{display:inline-flex;align-items:center;gap:10px;font-size:14px;color:var(--text-mute);border:1px solid var(--line);padding:14px 22px;border-radius:12px;}
+.case-btn{display:inline-flex;align-items:center;gap:10px;font-size:15px;color:var(--text);border:1px solid var(--line);padding:12px 22px;border-radius:980px;}
 .case-btn:hover{border-color:var(--text-faint);color:var(--text);}
 .case-note{font-size:14px;line-height:1.55;color:var(--text-mute);border:1px dashed var(--line);padding:14px 18px;border-radius:12px;max-width:420px;}
 .case-media{aspect-ratio:1/1;border-radius:18px;overflow:hidden;}
 .case-media img{width:100%;height:100%;object-fit:cover;display:block;}
 /* Обложка без картинки (в стиле Whitfield). Если есть своя картинка — замени блок на <img> */
-.cover{width:100%;height:100%;background:#3B5C4F;color:#fff;padding:36px;display:flex;flex-direction:column;justify-content:space-between;}
+.cover{width:100%;height:100%;background:#3B5C4F;color:#fff;display:flex;flex-direction:column;justify-content:space-between;}
+.cover > div:first-child{padding:36px 36px 0;}
 .cover.cover-alt{background:#1F3A2E;}
 .cover-tag{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#BFD4C9;font-weight:600;}
 .cover-title{font-family:var(--font-display);font-size:30px;font-weight:700;line-height:1.1;margin-top:14px;}
 .cover-sub{font-size:14px;color:#DCE7E1;margin-top:12px;line-height:1.5;}
-.cover-pill{align-self:flex-start;font-size:12px;font-weight:600;background:#F2EEE6;color:#2B3A33;padding:7px 14px;border-radius:100px;}
+.cover-foot{background:#E3ECE7;color:#2F4A3E;font-size:12px;font-weight:500;padding:14px 36px;}
 
 /* Certifications */
 .cert-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
@@ -235,7 +237,7 @@ p{margin:0;}
   <section class="hero">
     <div class="hero-copy">
       <span class="status-pill"><span class="status-dot"></span>Open to work · Remote · US hours</span>
-      <h1>Clean, reconciled books for <em>small US businesses</em></h1>
+      <h1>Clean, reconciled<br class="br-d"> books for <em>small&nbsp;US<br class="br-d"> businesses</em></h1>
       <div class="hero-intro">
         <img class="hero-mini" src="assets/sia-photo.webp" alt="Anastasia Volkova">
         <p class="hero-sub">I'm Anastasia, a bookkeeper working in QuickBooks Online. I take the books from receipts and statements to a monthly close you can rely on.</p>
@@ -293,7 +295,7 @@ p{margin:0;}
             <div class="cover-title">Whitfield<br>Interiors &amp; Doors LLC</div>
             <div class="cover-sub">Closing Q1 2026 from raw documents<br>to financial statements</div>
           </div>
-          <div class="cover-pill">Practice project · fictional company · Google Sheets</div>
+          <div class="cover-foot">Practice project · Google Sheets</div>
         </div>
       </div>
     </div>
@@ -315,7 +317,7 @@ p{margin:0;}
             <div class="cover-title">QuickBooks<br>Online project</div>
             <div class="cover-sub">Monthly close and reporting in QBO</div>
           </div>
-          <div class="cover-pill">Practice project · QuickBooks Online</div>
+          <div class="cover-foot">Practice project · QuickBooks Online</div>
         </div>
       </div>
     </div>
