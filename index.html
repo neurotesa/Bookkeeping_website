@@ -166,6 +166,10 @@ p{margin:0;}
 .exp-role{font-family:var(--font-display);font-weight:600;font-size:18px;}
 .exp-co{font-size:14px;color:var(--text-mute);margin-top:2px;}
 .exp-period{font-size:13px;color:var(--text-faint);white-space:nowrap;}
+.edu{display:flex;align-items:center;gap:18px;background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:20px 24px;}
+.edu-logo{width:56px;height:56px;border-radius:12px;object-fit:contain;flex-shrink:0;background:#fff;}
+.edu-body{flex:1;min-width:0;}
+@media (max-width:760px){.edu{flex-wrap:wrap;}.edu .exp-period{width:100%;padding-left:74px;margin-top:-8px;}}
 .exp-desc{font-size:15px;line-height:1.6;color:var(--text-mute);max-width:640px;}
 
 /* Testimonials */
@@ -184,7 +188,7 @@ p{margin:0;}
 .contact-links{display:flex;gap:28px;flex-wrap:wrap;}
 .contact-links a{font-size:15px;color:var(--text-mute);border-bottom:1px solid var(--line);padding-bottom:4px;}
 .contact-links a:hover{color:var(--text);border-color:var(--text-faint);}
-.footer{padding:32px 0 48px;border-top:1px solid var(--line);font-size:13px;color:var(--text-faint);}
+.footer{padding:32px 0 48px;font-size:13px;color:var(--text-faint);}
 
 @media (max-width:860px){
   .svc-grid,.cert-grid{grid-template-columns:repeat(2,1fr);}
@@ -400,6 +404,19 @@ p{margin:0;}
     </div>
   </section>
 
+  <!-- ============ ОБРАЗОВАНИЕ ============ -->
+  <section class="section">
+    <p class="section-label reveal">Education</p>
+    <div class="edu reveal">
+      <img class="edu-logo" src="data:image/webp;base64,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" alt="Saint Petersburg State University of Finance and Economics logo">
+      <div class="edu-body">
+        <div class="exp-role">Saint Petersburg State University of Finance and Economics</div>
+        <div class="exp-co">Bachelor's degree</div>
+      </div>
+      <div class="exp-period">2010 — 2014</div>
+    </div>
+  </section>
+
   <!-- ============ ОТЗЫВЫ ============ -->
   <section class="section" id="testimonials">
     <p class="section-label reveal">Testimonials</p>
@@ -433,7 +450,7 @@ p{margin:0;}
     </div>
   </section>
 
-  <div class="footer">© 2026 Anastasia Volkova</div>
+  <div class="footer">© 2026</div>
 
 </main>
 
