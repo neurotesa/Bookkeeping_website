@@ -137,6 +137,9 @@ ul.deliv{padding:0;}
   .nav .btn-label-long{display:none;}
 }
 @media (min-width:701px){ .nav .btn-label-short{display:none;} }
+.copy-email{cursor:pointer;position:relative;}
+.copy-email .copy-hint{margin-left:8px;font-size:12px;color:var(--text-faint);transition:color .2s ease;}
+.copy-email.copied .copy-hint{color:var(--accent);}
 </style>
 </head>
 <body>
@@ -383,12 +386,29 @@ ul.deliv{padding:0;}
     <p>Every entry, schedule and statement is in the spreadsheet. Feedback from bookkeepers is welcome.</p>
     <div class="end-actions">
       <a class="btn btn-primary" href="https://bit.ly/4yEhwOC" target="_blank" rel="noopener">Open the spreadsheet</a>
-      <a class="btn btn-ghost" href="https://mail.google.com/mail/?view=cm&fs=1&to=volkova.workpost@gmail.com" target="_blank" rel="noopener">volkova.workpost@gmail.com</a>
+      <a href="#" class="btn btn-ghost copy-email" data-email="volkova.workpost@gmail.com" title="Click to copy"><span class="copy-text">volkova.workpost@gmail.com</span><span class="copy-hint">Copy</span></a>
     </div>
   </div>
 
   <div class="footer">Whitfield Interiors &amp; Doors LLC · Q1 2026 · Practice project on a fictional company · Anastasia Volkova</div>
 
 </main>
+<script>
+document.querySelectorAll('.copy-email').forEach(el => {
+  const hint = el.querySelector('.copy-hint');
+  el.addEventListener('click', async (e) => {
+    e.preventDefault();
+    const email = el.dataset.email;
+    try { await navigator.clipboard.writeText(email); }
+    catch(err){
+      const r = document.createRange(); r.selectNodeContents(el.querySelector('.copy-text'));
+      const sel = window.getSelection(); sel.removeAllRanges(); sel.addRange(r);
+      document.execCommand && document.execCommand('copy');
+    }
+    el.classList.add('copied'); hint.textContent = 'Copied';
+    clearTimeout(el._t); el._t = setTimeout(() => { el.classList.remove('copied'); hint.textContent = 'Copy'; }, 1800);
+  });
+});
+</script>
 </body>
 </html>
