@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Whitfield Interiors &amp; Doors LLC — Bookkeeping case study</title>
+<meta name="description" content="Closing Q1 2026 from raw documents to financial statements. Bookkeeping case study by Anastasia Volkova.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#FAFAF8; --surface:#FFFFFF; --surface-2:#F2F3EF; --line:#E4E6E1;
+  --text:#151715; --text-mute:#5C625D; --text-faint:#9AA09B;
+  --accent:#2F6B4F; --accent-bg:#E7F0EA; --green:#3B5C4F;
+  --font-display:'Manrope',sans-serif; --font-body:'Inter',sans-serif;
+  --container:880px;
+}
+*,*::before,*::after{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{margin:0;background:var(--bg);color:var(--text);font-family:var(--font-body);-webkit-font-smoothing:antialiased;}
+a{color:inherit;text-decoration:none;}
+h1,h2,h3{font-family:var(--font-display);margin:0;}
+p{margin:0;}
+.wrap{max-width:var(--container);margin:0 auto;padding:0 32px;}
+
+/* Nav */
+.nav{padding:18px 0;position:sticky;top:0;z-index:50;background:rgba(250,250,248,0.85);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);}
+.nav-inner{max-width:var(--container);margin:0 auto;padding:0 32px;display:flex;align-items:center;justify-content:space-between;gap:16px;}
+.back{font-size:14px;color:var(--text-mute);display:inline-flex;align-items:center;gap:8px;}
+.back:hover{color:var(--text);}
+.btn{display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:600;padding:11px 18px;border-radius:12px;white-space:nowrap;}
+.btn-primary{background:var(--text);color:#fff;}
+.btn-primary:hover{background:#2a2d2a;}
+.btn-sm{padding:9px 14px;font-size:13px;}
+
+/* Cover */
+.cover{margin-top:40px;background:var(--green);color:#fff;border-radius:24px;padding:56px 48px;}
+.cover-tag{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#BFD4C9;font-weight:600;}
+.cover h1{font-size:clamp(34px,5.5vw,54px);font-weight:700;line-height:1.05;letter-spacing:-0.02em;margin:16px 0 16px;}
+.cover-sub{font-size:18px;color:#DCE7E1;line-height:1.5;max-width:520px;}
+.cover-meta{margin-top:32px;padding-top:20px;border-top:1px solid rgba(255,255,255,.18);font-size:13px;color:#BFD4C9;}
+.under-cover{margin-top:20px;}
+
+/* Sections */
+section{margin-top:88px;}
+.label{font-size:13px;color:var(--text-faint);letter-spacing:.02em;margin-bottom:14px;}
+h2{font-size:clamp(26px,3.6vw,34px);font-weight:700;letter-spacing:-0.02em;line-height:1.15;margin-bottom:20px;}
+.lead{font-size:17px;line-height:1.65;color:var(--text-mute);max-width:680px;}
+.lead + .lead{margin-top:14px;}
+.lead b{color:var(--text);font-weight:600;}
+
+/* Facts */
+.facts{margin-top:28px;background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:4px 24px;}
+.facts div{display:flex;justify-content:space-between;gap:20px;padding:14px 0;border-bottom:1px solid var(--line);font-size:15px;}
+.facts div:last-child{border-bottom:0;}
+.facts dt{color:var(--text-mute);}
+.facts dd{margin:0;font-weight:600;text-align:right;}
+
+/* Goal */
+.sub-h{font-size:20px;font-weight:700;letter-spacing:-0.01em;margin:44px 0 0;}
+.reasons{margin-top:18px;display:grid;grid-template-columns:repeat(2,1fr);gap:12px;}
+.reasons > *{min-width:0;}
+.reason{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:22px;}
+.reason h3{font-size:16px;font-weight:700;margin-bottom:6px;}
+.reason p{font-size:14px;line-height:1.55;color:var(--text-mute);}
+@media (max-width:700px){.reasons{grid-template-columns:1fr;}}
+
+/* Inputs */
+.inputs{margin-top:28px;display:grid;grid-template-columns:repeat(3,1fr);gap:12px;}
+.inputs > *{min-width:0;}
+.input{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:22px;}
+.input-num{font-family:var(--font-display);font-size:30px;font-weight:800;color:var(--accent);line-height:1;margin-bottom:14px;}
+.input h3{font-size:16px;font-weight:700;margin-bottom:4px;}
+.input p{font-size:14px;color:var(--text-mute);line-height:1.5;}
+.docs{margin-top:16px;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;}
+.docs img{width:100%;border-radius:14px;border:1px solid var(--line);display:block;background:var(--surface);}
+@media (max-width:700px){.inputs{grid-template-columns:1fr 1fr;}}
+
+/* Steps */
+.steps{margin-top:28px;display:grid;gap:12px;}
+.step{display:grid;grid-template-columns:44px 1fr;gap:16px;align-items:start;background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:20px 22px;}
+.step-num{width:36px;height:36px;border-radius:10px;background:var(--accent-bg);color:var(--accent);font-family:var(--font-display);font-weight:700;display:flex;align-items:center;justify-content:center;}
+.step h3{font-size:17px;font-weight:700;margin-bottom:4px;}
+.step p{font-size:14px;color:var(--text-mute);line-height:1.5;}
+
+/* Tricky */
+.cards{margin-top:28px;display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+.cards > *{min-width:0;}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:28px;}
+.card h3{font-size:19px;font-weight:700;margin-bottom:10px;}
+.card p{font-size:15px;line-height:1.6;color:var(--text-mute);}
+
+/* Statements */
+.statement{margin-top:28px;background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:28px 28px 20px;overflow-x:auto;}
+.statement-head{display:flex;justify-content:space-between;align-items:baseline;gap:16px;margin-bottom:12px;}
+.statement-head h3{font-size:18px;font-weight:700;}
+.statement-head span{font-size:13px;color:var(--text-faint);}
+table{width:100%;border-collapse:collapse;font-size:14px;font-variant-numeric:tabular-nums;}
+td{padding:7px 0;border-bottom:1px solid var(--surface-2);vertical-align:top;}
+td.n{text-align:right;white-space:nowrap;padding-left:24px;}
+td.ind{padding-left:16px;color:var(--text-mute);}
+tr.group td{padding-top:18px;font-weight:600;color:var(--text);border-bottom:1px solid var(--line);}
+tr.total td{font-weight:600;}
+tr.grand td{font-weight:700;border-top:2px solid var(--text);border-bottom:0;padding-top:10px;}
+tr.neg td.n{color:#A33B2F;}
+td.desc{color:var(--text-mute);padding-left:16px;}
+
+.note{margin-top:16px;background:var(--accent-bg);border-radius:14px;padding:16px 20px;font-size:14px;line-height:1.55;color:#24493A;}
+.note b{font-weight:600;}
+
+/* Deliverables */
+.deliv{margin-top:28px;display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+.deliv li{list-style:none;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 16px;font-size:15px;display:flex;gap:10px;align-items:center;}
+.deliv li::before{content:'✓';color:var(--accent);font-weight:700;}
+ul.deliv{padding:0;}
+
+.end{margin-top:88px;padding:48px;border-radius:24px;background:var(--surface);border:1px solid var(--line);text-align:center;}
+.end h2{margin-bottom:12px;}
+.end p{color:var(--text-mute);margin-bottom:24px;}
+.end-actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;}
+.btn-ghost{border:1px solid var(--line);color:var(--text-mute);background:var(--surface);}
+.btn-ghost:hover{border-color:var(--text-faint);color:var(--text);}
+.footer{padding:40px 0 56px;font-size:13px;color:var(--text-faint);}
+
+@media (max-width:700px){
+  .wrap,.nav-inner{padding:0 20px;}
+  .cover{padding:36px 24px;border-radius:20px;margin-top:24px;}
+  section{margin-top:64px;}
+  .cards,.deliv{grid-template-columns:1fr;}
+  .statement{padding:20px 18px 14px;}
+  table{font-size:13px;}
+  .end{padding:32px 20px;}
+  .nav .btn-label-long{display:none;}
+}
+@media (min-width:701px){ .nav .btn-label-short{display:none;} }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a class="back" href="index.html">← Back to portfolio</a>
+    <!-- Ссылка на таблицу -->
+    <a class="btn btn-primary btn-sm" href="https://bit.ly/4yEhwOC" target="_blank" rel="noopener"><span class="btn-label-long">Open the spreadsheet</span><span class="btn-label-short">Spreadsheet</span></a>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <div class="cover">
+    <div class="cover-tag">Bookkeeping case study</div>
+    <h1>Whitfield Interiors &amp; Doors LLC</h1>
+    <p class="cover-sub">Closing Q1 2026 from raw documents to financial statements.</p>
+    <p class="cover-meta">Practice project on a fictional company · Google Sheets</p>
+  </div>
+  <div class="under-cover">
+    <a class="btn btn-primary" href="https://bit.ly/4yEhwOC" target="_blank" rel="noopener">Open the spreadsheet</a>
+  </div>
+
+  <section>
+    <p class="label">Goal</p>
+    <h2>Close a full quarter by hand, with every number traceable</h2>
+    <p class="lead">The goal was to take one small business through the full accounting cycle: from raw source documents to a Trial Balance, financial statements and a list of questions for the client. I wanted to show not just the result but how every number gets there.</p>
+
+    <h3 class="sub-h">Why Google Sheets and not QuickBooks</h3>
+    <div class="reasons">
+      <div class="reason"><h3>Every calculation is visible</h3><p>In a spreadsheet each balance comes from a formula you can click and trace back to the journal entry and the source document. In accounting software most of that is hidden behind the interface.</p></div>
+      <div class="reason"><h3>The mechanics, not the buttons</h3><p>Posting every entry through debits and credits by hand, like T-accounts, makes sure I understand what each transaction does to the books, rather than relying on the software to decide.</p></div>
+      <div class="reason"><h3>Schedules built from scratch</h3><p>FIFO inventory and COGS, straight-line depreciation, loan amortization and payroll accruals were each calculated in their own schedule, so the adjusting entries can be checked line by line.</p></div>
+      <div class="reason"><h3>Easy to review</h3><p>Anyone can open the link and check the work. No QuickBooks subscription or access to a company file is needed.</p></div>
+      <div class="reason"><h3>Errors don't hide</h3><p>Without bank feed rules or auto-categorization nothing is posted silently. An unbalanced entry breaks the Trial Balance, and a wrong match shows up as an open vendor or customer balance.</p></div>
+      <div class="reason"><h3>The base for QuickBooks work</h3><p>Knowing what the software does under the hood makes QuickBooks faster to use and easier to clean up. A follow-up project in QuickBooks Online is in progress.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <p class="label">The company</p>
+    <h2>An interior design studio that also sells doors</h2>
+    <p class="lead">Whitfield Interiors &amp; Doors is a small studio in Texas. It designs residential and commercial interiors and resells interior and exterior doors with delivery and installation.</p>
+    <dl class="facts">
+      <div><dt>Basis</dt><dd>Accrual</dd></div>
+      <div><dt>Inventory</dt><dd>FIFO, periodic</dd></div>
+      <div><dt>Depreciation</dt><dd>Straight-line</dd></div>
+      <div><dt>Financing</dt><dd>2 loans: business loan and truck loan</dd></div>
+      <div><dt>Customer payments</dt><dd>Bank transfers and paper checks</dd></div>
+      <div><dt>Payroll</dt><dd>Biweekly, run through a payroll service</dd></div>
+      <div><dt>Built in</dt><dd>Google Sheets: manual general ledger</dd></div>
+    </dl>
+  </section>
+
+  <section>
+    <p class="label">What I received</p>
+    <h2>A quarter of raw documents</h2>
+    <p class="lead">The client handed over the source documents for January–March 2026.</p>
+    <div class="inputs">
+      <div class="input"><div class="input-num">70</div><h3>Source documents</h3><p>Vendor bills, customer invoices and credit memos</p></div>
+      <div class="input"><div class="input-num">77</div><h3>Bank transactions</h3><p>Business checking statement for the quarter</p></div>
+      <div class="input"><div class="input-num">1</div><h3>Credit card statement</h3><p>Business card charges and payoffs</p></div>
+      <div class="input"><div class="input-num">—</div><!-- впиши количество чеков вместо — --><h3>Paper checks</h3><p>Customer checks received before deposit</p></div>
+      <div class="input"><div class="input-num">—</div><!-- впиши количество отчётов вместо — --><h3>Payroll reports</h3><p>Biweekly reports from the payroll service</p></div>
+      <div class="input"><div class="input-num">2</div><h3>Loan agreements</h3><p>Business loan and truck loan</p></div>
+    </div>
+    <!-- Сюда можно добавить 2–3 картинки реальных документов из курса (инвойс, bill, фрагмент выписки):
+    <div class="docs">
+      <img src="assets/whitfield-invoice.webp" alt="Sample customer invoice">
+      <img src="assets/whitfield-bank.webp" alt="Bank statement fragment">
+    </div> -->
+  </section>
+
+  <section>
+    <p class="label">What I did</p>
+    <h2>From raw documents to statements</h2>
+    <div class="steps">
+      <div class="step"><div class="step-num">1</div><div><h3>Posted 70 source documents</h3><p>Vendor bills, customer invoices and credit memos</p></div></div>
+      <div class="step"><div class="step-num">2</div><div><h3>Recorded the bank statement</h3><p>77 transactions, matched to bills and invoices</p></div></div>
+      <div class="step"><div class="step-num">3</div><div><h3>Recorded the credit card statement</h3><p>Charges only: payoffs were already in the bank</p></div></div>
+      <div class="step"><div class="step-num">4</div><div><h3>Recorded incoming checks</h3><p>Through Undeposited Funds</p></div></div>
+      <div class="step"><div class="step-num">5</div><div><h3>Recorded payroll</h3><p>From payroll service reports, accrued across month-ends</p></div></div>
+      <div class="step"><div class="step-num">6</div><div><h3>Adjusting entries</h3><p>Prepaid expenses, depreciation, loan interest, FIFO COGS</p></div></div>
+      <div class="step"><div class="step-num">7</div><div><h3>Closed the quarter</h3><p>Trial Balance, Balance Sheet, P&amp;L, client request</p></div></div>
+    </div>
+  </section>
+
+  <section>
+    <p class="label">Method</p>
+    <h2>Every vendor and customer payment through A/P and A/R</h2>
+    <p class="lead">Every vendor payment went through Accounts Payable and every customer payment through Accounts Receivable, even when there was no matching bill or invoice.</p>
+    <p class="lead">Once a bill meets its payment, the vendor balance nets to zero. The same goes for customers. <b>Anything left over is a signal:</b> a missing receipt, a short payment or a posting error.</p>
+    <p class="lead">That turns reconciliation into a simple check: scan the open balances by name. I used them to build the client request: 9 payments with missing receipts and the customers who still owe money.</p>
+    <p class="lead">Payroll, loans, the rent deposit, credit card payoffs and owner transactions went to their own accounts, since they are not vendor bills.</p>
+  </section>
+
+  <section>
+    <p class="label">The tricky parts</p>
+    <h2>Two places where it is easy to double-count</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Credit card payoffs</h3>
+        <p>A payoff shows up twice: as money leaving the bank and as money arriving on the card. I recorded it at the bank stage, so from the card statement I posted only the charges. Posting the payoff again would double it.</p>
+      </div>
+      <div class="card">
+        <h3>Paper checks</h3>
+        <p>Checks go to Undeposited Funds first, not straight to the bank. One check arrived before its invoice was issued. That is a customer prepayment, so it went to Unearned Revenue, not A/R.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <p class="label">Results</p>
+    <h2>Financial statements</h2>
+
+    <div class="statement">
+      <div class="statement-head"><h3>Balance Sheet</h3><span>As of 3/31/2026</span></div>
+      <table>
+        <tr class="group"><td colspan="2">Current Assets</td></tr>
+        <tr><td class="ind">Bank 2201</td><td class="n">142,432.39</td></tr>
+        <tr><td class="ind">Undeposited funds</td><td class="n">5,431.22</td></tr>
+        <tr><td class="ind">Accounts Receivable</td><td class="n">33,196.90</td></tr>
+        <tr><td class="ind">Inventory</td><td class="n">972.00</td></tr>
+        <tr><td class="ind">Prepaid Expenses</td><td class="n">38,792.20</td></tr>
+        <tr class="total"><td>Total Current Assets</td><td class="n">220,824.71</td></tr>
+        <tr class="group"><td colspan="2">Noncurrent Assets</td></tr>
+        <tr><td class="ind">Fixed Assets</td><td class="n">62,660.00</td></tr>
+        <tr class="neg"><td class="ind">Accumulated depreciation</td><td class="n">(3,104.25)</td></tr>
+        <tr><td class="ind">Security Deposits</td><td class="n">3,500.00</td></tr>
+        <tr class="total"><td>Total Noncurrent Assets</td><td class="n">63,055.75</td></tr>
+        <tr class="grand"><td>Total Assets</td><td class="n">283,880.46</td></tr>
+        <tr class="group"><td colspan="2">Current Liabilities</td></tr>
+        <tr><td class="ind">Accounts Payable</td><td class="n">6,005.08</td></tr>
+        <tr><td class="ind">Credit Card</td><td class="n">–</td></tr>
+        <tr><td class="ind">Payroll Liabilities: Accrual Liabilities</td><td class="n">11,018.57</td></tr>
+        <tr><td class="ind">Payroll Liabilities: Taxes Liabilities</td><td class="n">870.47</td></tr>
+        <tr><td class="ind">Sales Tax Liability</td><td class="n">11,505.62</td></tr>
+        <tr><td class="ind">Unearned Revenue</td><td class="n">–</td></tr>
+        <tr class="total"><td>Total Current Liabilities</td><td class="n">29,399.74</td></tr>
+        <tr class="group"><td colspan="2">Noncurrent Liabilities</td></tr>
+        <tr><td class="ind">Loans: Business Loan Liabilities</td><td class="n">49,669.31</td></tr>
+        <tr><td class="ind">Loans: Truck Loan Liabilities</td><td class="n">35,259.91</td></tr>
+        <tr class="total"><td>Total Noncurrent Liabilities</td><td class="n">84,929.22</td></tr>
+        <tr class="total"><td>Total Liabilities</td><td class="n">114,328.96</td></tr>
+        <tr class="group"><td colspan="2">Owner's Equity</td></tr>
+        <tr><td class="ind">Contribution</td><td class="n">225,000.00</td></tr>
+        <tr class="neg"><td class="ind">Distribution</td><td class="n">(16,371.89)</td></tr>
+        <tr class="neg"><td class="ind">Net Income (Q1)</td><td class="n">(39,076.61)</td></tr>
+        <tr class="total"><td>Total Owner's Equity</td><td class="n">169,551.50</td></tr>
+        <tr class="grand"><td>Total Liabilities &amp; Owner's Equity</td><td class="n">283,880.46</td></tr>
+      </table>
+    </div>
+
+    <div class="statement">
+      <div class="statement-head"><h3>Income Statement</h3><span>Q1 2026 (1/1/2026 – 3/31/2026)</span></div>
+      <table>
+        <tr class="group"><td colspan="2">Revenue</td></tr>
+        <tr><td class="ind">Design Income</td><td class="n">80,604.00</td></tr>
+        <tr><td class="ind">Doors Income</td><td class="n">58,858.00</td></tr>
+        <tr class="total"><td>Net Revenue</td><td class="n">139,462.00</td></tr>
+        <tr class="group"><td colspan="2">COGS</td></tr>
+        <tr><td class="ind">Cost of Goods Sold</td><td class="n">17,427.00</td></tr>
+        <tr><td class="ind">Supplies COGS</td><td class="n">5,090.00</td></tr>
+        <tr class="total"><td>Total COGS</td><td class="n">22,517.00</td></tr>
+        <tr class="grand"><td>Gross Profit (margin 83.85%)</td><td class="n">116,945.00</td></tr>
+        <tr class="group"><td colspan="2">Operating Expenses</td></tr>
+        <tr><td class="ind">Bank Expenses</td><td class="n">30.00</td></tr>
+        <tr><td class="ind">Business Insurance Expenses</td><td class="n">7,645.66</td></tr>
+        <tr><td class="ind">Depreciation Expenses</td><td class="n">3,104.25</td></tr>
+        <tr><td class="ind">Interest Expenses</td><td class="n">438.21</td></tr>
+        <tr><td class="ind">IT Expenses: Hosting</td><td class="n">996.78</td></tr>
+        <tr><td class="ind">IT Expenses: Internet</td><td class="n">254.61</td></tr>
+        <tr><td class="ind">IT Expenses: Phone</td><td class="n">1,759.90</td></tr>
+        <tr><td class="ind">IT Expenses: Subscriptions</td><td class="n">1,631.92</td></tr>
+        <tr><td class="ind">Office Expenses: Food</td><td class="n">479.00</td></tr>
+        <tr><td class="ind">Office Expenses: Fuel</td><td class="n">552.00</td></tr>
+        <tr><td class="ind">Office Expenses: Maintenance</td><td class="n">78.90</td></tr>
+        <tr><td class="ind">Office Expenses: Postage</td><td class="n">56.14</td></tr>
+        <tr><td class="ind">Office Expenses: Supplies</td><td class="n">645.11</td></tr>
+        <tr><td class="ind">Payroll Expenses: Accruals</td><td class="n">89,457.57</td></tr>
+        <tr><td class="ind">Payroll Expenses: Subcontracts</td><td class="n">1,907.00</td></tr>
+        <tr><td class="ind">Payroll Expenses: Taxes</td><td class="n">7,067.16</td></tr>
+        <tr><td class="ind">Professional Fees: Lawyer</td><td class="n">4,520.30</td></tr>
+        <tr><td class="ind">Promotion Expenses: Internet</td><td class="n">5,250.00</td></tr>
+        <tr><td class="ind">Promotion Expenses: Marketing</td><td class="n">5,559.09</td></tr>
+        <tr><td class="ind">Rent Expenses: Office</td><td class="n">10,930.86</td></tr>
+        <tr><td class="ind">Rent Expenses: Storage</td><td class="n">11,151.15</td></tr>
+        <tr><td class="ind">Travel Expenses</td><td class="n">2,250.00</td></tr>
+        <tr><td class="ind">Truck Maintenance Expenses</td><td class="n">256.00</td></tr>
+        <tr class="total"><td>Total Operating Expenses</td><td class="n">156,021.61</td></tr>
+        <tr class="grand neg"><td>Net Income (margin −28.02%)</td><td class="n">(39,076.61)</td></tr>
+      </table>
+    </div>
+  </section>
+
+  <section>
+    <p class="label">Client request</p>
+    <h2>What I sent back to the client</h2>
+
+    <div class="statement">
+      <div class="statement-head"><h3>Missing receipts or invoices</h3><span>9 payments</span></div>
+      <table>
+        <tr><td>HomePro Supply</td><td class="desc">Door installation parts</td><td class="n">1,530.00</td></tr>
+        <tr><td>ShipRight Postal</td><td class="desc">Postage</td><td class="n">56.14</td></tr>
+        <tr><td>QuickFix Appliance Repair</td><td class="desc">Coffee machine repair</td><td class="n">78.90</td></tr>
+        <tr><td>Fresh Market Deli</td><td class="desc">Office food</td><td class="n">479.00</td></tr>
+        <tr><td>QuickFuel Station</td><td class="desc">Fuel</td><td class="n">552.00</td></tr>
+        <tr><td>Grand Plaza Hotel</td><td class="desc">Business trip: hotel</td><td class="n">1,500.00</td></tr>
+        <tr><td>AeroVista Airlines</td><td class="desc">Business trip: airfare</td><td class="n">750.00</td></tr>
+        <tr><td>RoadReady Truck Repair</td><td class="desc">Truck repair</td><td class="n">256.00</td></tr>
+        <tr><td>City Office Mart</td><td class="desc">Office supplies</td><td class="n">629.51</td></tr>
+        <tr class="grand"><td colspan="2">Total</td><td class="n">5,831.55</td></tr>
+      </table>
+    </div>
+
+    <div class="statement">
+      <div class="statement-head"><h3>Open customer balance</h3></div>
+      <table>
+        <tr><td>Michael Grant</td><td class="desc">Invoice 1/29: 7,472.50 · paid 2/15: 7,350.00</td><td class="n"><b>122.50 due</b></td></tr>
+      </table>
+    </div>
+
+    <div class="note"><b>Note:</b> Riverside Office Leasing issued a 256.00 credit memo for January rent. Next month's rent payment should be reduced by 256.00.</div>
+  </section>
+
+  <section>
+    <p class="label">Deliverables</p>
+    <h2>What's in the Google Sheets workbook</h2>
+    <ul class="deliv">
+      <li>General Journal across 6 sources</li>
+      <li>Trial Balance</li>
+      <li>Balance Sheet and Profit &amp; Loss</li>
+      <li>FIFO inventory and COGS schedule</li>
+      <li>Depreciation schedule (straight-line)</li>
+      <li>Loan amortization: interest vs principal</li>
+      <li>Payroll accruals across month-ends</li>
+      <li>Client request letter</li>
+    </ul>
+  </section>
+
+  <div class="end">
+    <h2>See the full workbook</h2>
+    <p>Every entry, schedule and statement is in the spreadsheet. Feedback from bookkeepers is welcome.</p>
+    <div class="end-actions">
+      <a class="btn btn-primary" href="https://bit.ly/4yEhwOC" target="_blank" rel="noopener">Open the spreadsheet</a>
+      <a class="btn btn-ghost" href="mailto:volkova.workpost@gmail.com">volkova.workpost@gmail.com</a>
+    </div>
+  </div>
+
+  <div class="footer">Whitfield Interiors &amp; Doors LLC · Q1 2026 · Practice project on a fictional company · Anastasia Volkova</div>
+
+</main>
+</body>
+</html>
