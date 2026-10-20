@@ -55,7 +55,7 @@ h2{font-size:clamp(26px,3.6vw,34px);font-weight:700;letter-spacing:-0.02em;line-
 .lead b{color:var(--text);font-weight:600;}
 
 /* Facts */
-.facts{margin-top:28px;background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:4px 24px;}
+.facts{margin-top:16px;margin-bottom:4px;background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:4px 24px;}
 .facts div{display:flex;justify-content:space-between;gap:20px;padding:14px 0;border-bottom:1px solid var(--line);font-size:15px;}
 .facts div:last-child{border-bottom:0;}
 .facts dt{color:var(--text-mute);}
@@ -71,7 +71,7 @@ h2{font-size:clamp(26px,3.6vw,34px);font-weight:700;letter-spacing:-0.02em;line-
 @media (max-width:700px){.reasons{grid-template-columns:1fr;}}
 
 /* Inputs */
-.inputs{margin-top:28px;display:grid;grid-template-columns:repeat(3,1fr);gap:12px;}
+.inputs{margin-top:16px;margin-bottom:4px;display:grid;grid-template-columns:repeat(4,1fr);gap:12px;}
 .inputs > *{min-width:0;}
 .input{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:22px;}
 .input-num{font-family:var(--font-display);font-size:30px;font-weight:800;color:var(--accent);line-height:1;margin-bottom:14px;}
@@ -82,7 +82,7 @@ h2{font-size:clamp(26px,3.6vw,34px);font-weight:700;letter-spacing:-0.02em;line-
 @media (max-width:700px){.inputs{grid-template-columns:1fr 1fr;}}
 
 /* Steps */
-.steps{margin-top:28px;display:grid;gap:12px;}
+.steps{margin-top:16px;display:grid;gap:12px;}
 .step{display:grid;grid-template-columns:44px 1fr;gap:16px;align-items:start;background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:20px 22px;}
 .step-num{width:36px;height:36px;border-radius:10px;background:var(--accent-bg);color:var(--accent);font-family:var(--font-display);font-weight:700;display:flex;align-items:center;justify-content:center;}
 .step h3{font-size:17px;font-weight:700;margin-bottom:4px;}
@@ -151,6 +151,12 @@ ul.deliv{padding:0;}
   .nav .btn-ghost{background:rgba(255,255,255,.72);-webkit-backdrop-filter:saturate(180%) blur(16px);backdrop-filter:saturate(180%) blur(16px);border:1px solid rgba(0,0,0,.06);box-shadow:0 6px 20px rgba(20,30,40,.12);}
   main{padding-top:60px;}
 }
+.lang-switch{display:inline-flex;gap:2px;padding:3px;border:1px solid var(--line);border-radius:980px;background:var(--surface);}
+.lang-switch a{font-size:12px;font-weight:600;letter-spacing:.02em;color:var(--text-faint);padding:5px 11px;border-radius:980px;line-height:1;}
+.lang-switch a:hover{color:var(--text);}
+.lang-switch a.on{background:var(--text);color:#fff;}
+.nav-right{display:flex;align-items:center;gap:12px;}
+@media screen and (max-width:700px){.nav .lang-switch{pointer-events:auto;height:44px;align-items:center;padding:4px;background:rgba(255,255,255,.72);-webkit-backdrop-filter:saturate(180%) blur(16px);backdrop-filter:saturate(180%) blur(16px);border:1px solid rgba(0,0,0,.06);box-shadow:0 6px 20px rgba(20,30,40,.12);}.nav .lang-switch a{padding:9px 11px;font-size:13px;}}
 </style>
 </head>
 <body>
@@ -158,8 +164,11 @@ ul.deliv{padding:0;}
 <header class="nav">
   <div class="nav-inner">
     <a class="back" href="index.html">← <span>Back to portfolio</span></a>
-    <!-- Ссылка на таблицу -->
-    <a class="btn btn-primary btn-sm" href="https://bit.ly/4yEhwOC" target="_blank" rel="noopener"><span class="btn-label-long">Open the spreadsheet</span><span class="btn-label-short">Spreadsheet</span></a>
+    <div class="nav-right">
+      <div class="lang-switch"><a href="whitfield-case.html" hreflang="en" class="on">EN</a><a href="whitfield-case-ru.html" hreflang="ru">RU</a></div>
+      <!-- Ссылка на таблицу -->
+      <a class="btn btn-primary btn-sm" href="https://bit.ly/4yEhwOC" target="_blank" rel="noopener"><span class="btn-label-long">Open the spreadsheet</span><span class="btn-label-short">Spreadsheet</span></a>
+    </div>
   </div>
 </header>
 
@@ -168,33 +177,26 @@ ul.deliv{padding:0;}
   <div class="cover">
     <div class="cover-tag">Bookkeeping case study</div>
     <h1>Whitfield Interiors &amp; Doors LLC</h1>
-    <p class="cover-sub">Closing Q1 2026 from raw documents to financial statements.</p>
-    <p class="cover-meta">Practice project on a fictional company · Google Sheets</p>
+    <p class="cover-sub">Books for a quarter prepared from scratch for a sales tax return, in one week.</p>
+    <p class="cover-meta">Q1 2026 · Google Sheets · Sales tax</p>
   </div>
   <div class="under-cover">
     <a class="btn btn-primary" href="https://bit.ly/4yEhwOC" target="_blank" rel="noopener">Open the spreadsheet</a>
   </div>
 
   <section>
-    <p class="label">Goal</p>
-    <h2>Close a full quarter by hand, with every number traceable</h2>
-    <p class="lead">The goal was to take one small business through the full accounting cycle: from raw source documents to a Trial Balance, financial statements and a list of questions for the client. I wanted to show not just the result but how every number gets there.</p>
-
-    <h3 class="sub-h">Why Google Sheets and not QuickBooks</h3>
-    <div class="reasons">
-      <div class="reason"><h3>Every calculation is visible</h3><p>In a spreadsheet each balance comes from a formula you can click and trace back to the journal entry and the source document. In accounting software most of that is hidden behind the interface.</p></div>
-      <div class="reason"><h3>The mechanics, not the buttons</h3><p>Posting every entry through debits and credits by hand, like T-accounts, makes sure I understand what each transaction does to the books, rather than relying on the software to decide.</p></div>
-      <div class="reason"><h3>Schedules built from scratch</h3><p>FIFO inventory and COGS, straight-line depreciation, loan amortization and payroll accruals were each calculated in their own schedule, so the adjusting entries can be checked line by line.</p></div>
-      <div class="reason"><h3>Easy to review</h3><p>Anyone can open the link and check the work. No QuickBooks subscription or access to a company file is needed.</p></div>
-      <div class="reason"><h3>Errors don't hide</h3><p>Without bank feed rules or auto-categorization nothing is posted silently. An unbalanced entry breaks the Trial Balance, and a wrong match shows up as an open vendor or customer balance.</p></div>
-      <div class="reason"><h3>The base for QuickBooks work</h3><p>Knowing what the software does under the hood makes QuickBooks faster to use and easier to clean up. A follow-up project in QuickBooks Online is in progress.</p></div>
-    </div>
+    <p class="label">The client</p>
+    <h2>A door and interior company with no books for the quarter</h2>
+    <p class="lead">Whitfield Interiors &amp; Doors sells and installs interior and exterior doors and offers interior design. The owner had not kept any books. The task was to prepare the books for Q1 for a sales tax return in a tight deadline: one week.</p>
+    <p class="lead">The client wanted to save on software, so we decided to keep the books in Google Sheets.</p>
   </section>
 
   <section>
-    <p class="label">The company</p>
-    <h2>An interior design studio that also sells doors</h2>
-    <p class="lead">Whitfield Interiors &amp; Doors is a small studio in Texas. It designs residential and commercial interiors and resells interior and exterior doors with delivery and installation.</p>
+    <p class="label">Action plan</p>
+    <h2>From the first call to the reports</h2>
+    <div class="steps">
+      <div class="step"><div class="step-num">1</div><div><h3>Initial interview with the client</h3><p>Goals, deadlines and how the business works: basis, inventory, financing, payroll.</p></div></div>
+    </div>
     <dl class="facts">
       <div><dt>Basis</dt><dd>Accrual</dd></div>
       <div><dt>Inventory</dt><dd>FIFO, periodic</dd></div>
@@ -202,40 +204,25 @@ ul.deliv{padding:0;}
       <div><dt>Financing</dt><dd>2 loans: business loan and truck loan</dd></div>
       <div><dt>Customer payments</dt><dd>Bank transfers and paper checks</dd></div>
       <div><dt>Payroll</dt><dd>Biweekly, run through a payroll service</dd></div>
-      <div><dt>Built in</dt><dd>Google Sheets: manual general ledger</dd></div>
+      <div><dt>Books kept in</dt><dd>Google Sheets</dd></div>
     </dl>
-  </section>
-
-  <section>
-    <p class="label">What I received</p>
-    <h2>A quarter of raw documents</h2>
-    <p class="lead">The client handed over the source documents for January–March 2026.</p>
+    <div class="steps">
+      <div class="step"><div class="step-num">2</div><div><h3>Agreed the chart of accounts</h3><p>Accounts set up for both lines of business: design and doors.</p></div></div>
+      <div class="step"><div class="step-num">3</div><div><h3>Received the documents and recorded them</h3><p>Vendor bills, customer invoices, credit memos and checks.</p></div></div>
+      <div class="step"><div class="step-num">4</div><div><h3>Bank reconciliation</h3><p>Every bank and credit card transaction matched to bills and invoices.</p></div></div>
+    </div>
     <div class="inputs">
       <div class="input"><div class="input-num">70</div><h3>Source documents</h3><p>Vendor bills, customer invoices and credit memos</p></div>
       <div class="input"><div class="input-num">77</div><h3>Bank transactions</h3><p>Business checking statement for the quarter</p></div>
       <div class="input"><div class="input-num">1</div><h3>Credit card statement</h3><p>Business card charges and payoffs</p></div>
-      <div class="input"><div class="input-num">—</div><!-- впиши количество чеков вместо — --><h3>Paper checks</h3><p>Customer checks received before deposit</p></div>
-      <div class="input"><div class="input-num">—</div><!-- впиши количество отчётов вместо — --><h3>Payroll reports</h3><p>Biweekly reports from the payroll service</p></div>
-      <div class="input"><div class="input-num">2</div><h3>Loan agreements</h3><p>Business loan and truck loan</p></div>
+      <div class="input"><div class="input-num">2</div><h3>Loans</h3><p>Business loan and truck loan</p></div>
     </div>
-    <!-- Сюда можно добавить 2–3 картинки реальных документов из курса (инвойс, bill, фрагмент выписки):
-    <div class="docs">
-      <img src="assets/whitfield-invoice.webp" alt="Sample customer invoice">
-      <img src="assets/whitfield-bank.webp" alt="Bank statement fragment">
-    </div> -->
-  </section>
-
-  <section>
-    <p class="label">What I did</p>
-    <h2>From raw documents to statements</h2>
     <div class="steps">
-      <div class="step"><div class="step-num">1</div><div><h3>Posted 70 source documents</h3><p>Vendor bills, customer invoices and credit memos</p></div></div>
-      <div class="step"><div class="step-num">2</div><div><h3>Recorded the bank statement</h3><p>77 transactions, matched to bills and invoices</p></div></div>
-      <div class="step"><div class="step-num">3</div><div><h3>Recorded the credit card statement</h3><p>Charges only: payoffs were already in the bank</p></div></div>
-      <div class="step"><div class="step-num">4</div><div><h3>Recorded incoming checks</h3><p>Through Undeposited Funds</p></div></div>
-      <div class="step"><div class="step-num">5</div><div><h3>Recorded payroll</h3><p>From payroll service reports, accrued across month-ends</p></div></div>
-      <div class="step"><div class="step-num">6</div><div><h3>Adjusting entries</h3><p>Prepaid expenses, depreciation, loan interest, FIFO COGS</p></div></div>
-      <div class="step"><div class="step-num">7</div><div><h3>Closed the quarter</h3><p>Trial Balance, Balance Sheet, P&amp;L, client request</p></div></div>
+      <div class="step"><div class="step-num">5</div><div><h3>Recorded payroll</h3><p>Biweekly payroll from the payroll service reports, accrued across month-ends.</p></div></div>
+      <div class="step"><div class="step-num">6</div><div><h3>Calculated and posted COGS</h3><p>FIFO inventory schedule, cost of goods sold for the quarter.</p></div></div>
+      <div class="step"><div class="step-num">7</div><div><h3>Calculated and posted loans and depreciation</h3><p>Loan interest vs principal, straight-line depreciation of fixed assets.</p></div></div>
+      <div class="step"><div class="step-num">8</div><div><h3>Reconciled A/R and A/P</h3><p>Found an overdue customer balance and payments with missing receipts.</p></div></div>
+      <div class="step"><div class="step-num">9</div><div><h3>Prepared the reports</h3><p>Income Statement, Balance Sheet and a report for the sales tax return.</p></div></div>
     </div>
   </section>
 
@@ -388,6 +375,7 @@ ul.deliv{padding:0;}
       <li>Depreciation schedule (straight-line)</li>
       <li>Loan amortization: interest vs principal</li>
       <li>Payroll accruals across month-ends</li>
+      <li>Sales tax report for the return</li>
       <li>Client request letter</li>
     </ul>
   </section>
@@ -401,7 +389,7 @@ ul.deliv{padding:0;}
     </div>
   </div>
 
-  <div class="footer">Whitfield Interiors &amp; Doors LLC · Q1 2026 · Practice project on a fictional company</div>
+  <div class="footer">Whitfield Interiors &amp; Doors LLC · Q1 2026</div>
 
 </main>
 <script>
