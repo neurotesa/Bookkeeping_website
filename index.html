@@ -120,8 +120,8 @@ p{margin:0;}
 .case.case-tight{margin-top:20px;}
 .case-card{background:var(--surface);border:1px solid var(--line);border-radius:24px;padding:48px;display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;overflow:hidden;}
 .case-card > *{min-width:0;}
-.case-tags{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:28px;}
-.case-tags span{font-size:13px;color:var(--text-mute);background:var(--surface-2);border:1px solid var(--line);padding:8px 16px;border-radius:8px;}
+.case-tags{display:flex;flex-wrap:wrap;margin-bottom:14px;font-size:14px;color:var(--text-faint);}
+.case-tags span + span::before{content:"·";margin:0 8px;}
 .case-copy h3{font-size:30px;font-weight:700;letter-spacing:-0.01em;margin-bottom:16px;line-height:1.15;overflow-wrap:break-word;}
 .case-metric-inline{font-size:18px;line-height:1.5;color:var(--text-mute);margin-bottom:28px;}
 .case-btn{display:inline-flex;align-items:center;gap:10px;font-size:15px;color:var(--text);border:1px solid var(--line);padding:12px 22px;border-radius:980px;}
@@ -380,7 +380,7 @@ p{margin:0;}
   <section class="case">
     <div class="case-card">
       <div class="case-copy reveal">
-        <div class="case-tags"><span>Google Sheets</span><span>Sales tax</span><span>Q1 2026</span></div>
+        <div class="case-tags"><span>Bank reconciliation</span><span>Payroll</span><span>Inventory (FIFO)</span><span>Loans</span><span>Financial statements</span></div>
         <h3>Whitfield Interiors &amp; Doors LLC</h3>
         <p class="case-metric-inline">The company sells and installs doors and had kept no books. The task was to prepare the books for Q1 for a sales tax return in one week. The client wanted to save on software, so the books were kept in Google Sheets.</p>
         <a href="whitfield-case.html" class="case-btn"><span>View case</span> <span>→</span></a>
@@ -390,9 +390,9 @@ p{margin:0;}
           <div>
             <div class="cover-tag">Bookkeeping case</div>
             <div class="cover-title">Whitfield<br>Interiors &amp; Doors LLC</div>
-            <div class="cover-sub">Q1 books for a sales tax return <br>in one week</div>
+            <div class="cover-sub">Q1 closed from raw documents <br>to financial statements</div>
           </div>
-          <div class="cover-foot">Google Sheets · Sales tax</div>
+          <div class="cover-foot">Google Sheets</div>
         </div>
       </div>
     </div>
@@ -597,7 +597,7 @@ p{margin:0;}
   <section class="case">
     <div class="case-card">
       <div class="case-copy reveal">
-        <div class="case-tags"><span>Google Sheets</span><span>Налог с продаж</span><span>Q1 2026</span></div>
+        <div class="case-tags"><span>Сверка банка</span><span>Зарплата</span><span>Запасы (FIFO)</span><span>Кредиты</span><span>Финансовая отчётность</span></div>
         <h3>Whitfield Interiors &amp; Doors LLC</h3>
         <p class="case-metric-inline">Компания продаёт и устанавливает двери, учёт не вёлся. Задача: подготовить учёт за первый квартал для декларации по налогу с продаж за одну неделю. Клиент хотел сэкономить на софте, поэтому учёт вели в Google Sheets.</p>
         <a href="whitfield-case.html" class="case-btn"><span>Смотреть кейс</span> <span>→</span></a>
@@ -607,9 +607,9 @@ p{margin:0;}
           <div>
             <div class="cover-tag">Бухгалтерский кейс</div>
             <div class="cover-title">Whitfield<br>Interiors &amp; Doors LLC</div>
-            <div class="cover-sub">Учёт за квартал для декларации <br>по sales tax за неделю</div>
+            <div class="cover-sub">Квартал закрыт от первичных документов <br>до финансовой отчётности</div>
           </div>
-          <div class="cover-foot">Google Sheets · Налог с продаж</div>
+          <div class="cover-foot">Google Sheets</div>
         </div>
       </div>
     </div>
