@@ -120,8 +120,8 @@ p{margin:0;}
 .case.case-tight{margin-top:20px;}
 .case-card{background:var(--surface);border:1px solid var(--line);border-radius:24px;padding:48px;display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;overflow:hidden;}
 .case-card > *{min-width:0;}
-.case-tags{display:flex;flex-wrap:wrap;margin-bottom:14px;font-size:14px;color:var(--text-faint);}
-.case-tags span + span::before{content:"·";margin:0 8px;}
+.case-tags{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:28px;}
+.case-tags span{font-size:13px;color:var(--text-mute);background:var(--surface-2);border:1px solid var(--line);padding:8px 16px;border-radius:8px;}
 .case-copy h3{font-size:30px;font-weight:700;letter-spacing:-0.01em;margin-bottom:16px;line-height:1.15;overflow-wrap:break-word;}
 .case-metric-inline{font-size:18px;line-height:1.5;color:var(--text-mute);margin-bottom:28px;}
 .case-btn{display:inline-flex;align-items:center;gap:10px;font-size:15px;color:var(--text);border:1px solid var(--line);padding:12px 22px;border-radius:980px;}
@@ -225,6 +225,8 @@ p{margin:0;}
 .exp-results{list-style:none;margin:14px 0 0;padding:0;max-width:680px;}
 .exp-results li{position:relative;padding-left:20px;font-size:15px;line-height:1.55;color:var(--text);margin:6px 0;}
 .exp-results li::before{content:'';position:absolute;left:3px;top:.62em;width:6px;height:6px;border-radius:50%;background:var(--accent);}
+.co-link{color:var(--text);border-bottom:1px solid var(--line);}
+.co-link:hover{border-color:var(--text-faint);}
 .exp-desc{font-size:15px;line-height:1.6;color:var(--text-mute);max-width:640px;}
 
 /* Testimonials */
@@ -475,7 +477,7 @@ p{margin:0;}
       </div>
       <div class="exp-item reveal">
         <div class="exp-item-head">
-          <div><div class="exp-role">Digital Assets Specialist</div><div class="exp-co">UULA · Remote</div></div>
+          <div><div class="exp-role">Digital Assets Specialist</div><div class="exp-co"><a class="co-link" href="https://www.uula.com/kw" target="_blank" rel="noopener">UULA ↗</a> · Remote</div></div>
           <div class="exp-period">2022 — 2025</div>
         </div>
         <p class="exp-desc">Managed end-to-end production workflows in the core product team, working to strict specifications and deadlines; automated key parts of the team's daily routine.</p>
@@ -483,7 +485,7 @@ p{margin:0;}
       </div>
       <div class="exp-item reveal">
         <div class="exp-item-head">
-          <div><div class="exp-role">Digital Assets Specialist</div><div class="exp-co">Dataduck · Remote</div></div>
+          <div><div class="exp-role">Digital Assets Specialist</div><div class="exp-co"><a class="co-link" href="https://dataduck.com/" target="_blank" rel="noopener">Dataduck ↗</a> · Remote</div></div>
           <div class="exp-period">2019 — 2021</div>
         </div>
         <p class="exp-desc">Produced materials for a global FinTech trading platform, gaining a working understanding of digital financial services and user flows.</p>
@@ -692,7 +694,7 @@ p{margin:0;}
       </div>
       <div class="exp-item reveal">
         <div class="exp-item-head">
-          <div><div class="exp-role">Digital Assets Specialist</div><div class="exp-co">UULA · Удалённо</div></div>
+          <div><div class="exp-role">Digital Assets Specialist</div><div class="exp-co"><a class="co-link" href="https://www.uula.com/kw" target="_blank" rel="noopener">UULA ↗</a> · Удалённо</div></div>
           <div class="exp-period">2022 — 2025</div>
         </div>
         <p class="exp-desc">Вела производственные процессы от начала до конца в основной продуктовой команде, работала по строгим спецификациям и срокам; автоматизировала ключевые части ежедневной рутины команды.</p>
@@ -700,7 +702,7 @@ p{margin:0;}
       </div>
       <div class="exp-item reveal">
         <div class="exp-item-head">
-          <div><div class="exp-role">Digital Assets Specialist</div><div class="exp-co">Dataduck · Удалённо</div></div>
+          <div><div class="exp-role">Digital Assets Specialist</div><div class="exp-co"><a class="co-link" href="https://dataduck.com/" target="_blank" rel="noopener">Dataduck ↗</a> · Удалённо</div></div>
           <div class="exp-period">2019 — 2021</div>
         </div>
         <p class="exp-desc">Готовила материалы для международной финтех-платформы для трейдинга, разобралась в устройстве цифровых финансовых сервисов.</p>
