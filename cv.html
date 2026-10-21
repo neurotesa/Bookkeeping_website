@@ -67,26 +67,28 @@ li a,.job a{color:var(--accent);font-weight:500;}
 }
 .contacts .plain{color:var(--text-mute);margin-right:-12px;}
 .contacts + .contacts{margin-top:6px;}
+li a b{color:var(--accent);}
+.contacts .copy-email{color:var(--text);border-bottom:1px solid var(--line);padding-bottom:1px;}
 .intro{font-size:15px;line-height:1.55;color:var(--text-mute);margin:0 0 6px;}
-.org a{color:inherit;border-bottom:1px solid var(--line);}
+.org a{color:var(--accent);font-weight:500;}
 @media print{
-  @page{size:Letter;margin:0.55in 0.6in;}
+  @page{size:Letter;margin:0.45in 0.55in;}
   html,body{background:#fff;}
   .nav{display:none;}
   .sheet{margin:0;padding:0;border:0;border-radius:0;max-width:none;}
   .name{font-size:26px;}
   .title{font-size:13px;margin-top:3px;}
   .contacts{font-size:10.5px;margin-top:8px;gap:2px 14px;}
-  .contacts a{border:0;}
+  .contacts a,.contacts .copy-email{border:0;}
   .copy-hint{display:none;}
   .contacts + .contacts{margin-top:3px;}
   .intro{font-size:10.2px;line-height:1.42;margin:0 0 3px;}
   .loc{font-size:10px;margin-top:3px;}
-  section{margin-top:12px;padding-top:9px;}
+  section{margin-top:9px;padding-top:7px;}
   h2{font-size:9px;margin-bottom:6px;}
-  p,li{font-size:10.2px;line-height:1.42;}
-  li{margin:1.5px 0;}
-  .job + .job{margin-top:9px;}
+  p,li{font-size:10px;line-height:1.38;}
+  li{margin:1px 0;}
+  .job + .job{margin-top:7px;}
   .job-head{margin-bottom:3px;}
   .role{font-size:11.5px;}
   .org{font-size:10px;}
@@ -118,13 +120,14 @@ li a,.job a{color:var(--accent);font-weight:500;}
 <main class="sheet">
   <h1 class="name">Anastasia Volkova</h1>
   <div class="title">Bookkeeper | QuickBooks Online Certified</div>
-  <div class="contacts"><a href="#" class="copy-email" data-email="volkova.workpost@gmail.com" title="Click to copy"><span class="copy-text">volkova.workpost@gmail.com</span><span class="copy-hint">Copy</span></a><a href="#" class="copy-email" data-email="+13252389424" title="Click to copy"><span class="copy-text">+1 (325) 238-9424</span><span class="copy-hint">Copy</span></a><a href="https://www.linkedin.com/in/siavolkova" target="_blank" rel="noopener">linkedin.com/in/siavolkova</a></div>
+  <div class="contacts"><span class="copy-email" role="button" tabindex="0" data-email="volkova.workpost@gmail.com" title="Click to copy"><span class="copy-text">volkova.workpost@gmail.com</span><span class="copy-hint">Copy</span></span><span class="copy-email" role="button" tabindex="0" data-email="+13252389424" title="Click to copy"><span class="copy-text">+1 (325) 238-9424</span><span class="copy-hint">Copy</span></span><a href="https://www.linkedin.com/in/siavolkova" target="_blank" rel="noopener">linkedin.com/in/siavolkova</a></div>
   <div class="contacts"><span class="plain">Portfolio:</span><a href="https://www.siabookkeeping.com" target="_blank" rel="noopener">siabookkeeping.com</a></div>
   <div class="loc">Remote · available during US business hours</div>
 
   <section><h2>Summary</h2><p>Bookkeeper for US businesses, Intuit QuickBooks Online certified (Level 1 and 2). I keep books on accrual and cash basis, with expertise in payroll, inventory and reporting. Closed a full quarter of books in one week, from 70 source documents and 77 bank transactions to a balanced Balance Sheet and P&amp;L. Brings 6 years of remote work in FinTech and EdTech teams: strict specifications, deadlines and process automation.</p></section>
   <section><h2>Skills</h2><ul><li><b>Bookkeeping:</b> journal entries, accounts payable and receivable, bank and credit card reconciliation, Undeposited Funds, payroll entries and accruals, sales tax liability</li><li><b>Tax Accounting:</b> adjusting entries, prepaid expenses, depreciation (straight-line), loan amortization, FIFO inventory and COGS, Trial Balance, Balance Sheet, Profit &amp; Loss</li><li><b>Accounting basis:</b> accrual and cash basis, US GAAP fundamentals</li><li><b>Tools:</b> QuickBooks Online, Xero, Sage, Wave, Excel, Google Sheets, Workflow Automation Platform and AI tools</li></ul></section>
-  <section><h2>Experience</h2><div class="job"><div class="job-head"><div><div class="role">Bookkeeper</div><div class="org">Self-employed, Remote</div></div><div class="dates">Jan 2026 – Present</div></div><p class="intro">Whitfield Interiors &amp; Doors LLC: a door sales and installation company with no books kept. Prepared the books for Q1 for a sales tax return in one week, in Google Sheets. <a href="https://www.siabookkeeping.com/whitfield-case.html" target="_blank" rel="noopener">Case</a></p><ul><li>Closed a full quarter of books in 1 week, ready for the sales tax return.</li><li>Reconciled 77 bank transactions and 70 source documents: the Balance Sheet balanced to the cent.</li><li>Identified expenses missing receipts, an unused vendor credit and an underpaid invoice.</li><li>Split loan payments into interest and principal.</li><li>Accrued payroll at every month-end.</li><li>Calculated COGS using FIFO.</li><li>Now completing a QuickBooks Online project: W-2 payroll, 1099 filing and a review before Form 1120.</li></ul></div><div class="job"><div class="job-head"><div><div class="role">Digital Assets Specialist</div><div class="org"><a href="https://www.uula.com/kw" target="_blank" rel="noopener">UULA</a> (EdTech, Kuwait), Remote</div></div><div class="dates">Aug 2022 – Jul 2025</div></div><ul><li>Cut time to market by 20% by building a template structure for recurring launches.</li><li>Improved launch effectiveness by 10% through structured A/B testing and analysis of results.</li><li>Worked with research and engineering teams to turn test data into decisions.</li></ul></div><div class="job"><div class="job-head"><div><div class="role">Digital Assets Specialist</div><div class="org"><a href="https://dataduck.com/" target="_blank" rel="noopener">Dataduck</a> (FinTech trading platform), Remote</div></div><div class="dates">Aug 2019 – Sep 2021</div></div><ul><li>Cut production costs by 40% by automating a recurring process with JavaScript templates.</li><li>Scaled one workflow to 10 languages without redoing the work, reaching new markets 50% faster.</li><li>Reduced repeated support questions by 18–25% by explaining financial tools to users step by step.</li></ul></div></section>
+  <section><h2>Experience</h2><div class="job"><div class="job-head"><div><div class="role">Bookkeeper</div><div class="org">Self-employed, Remote</div></div><div class="dates">Jan 2026 – Present</div></div><p class="intro">Whitfield Interiors &amp; Doors LLC: a door sales and installation company with no books kept. Prepared the books for Q1 for a sales tax return in one week, in Google Sheets.</p><ul><li>Closed a full quarter of books in 1 week, ready for the sales tax return.</li><li>Reconciled 77 bank transactions and 70 source documents: the Balance Sheet balanced to the cent.</li><li>Identified expenses missing receipts, an unused vendor credit and an underpaid invoice.</li><li>Split loan payments into interest and principal.</li><li>Accrued payroll at every month-end.</li><li>Calculated COGS using FIFO.</li><li>Now completing a QuickBooks Online project: W-2 payroll, 1099 filing and a review before Form 1120.</li></ul></div><div class="job"><div class="job-head"><div><div class="role">Digital Assets Specialist</div><div class="org"><a href="https://www.uula.com/kw" target="_blank" rel="noopener">UULA</a> (EdTech, Kuwait), Remote</div></div><div class="dates">Aug 2022 – Jul 2025</div></div><ul><li>Cut time to market by 20% by building a template structure for recurring launches.</li><li>Improved launch effectiveness by 10% through structured A/B testing and analysis of results.</li><li>Worked with research and engineering teams to turn test data into decisions.</li></ul></div><div class="job"><div class="job-head"><div><div class="role">Digital Assets Specialist</div><div class="org"><a href="https://dataduck.com/" target="_blank" rel="noopener">Dataduck</a> (FinTech trading platform), Remote</div></div><div class="dates">Aug 2019 – Sep 2021</div></div><ul><li>Cut production costs by 40% by automating a recurring process with JavaScript templates.</li><li>Scaled one workflow to 10 languages without redoing the work, reaching new markets 50% faster.</li><li>Reduced repeated support questions by 18–25% by explaining financial tools to users step by step.</li></ul></div></section>
+  <section><h2>Projects</h2><ul><li><a href="https://www.siabookkeeping.com/whitfield-case.html" target="_blank" rel="noopener"><b>Whitfield Interiors &amp; Doors LLC</b></a> — Q1 books prepared for a sales tax return in one week · Google Sheets</li><li><a href="https://www.siabookkeeping.com/#work" target="_blank" rel="noopener"><b>QuickBooks Online project</b></a> — W-2 payroll, 1099 filing and a review before Form 1120 · in progress</li></ul></section>
   <section><h2>Certifications and training</h2><ul><li><b>Intuit QuickBooks Certification Level 2</b> — Intuit ProAdvisor, Oct 2026 · <a href="https://www.credly.com/badges/3b1962f8-57c2-4432-a786-ff900c0e7fef" target="_blank" rel="noopener">Verify</a></li><li><b>Intuit QuickBooks Certification Level 1</b> — Intuit ProAdvisor, Oct 2026 · <a href="https://www.credly.com/badges/707a9143-3d06-423c-b488-7f5261569943" target="_blank" rel="noopener">Verify</a></li><li><b>US Accounting and Bookkeeping program</b> — full accounting cycle, 2026</li><li><b>Tax Accounting</b> — AccountingSchool.online, in progress</li></ul></section>
   <section><h2>Education</h2>
     <div class="job-head"><div><div class="role">Saint Petersburg State University of Finance and Economics</div><div class="org">Bachelor&#x27;s degree</div></div><div class="dates">2010 – 2014</div></div>
