@@ -169,6 +169,15 @@ ul.deliv{padding:0;}
 .shot.in-card{margin:0 0 20px;}
 .shot.in-card img{border-radius:10px;}
 #results{scroll-margin-top:90px;}
+
+/* Lightbox */
+.lb{position:fixed;inset:0;z-index:100;background:rgba(20,24,28,.86);display:none;align-items:center;justify-content:center;padding:64px 24px 24px;}
+.lb.open{display:flex;}
+.lb img{max-width:100%;max-height:100%;border-radius:12px;background:#fff;box-shadow:0 20px 60px rgba(0,0,0,.4);}
+.lb-close{position:absolute;top:16px;right:16px;width:44px;height:44px;border-radius:50%;border:0;background:rgba(255,255,255,.92);color:#1D1D1F;font-size:26px;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;}
+.lb-close:hover{background:#fff;}
+a.zoom{cursor:zoom-in;display:block;}
+body.lb-on{overflow:hidden;}
 </style>
 </head>
 <body>
@@ -225,16 +234,16 @@ ul.deliv{padding:0;}
     <div class="steps">
       <div class="step"><div class="step-num">2</div><div><h3>Processed the bank feed</h3><p>Matched each bank line to a bill, invoice or payment. Bank rules for recurring charges, checked one by one.</p></div></div>
     </div>
-    <figure class="shot"><a href="img/harlow-bank-feed.webp" target="_blank" rel="noopener"><img src="img/harlow-bank-feed.webp" alt="QuickBooks Online bank feed: posted transactions matched to bill payments and expenses" loading="lazy"></a><figcaption>Bank feed: every line matched to a bill payment or categorized</figcaption></figure>
+    <figure class="shot"><a href="img/harlow-bank-feed.webp" class="zoom"><img src="img/harlow-bank-feed.webp" alt="QuickBooks Online bank feed: posted transactions matched to bill payments and expenses" loading="lazy"></a><figcaption>Bank feed: every line matched to a bill payment or categorized</figcaption></figure>
     <div class="steps">
       <div class="step"><div class="step-num">3</div><div><h3>Recorded bills by service period</h3><p>Bills dated to the month of the service, not the payment date. Vendor credits, a car bought on a loan, a security deposit and prepaid insurance.</p></div></div>
     </div>
-    <figure class="shot"><a href="img/harlow-prepaid-bill.webp" target="_blank" rel="noopener"><img src="img/harlow-prepaid-bill.webp" alt="Bill for six months of insurance posted to Prepaid Expenses" loading="lazy"></a><figcaption>Insurance for April–September paid upfront: 6,000 to Prepaid Expenses, then 1,000 a month to expense</figcaption></figure>
+    <figure class="shot"><a href="img/harlow-prepaid-bill.webp" class="zoom"><img src="img/harlow-prepaid-bill.webp" alt="Bill for six months of insurance posted to Prepaid Expenses" loading="lazy"></a><figcaption>Insurance for April–September paid upfront: 6,000 to Prepaid Expenses, then 1,000 a month to expense</figcaption></figure>
     <div class="steps">
       <div class="step"><div class="step-num">4</div><div><h3>Recorded sales</h3><p>Invoices with sales tax and discounts, sales receipts, credit memos, a customer deposit, a refund, a returned check and a bad debt write-off.</p></div></div>
       <div class="step"><div class="step-num">5</div><div><h3>Reconciled the bank</h3><p>Bank 2202 reconciled to the June 30 statement. Difference 0.00.</p></div></div>
     </div>
-    <figure class="shot"><a href="img/harlow-reconciliation.webp" target="_blank" rel="noopener"><img src="img/harlow-reconciliation.webp" alt="Bank reconciliation for Bank 2202 as of June 30, 2026 with a difference of 0.00" loading="lazy"></a><figcaption>Statement ending balance 25,033.42 equals the cleared balance</figcaption></figure>
+    <figure class="shot"><a href="img/harlow-reconciliation.webp" class="zoom"><img src="img/harlow-reconciliation.webp" alt="Bank reconciliation for Bank 2202 as of June 30, 2026 with a difference of 0.00" loading="lazy"></a><figcaption>Statement ending balance 25,033.42 equals the cleared balance</figcaption></figure>
     <div class="steps">
       <div class="step"><div class="step-num">6</div><div><h3>Reviewed A/R and A/P</h3><p>Found vendor payments with no bill, unused vendor credits and customer deposits with no invoice.</p></div></div>
       <div class="step"><div class="step-num">7</div><div><h3>Prepared the reports</h3><p>Balance Sheet and Profit &amp; Loss by month, Journal, General Ledger, Customer Balance Summary, Unpaid Bills.</p></div></div>
@@ -254,22 +263,22 @@ ul.deliv{padding:0;}
     <h2>Six places where the numbers can go wrong</h2>
     <div class="cards">
       <div class="card">
-        <figure class="shot in-card"><a href="img/harlow-journal-entry-deposit.webp" target="_blank" rel="noopener"><img src="img/harlow-journal-entry-deposit.webp" alt="Journal entry applying a 3,000 customer deposit to open invoices" loading="lazy"></a></figure>
+        <figure class="shot in-card"><a href="img/harlow-journal-entry-deposit.webp" class="zoom"><img src="img/harlow-journal-entry-deposit.webp" alt="Journal entry applying a 3,000 customer deposit to open invoices" loading="lazy"></a></figure>
         <h3>Deposit before the invoice</h3>
         <p>A customer paid 3,000 before the work was done. That is a liability, not income, so it went to Deferred Payments. When the invoices were issued, a journal entry moved it to A/R: Dr Deferred Payments 3,000, Cr A/R 3,000.</p>
       </div>
       <div class="card">
-        <figure class="shot in-card"><a href="img/harlow-refund-check.webp" target="_blank" rel="noopener"><img src="img/harlow-refund-check.webp" alt="Refund check of 175 to a customer posted against Accounts Receivable" loading="lazy"></a></figure>
+        <figure class="shot in-card"><a href="img/harlow-refund-check.webp" class="zoom"><img src="img/harlow-refund-check.webp" alt="Refund check of 175 to a customer posted against Accounts Receivable" loading="lazy"></a></figure>
         <h3>Overpayments refunded</h3>
         <p>The same customer overpaid two invoices by 295 in total. The refunds, 120 and a 175 check, were posted against A/R, so the customer balance returned to zero and income was not reduced twice.</p>
       </div>
       <div class="card">
-        <figure class="shot in-card"><a href="img/harlow-credit-memo.webp" target="_blank" rel="noopener"><img src="img/harlow-credit-memo.webp" alt="Credit memo for 5 hours of bookkeeping services with sales tax" loading="lazy"></a></figure>
+        <figure class="shot in-card"><a href="img/harlow-credit-memo.webp" class="zoom"><img src="img/harlow-credit-memo.webp" alt="Credit memo for 5 hours of bookkeeping services with sales tax" loading="lazy"></a></figure>
         <h3>Credit memo with sales tax</h3>
         <p>The customer did not accept 5 hours of May work. The credit memo for 425 plus 8.25% tax, 460.06 in total, reduced both revenue and the tax owed to the Texas Comptroller.</p>
       </div>
       <div class="card">
-        <figure class="shot in-card"><a href="img/harlow-billable-invoice.webp" target="_blank" rel="noopener"><img src="img/harlow-billable-invoice.webp" alt="Invoice re-billing 650 of flight tickets to the customer" loading="lazy"></a></figure>
+        <figure class="shot in-card"><a href="img/harlow-billable-invoice.webp" class="zoom"><img src="img/harlow-billable-invoice.webp" alt="Invoice re-billing 650 of flight tickets to the customer" loading="lazy"></a></figure>
         <h3>Billable expense, counted once</h3>
         <p>Flight tickets for 650 were paid by the company and re-billed to the customer. A bank rule had already posted the same charge to Fuel. I undid it and matched the bank line to the billable expense, otherwise the cost would be counted twice.</p>
       </div>
@@ -465,16 +474,16 @@ ul.deliv{padding:0;}
     <div class="steps">
       <div class="step"><div class="step-num">2</div><div><h3>Разобрала банковскую ленту</h3><p>Каждую строку банка сопоставила со счётом, инвойсом или оплатой. Правила для повторяющихся списаний, с проверкой каждого.</p></div></div>
     </div>
-    <figure class="shot"><a href="img/harlow-bank-feed.webp" target="_blank" rel="noopener"><img src="img/harlow-bank-feed.webp" alt="Банковская лента QuickBooks Online: операции сопоставлены с оплатами счетов и расходами" loading="lazy"></a><figcaption>Банковская лента: каждая строка сопоставлена с оплатой счёта или разнесена по категории</figcaption></figure>
+    <figure class="shot"><a href="img/harlow-bank-feed.webp" class="zoom"><img src="img/harlow-bank-feed.webp" alt="Банковская лента QuickBooks Online: операции сопоставлены с оплатами счетов и расходами" loading="lazy"></a><figcaption>Банковская лента: каждая строка сопоставлена с оплатой счёта или разнесена по категории</figcaption></figure>
     <div class="steps">
       <div class="step"><div class="step-num">3</div><div><h3>Внесла счета по периоду услуги</h3><p>Счета датированы месяцем услуги, а не датой оплаты. Кредит-ноты поставщиков, машина в кредит, гарантийный депозит и страховка с предоплатой.</p></div></div>
     </div>
-    <figure class="shot"><a href="img/harlow-prepaid-bill.webp" target="_blank" rel="noopener"><img src="img/harlow-prepaid-bill.webp" alt="Счёт за страховку на полгода, проведённый на Prepaid Expenses" loading="lazy"></a><figcaption>Страховка за апрель–сентябрь оплачена заранее: 6,000 на Prepaid Expenses, затем по 1,000 в месяц в расходы</figcaption></figure>
+    <figure class="shot"><a href="img/harlow-prepaid-bill.webp" class="zoom"><img src="img/harlow-prepaid-bill.webp" alt="Счёт за страховку на полгода, проведённый на Prepaid Expenses" loading="lazy"></a><figcaption>Страховка за апрель–сентябрь оплачена заранее: 6,000 на Prepaid Expenses, затем по 1,000 в месяц в расходы</figcaption></figure>
     <div class="steps">
       <div class="step"><div class="step-num">4</div><div><h3>Внесла продажи</h3><p>Инвойсы с налогом и скидками, чеки продаж, кредит-ноты, предоплата клиента, возврат, вернувшийся чек и списание безнадёжного долга.</p></div></div>
       <div class="step"><div class="step-num">5</div><div><h3>Сверила банк</h3><p>Bank 2202 сверен с выпиской на 30 июня. Расхождение 0.00.</p></div></div>
     </div>
-    <figure class="shot"><a href="img/harlow-reconciliation.webp" target="_blank" rel="noopener"><img src="img/harlow-reconciliation.webp" alt="Сверка Bank 2202 на 30 июня 2026, расхождение 0.00" loading="lazy"></a><figcaption>Остаток по выписке 25,033.42 равен сверенному остатку</figcaption></figure>
+    <figure class="shot"><a href="img/harlow-reconciliation.webp" class="zoom"><img src="img/harlow-reconciliation.webp" alt="Сверка Bank 2202 на 30 июня 2026, расхождение 0.00" loading="lazy"></a><figcaption>Остаток по выписке 25,033.42 равен сверенному остатку</figcaption></figure>
     <div class="steps">
       <div class="step"><div class="step-num">6</div><div><h3>Проверила AR и AP</h3><p>Нашла оплаты поставщикам без счетов, неиспользованные кредит-ноты и поступления от клиента без инвойса.</p></div></div>
       <div class="step"><div class="step-num">7</div><div><h3>Сформировала отчёты</h3><p>Balance Sheet и Profit &amp; Loss по месяцам, Journal, General Ledger, Customer Balance Summary, Unpaid Bills.</p></div></div>
@@ -494,22 +503,22 @@ ul.deliv{padding:0;}
     <h2>Шесть мест, где легко ошибиться</h2>
     <div class="cards">
       <div class="card">
-        <figure class="shot in-card"><a href="img/harlow-journal-entry-deposit.webp" target="_blank" rel="noopener"><img src="img/harlow-journal-entry-deposit.webp" alt="Проводка: предоплата клиента 3,000 зачтена в открытые инвойсы" loading="lazy"></a></figure>
+        <figure class="shot in-card"><a href="img/harlow-journal-entry-deposit.webp" class="zoom"><img src="img/harlow-journal-entry-deposit.webp" alt="Проводка: предоплата клиента 3,000 зачтена в открытые инвойсы" loading="lazy"></a></figure>
         <h3>Предоплата до инвойса</h3>
         <p>Клиент заплатил 3,000 до выполнения работ. Это обязательство, а не доход, поэтому сумма ушла на Deferred Payments. Когда инвойсы были выставлены, проводкой перенесла её в A/R: Dr Deferred Payments 3,000, Cr A/R 3,000.</p>
       </div>
       <div class="card">
-        <figure class="shot in-card"><a href="img/harlow-refund-check.webp" target="_blank" rel="noopener"><img src="img/harlow-refund-check.webp" alt="Чек на возврат клиенту 175, проведённый через Accounts Receivable" loading="lazy"></a></figure>
+        <figure class="shot in-card"><a href="img/harlow-refund-check.webp" class="zoom"><img src="img/harlow-refund-check.webp" alt="Чек на возврат клиенту 175, проведённый через Accounts Receivable" loading="lazy"></a></figure>
         <h3>Возврат переплаты</h3>
         <p>Тот же клиент переплатил по двум инвойсам 295. Возвраты, 120 и чек на 175, проведены через A/R: баланс клиента вернулся к нулю, а доход не уменьшился дважды.</p>
       </div>
       <div class="card">
-        <figure class="shot in-card"><a href="img/harlow-credit-memo.webp" target="_blank" rel="noopener"><img src="img/harlow-credit-memo.webp" alt="Кредит-нота за 5 часов бухгалтерских услуг с налогом" loading="lazy"></a></figure>
+        <figure class="shot in-card"><a href="img/harlow-credit-memo.webp" class="zoom"><img src="img/harlow-credit-memo.webp" alt="Кредит-нота за 5 часов бухгалтерских услуг с налогом" loading="lazy"></a></figure>
         <h3>Кредит-нота с налогом</h3>
         <p>Клиент не принял 5 часов работы за май. Кредит-нота на 425 плюс налог 8.25%, всего 460.06, уменьшила и выручку, и налог к уплате в Texas Comptroller.</p>
       </div>
       <div class="card">
-        <figure class="shot in-card"><a href="img/harlow-billable-invoice.webp" target="_blank" rel="noopener"><img src="img/harlow-billable-invoice.webp" alt="Инвойс клиенту на возмещение авиабилетов 650" loading="lazy"></a></figure>
+        <figure class="shot in-card"><a href="img/harlow-billable-invoice.webp" class="zoom"><img src="img/harlow-billable-invoice.webp" alt="Инвойс клиенту на возмещение авиабилетов 650" loading="lazy"></a></figure>
         <h3>Перевыставленный расход без задвоения</h3>
         <p>Авиабилеты на 650 оплатила компания и перевыставила клиенту. Банковское правило уже провело это списание в Fuel. Я отменила его и сопоставила строку банка с billable-расходом, иначе расход посчитался бы дважды.</p>
       </div>
@@ -663,6 +672,7 @@ ul.deliv{padding:0;}
 
 </template>
 
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Screenshot"><button type="button" class="lb-close" aria-label="Close">&times;</button><img alt=""></div>
 <script>
 (function(){
   var LANG_KEY='siteLang';
@@ -722,6 +732,17 @@ ul.deliv{padding:0;}
     el.classList.add('copied'); hint.textContent = current==='ru' ? 'Скопировано' : 'Copied';
     clearTimeout(el._t); el._t=setTimeout(function(){ el.classList.remove('copied'); hint.textContent = current==='ru' ? 'Копировать' : 'Copy'; }, 1800);
   });
+  // lightbox for screenshots
+  var lb=document.getElementById('lb'), lbImg=lb.querySelector('img');
+  function lbClose(){ lb.classList.remove('open'); document.body.classList.remove('lb-on'); lbImg.removeAttribute('src'); }
+  document.addEventListener('click', function(e){
+    var a=e.target.closest('a.zoom'); if(!a) return;
+    e.preventDefault();
+    var img=a.querySelector('img'); lbImg.src=a.getAttribute('href'); lbImg.alt=img ? img.alt : '';
+    lb.classList.add('open'); document.body.classList.add('lb-on');
+  });
+  lb.addEventListener('click', function(e){ if(e.target!==lbImg) lbClose(); });
+  document.addEventListener('keydown', function(e){ if(e.key==='Escape' && lb.classList.contains('open')) lbClose(); });
 })();
 </script>
 </body>
