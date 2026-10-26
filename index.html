@@ -1,869 +1,145 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>Anastasia Volkova — Bookkeeper</title>
-<meta name="description" content="Remote bookkeeper for US businesses: accrual and cash basis, payroll, inventory, reporting and sales tax. QuickBooks Online certified.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://www.siabookkeeping.com/">
-<meta property="og:title" content="Anastasia Volkova — Bookkeeper">
-<meta property="og:description" content="Remote bookkeeper for US businesses. QuickBooks Online certified.">
-<link rel="icon" type="image/png" href="data:image/png;base64,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">
-<link rel="apple-touch-icon" href="data:image/png;base64,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">
-<meta name="theme-color" content="#EBEEF2">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<!doctype html>
+<html lang="ru"><head><meta charset="utf-8">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Календарь по карте</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <style>
-:root{
-  --bg:        #EBEEF2;
-  --surface:   #FFFFFF;
-  --surface-2: #F5F5F7;
-  --line:      #DCE0E6;
-  --text:      #1D1D1F;
-  --text-mute: #6E6E73;
-  --text-faint:#86868B;
-  --accent:    #2F6B4F;
-  --accent-bg: #E8F3EE;
-  --font-display: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Helvetica Neue', Inter, Arial, sans-serif;
-  --font-body: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Inter, Arial, sans-serif;
-  --container: 980px;
-  --gap-block: 120px;
+:root{--bg:#f4f3f1;--paper:#f9f8f6;--line:#c9c8d3;--fg:#2b2a33;--muted:#7a7886;--badge:#cfc6e0;--badge-fg:#5b4f78;--good:#3f9a68;--good-bg:rgba(63,154,104,.10);--bad:#c8553d;--bad-bg:rgba(200,85,61,.10);--gold:#b8892a;--accent:#6c5a99;
+--body:"IBM Plex Sans","Segoe UI",system-ui,sans-serif;--mono:"IBM Plex Mono",ui-monospace,Menlo,monospace}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#15141a;--paper:#1c1b22;--line:#3a3946;--fg:#ebe9f2;--muted:#9a97a8;--badge:#4a4060;--badge-fg:#e0d6f5;--good:#5fcf92;--good-bg:rgba(95,207,146,.10);--bad:#ff8a70;--bad-bg:rgba(255,138,112,.10);--gold:#e6b450;--accent:#b8a4ec;color-scheme:dark}}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font-family:var(--body);margin:0;padding:20px 16px 40px}
+.wrap{max-width:1240px;margin:0 auto;display:flex;flex-direction:column;gap:18px}
+h1{font-weight:600;font-size:clamp(20px,3vw,28px);margin:0}
+.sub{font-family:var(--mono);font-size:12px;color:var(--muted);margin:4px 0 0}
+.legend{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:12px;color:var(--muted)}
+.legend i{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:5px}
+.month{background:var(--paper);padding:14px 14px 18px;border-radius:4px;box-shadow:0 1px 3px rgba(0,0,0,.08)}
+.mhead{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:8px;margin:0 4px 10px}
+.mnav{display:flex;align-items:center;gap:10px}.arr{font:inherit;font-size:22px;line-height:1;width:38px;height:38px;border-radius:50%;border:1px solid var(--line);background:var(--bg);color:var(--accent);cursor:pointer}.arr:disabled{opacity:.3;cursor:default}.mname{min-width:11ch;text-align:center;font-size:20px;font-weight:600;text-transform:uppercase;letter-spacing:.12em;color:var(--accent)}
+.mtools{display:flex;gap:8px;flex-wrap:wrap}
+.mtools button,.mtools label{font:inherit;font-size:13px;background:var(--bg);color:var(--fg);border:1px solid var(--line);border-radius:6px;padding:6px 10px;cursor:pointer}
+.mtools input{display:none}
+.wds{display:grid;grid-template-columns:repeat(7,1fr);font-size:11.5px;color:var(--muted);text-align:center;margin-bottom:4px}
+.grid{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));border-top:1px solid var(--line);border-left:1px solid var(--line)}
+.c{border-right:1px solid var(--line);border-bottom:1px solid var(--line);min-height:150px;padding:5px 6px 6px;display:flex;flex-direction:column;gap:3px;font-size:11.5px;line-height:1.3;position:relative}
+.c.good{background:var(--good-bg)}.c.bad{background:var(--bad-bg)}.c.today{box-shadow:inset 0 0 0 2px var(--accent)}
+.c.off .b{opacity:.4}
+.b{align-self:flex-start;background:var(--badge);color:var(--badge-fg);font-size:11px;font-weight:600;min-width:18px;padding:1px 4px;border-radius:3px;text-align:center}
+.wdm{display:none}
+.dot{position:absolute;top:7px;right:7px;width:8px;height:8px;border-radius:50%}
+.good .dot{background:var(--good)}.bad .dot{background:var(--bad)}.mid .dot{background:var(--line)}
+.sp{font-weight:600;font-size:10.5px;color:#fff;background:var(--accent);border-radius:3px;padding:1px 4px;align-self:flex-start}
+.sp.bad{background:var(--bad)}.sp.good{background:var(--good)}.sp.dv{background:var(--gold)}
+.ev{font-weight:600;font-size:11.5px}.y{color:var(--good)}.n{color:var(--bad)}
+.real{margin-top:auto;font:inherit;font-size:12.5px;font-weight:600;border:1.5px solid var(--accent);color:var(--accent);background:transparent;border-radius:6px;padding:6px 4px;cursor:pointer;width:100%}
+.real.has{background:var(--accent);color:#fff}
+.real:focus-visible{outline:2px solid var(--fg);outline-offset:2px}
+.prev{font-size:11px;color:var(--muted);font-style:italic;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}
+dialog{width:min(600px,calc(100% - 24px));border:1px solid var(--line);border-radius:12px;background:var(--paper);color:var(--fg);padding:18px;box-shadow:0 12px 40px rgba(0,0,0,.3)}
+dialog::backdrop{background:rgba(20,18,30,.45)}
+dialog h3{margin:0 0 4px;font-size:18px}
+dialog .tr{font-family:var(--mono);font-size:12px;color:var(--muted)}
+dialog textarea{width:100%;min-height:150px;font:inherit;font-size:15px;padding:10px;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--fg);resize:vertical}
+.row{display:flex;gap:8px;justify-content:flex-end;margin-top:10px}
+.row button{font:inherit;font-size:14px;border-radius:8px;padding:8px 16px;cursor:pointer;border:1px solid var(--line);background:var(--bg);color:var(--fg)}
+.row .primary{background:var(--accent);color:#fff;border-color:var(--accent)}
+.foot{font-size:12px;color:var(--muted);max-width:80ch;margin:0}
+.foot button{font:inherit;font-size:12px;background:none;border:0;color:var(--accent);text-decoration:underline;cursor:pointer;padding:0}
+@media (max-width:820px){
+ .wds{display:none}.grid{grid-template-columns:1fr;border:0}
+ .c{border:1px solid var(--line);border-radius:8px;margin-bottom:6px;min-height:0;font-size:13px}
+ .c.pad,.c.off{display:none}.wdm{display:inline;font-size:12px;color:var(--muted);margin-left:6px;font-weight:400}
 }
-*,*::before,*::after{box-sizing:border-box;}
-html{background:#EBEEF2;}
-html{scroll-behavior:smooth;}
-body{margin:0;letter-spacing:-0.01em;background:var(--bg);color:var(--text);font-family:var(--font-body);-webkit-font-smoothing:antialiased;}
-a{color:inherit;text-decoration:none;}
-h1,h2,h3,h4{font-family:var(--font-display);margin:0;}
-p{margin:0;}
-
-.wrap{max-width:var(--container);margin:0 auto;padding:0 32px;}
-
-/* Nav */
-.nav{padding:20px 0;position:sticky;top:0;z-index:50;background:rgba(235,238,242,0.8);-webkit-backdrop-filter:saturate(180%) blur(16px);backdrop-filter:saturate(180%) blur(16px);border-bottom:1px solid transparent;transition:border-color .2s ease;}
-.nav.scrolled{border-bottom-color:var(--line);}
-.nav-inner{max-width:var(--container);margin:0 auto;padding:0 32px;display:flex;align-items:center;justify-content:space-between;}
-.nav-name{font-family:var(--font-display);font-weight:600;font-size:15px;letter-spacing:-0.01em;line-height:1;}
-.nav-links{display:flex;align-items:center;gap:32px;margin-left:auto;margin-right:28px;}
-.nav-links a{font-size:14px;color:var(--text-mute);}
-.nav-links a:hover{color:var(--text);}
-.nav-toggle{display:none;flex-direction:column;justify-content:center;gap:5px;width:22px;height:32px;background:none;border:none;cursor:pointer;padding:0;}
-.nav-toggle span{display:block;width:100%;height:1px;background:var(--text);}
-.nav-mobile{display:none;flex-direction:column;padding:8px 32px 20px;border-top:1px solid var(--line);}
-.nav-mobile a{font-size:15px;color:var(--text-mute);padding:14px 0;border-bottom:1px solid var(--line);}
-.nav-mobile.open{display:flex;}
-
-/* Hero */
-.hero{padding:88px 0 0;display:grid;grid-template-columns:1.25fr 1fr;gap:56px;align-items:center;}
-.hero > *{min-width:0;}
-.hero-copy > *{opacity:0;animation:heroIn .7s ease forwards;}
-.hero-copy > *:nth-child(1){animation-delay:.05s;}
-.hero-copy > *:nth-child(2){animation-delay:.12s;}
-.hero-copy > *:nth-child(3){animation-delay:.2s;}
-.hero-copy > *:nth-child(4){animation-delay:.28s;}
-.hero-copy > *:nth-child(5){animation-delay:.36s;}
-.hero-photo{opacity:0;animation:heroIn .8s ease .2s forwards;}
-@keyframes heroIn{from{opacity:0;transform:translateY(14px);}to{opacity:1;transform:translateY(0);}}
-.status-pill{display:inline-flex;align-items:center;gap:8px;font-size:13px;color:var(--text-mute);background:var(--surface);border:1px solid var(--line);padding:7px 14px 7px 10px;border-radius:100px;margin-bottom:28px;}
-.status-dot{width:7px;height:7px;border-radius:50%;background:#22C55E;box-shadow:0 0 0 3px rgba(34,197,94,0.15);}
-.hero h1{font-size:clamp(36px,4.6vw,52px);font-weight:700;letter-spacing:-0.03em;line-height:1.05;margin-bottom:22px;}
-.hero h1 em{font-style:normal;color:var(--accent);}
-@media (max-width:760px){.br-d{display:none;}}
-.hero-sub{font-size:18px;line-height:1.6;color:var(--text-mute);max-width:500px;}
-.hero-cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:32px;}
-.btn{display:inline-flex;align-items:center;gap:8px;font-size:15px;font-weight:500;padding:12px 22px;border-radius:980px;}
-.btn-primary{background:var(--text);color:#fff;}
-.btn-primary:hover{background:#000000;}
-.btn-ghost{border:1px solid var(--line);color:var(--text-mute);background:var(--surface);}
-.btn-ghost:hover{border-color:var(--text-faint);color:var(--text);}
-.hero-proof{display:flex;align-items:center;gap:14px;margin-top:36px;padding-top:24px;border-top:1px solid var(--line);}
-.hero-proof img{width:44px;height:44px;}
-.hero-proof span{font-size:13px;line-height:1.45;color:var(--text-mute);}
-.hero-proof b{color:var(--text);font-weight:600;}
-.hero-intro{display:flex;align-items:flex-start;gap:14px;}
-.hero-mini{display:none;width:56px;height:56px;border-radius:50%;object-fit:cover;flex-shrink:0;background:var(--surface-2);border:1px solid var(--line);}
-.hero-photo{position:relative;}
-.hero-li{display:inline-block;margin-top:14px;font-size:14px;font-weight:500;color:var(--text-mute);border-bottom:1px solid var(--line);padding-bottom:2px;}
-.hero-li:hover{color:var(--text);border-color:var(--text-faint);}
-.hero-li-m{display:none;}
-.hero-photo img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:24px;display:block;background:var(--surface-2);border:1px solid var(--line);}
-.hero-tag{position:absolute;left:-20px;bottom:28px;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:12px 16px;box-shadow:0 8px 24px rgba(20,24,20,.08);font-size:13px;color:var(--text-mute);}
-.hero-tag b{display:block;color:var(--text);font-family:var(--font-display);font-size:15px;margin-bottom:2px;}
-@media (prefers-reduced-motion: reduce){
-  .hero-copy > *,.hero-photo{animation:none;opacity:1;}
-}
-
-/* Reveal */
-.reveal{opacity:0;transform:translateY(16px);transition:opacity .6s ease, transform .6s ease;}
-.reveal.in-view{opacity:1;transform:translateY(0);}
-@media (prefers-reduced-motion: reduce){
-  .reveal{opacity:1;transform:none;transition:none;}
-}
-
-/* Sections */
-.section{margin-top:var(--gap-block);scroll-margin-top:90px;}
-.section-label{font-size:13px;color:var(--text-faint);margin-bottom:28px;letter-spacing:0.02em;}
-.section-title{font-size:clamp(26px,3.6vw,36px);font-weight:700;letter-spacing:-0.02em;line-height:1.15;margin-bottom:36px;max-width:620px;}
-
-/* Services */
-.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
-.svc-grid > *{min-width:0;}
-.svc{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:28px;}
-.svc-num{font-size:13px;font-weight:600;color:var(--accent);margin-bottom:28px;}
-.svc h3{font-size:18px;font-weight:700;letter-spacing:-0.01em;line-height:1.25;margin-bottom:10px;}
-.svc p{font-size:14px;line-height:1.6;color:var(--text-mute);}
-
-/* Cases */
-.case{margin-top:24px;}
-.case.case-tight{margin-top:20px;}
-.case-card{background:var(--surface);border:1px solid var(--line);border-radius:24px;padding:48px;display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;overflow:hidden;}
-.case-card > *{min-width:0;}
-.case-tags{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:28px;}
-.case-tags span{font-size:13px;color:var(--text-mute);background:var(--surface-2);border:1px solid var(--line);padding:8px 16px;border-radius:8px;}
-.case-copy h3{font-size:30px;font-weight:700;letter-spacing:-0.01em;margin-bottom:16px;line-height:1.15;overflow-wrap:break-word;}
-.case-metric-inline{font-size:18px;line-height:1.5;color:var(--text-mute);margin-bottom:28px;}
-.case-btn{display:inline-flex;align-items:center;gap:10px;font-size:15px;color:var(--text);border:1px solid var(--line);padding:12px 22px;border-radius:980px;}
-.case-btn:hover{border-color:var(--text-faint);color:var(--text);}
-.case-note{font-size:14px;line-height:1.55;color:var(--text-mute);border:1px dashed var(--line);padding:14px 18px;border-radius:12px;max-width:420px;}
-.case-media{aspect-ratio:1/1;border-radius:18px;overflow:hidden;}
-.case-media img{width:100%;height:100%;object-fit:cover;display:block;}
-/* Обложка без картинки (в стиле Whitfield). Если есть своя картинка — замени блок на <img> */
-.cover{width:100%;height:100%;background:#3B5C4F;color:#fff;display:flex;flex-direction:column;justify-content:space-between;}
-.cover > div:first-child{padding:36px 36px 0;}
-.cover.cover-alt{background:#1F3A2E;}
-.cover-tag{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#BFD4C9;font-weight:600;}
-.cover-title{font-family:var(--font-display);font-size:30px;font-weight:700;line-height:1.1;margin-top:14px;}
-.cover-sub{font-size:14px;color:#DCE7E1;margin-top:12px;line-height:1.5;}
-.cover-foot{background:#E3ECE7;color:#2F4A3E;font-size:12px;font-weight:500;padding:14px 36px;}
-
-/* Certifications */
-.cert-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
-.cert-grid > *{min-width:0;}
-.cert{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:24px;display:flex;flex-direction:column;}
-.cert-badge{width:96px;height:96px;margin-bottom:20px;}
-.cert-badge img{width:100%;height:100%;display:block;}
-.cert-badge.empty{border-radius:16px;background:var(--surface-2);border:1px solid var(--line);display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-weight:700;color:var(--accent);font-size:22px;}
-.cert-badge.logo{padding:6px;}
-.cert-badge.logo img{border-radius:14px;}
-.cert-status{align-self:flex-start;margin-top:auto;font-size:12px;font-weight:600;color:var(--accent);background:var(--accent-bg);padding:5px 12px;border-radius:100px;}
-.cert h3{font-size:16px;font-weight:700;line-height:1.3;margin-bottom:6px;}
-.cert p{font-size:13px;color:var(--text-mute);margin-bottom:16px;}
-.cert a{margin-top:auto;font-size:14px;font-weight:600;color:var(--accent);}
-.cert a:hover{text-decoration:underline;}
-
-/* About */
-.about-grid{display:block;}
-.about-grid > *{min-width:0;}
-.about-copy .section-label{margin-bottom:16px;}
-.photo{aspect-ratio:1/1;width:100%;max-width:220px;background:var(--surface-2);border:1px solid var(--line);border-radius:18px;object-fit:cover;display:block;}
-.about-text{font-size:18px;line-height:1.65;color:var(--text-mute);max-width:720px;}
-.about-text b{color:var(--text);font-weight:600;}
-.tool-chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:24px;}
-.tool-chip{font-size:13px;color:var(--text-mute);background:var(--surface);border:1px solid var(--line);padding:7px 14px;border-radius:100px;white-space:nowrap;}
-
-/* Experience */
-.exp-item{padding:28px 0;border-bottom:1px solid var(--line);}
-.exp-item:last-child{border-bottom:none;}
-.exp-item-head{display:flex;justify-content:space-between;align-items:baseline;gap:24px;margin-bottom:12px;}
-.exp-role{font-family:var(--font-display);font-weight:600;font-size:18px;}
-.exp-co{font-size:14px;color:var(--text-mute);margin-top:2px;}
-.exp-period{font-size:13px;color:var(--text-faint);white-space:nowrap;}
-.hero-contacts{display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:22px;font-size:15px;}
-.hero-contacts a{color:var(--text);border-bottom:1px solid var(--line);padding-bottom:2px;}
-.hero-contacts a:hover{border-color:var(--text-faint);}
-.skill-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
-.skill-grid > *{min-width:0;}
-.skill-group{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:24px;}
-.skill-group h3{font-size:16px;font-weight:700;margin-bottom:14px;}
-.skill-list{list-style:none;margin:0;padding:0;}
-.skill-list li{font-size:15px;color:var(--text-mute);padding:9px 0 9px 22px;border-top:1px solid var(--line);position:relative;}
-.skill-list li:first-child{border-top:0;padding-top:2px;}
-.skill-list li::before{content:'';position:absolute;left:2px;top:50%;width:7px;height:7px;margin-top:-3px;border-radius:50%;background:var(--accent);opacity:.75;}
-.skill-list li:first-child::before{margin-top:-6px;}
-.rec-list{display:grid;gap:16px;}
-.rec{display:block;background:#fff;border:1px solid var(--line);border-radius:18px;padding:20px 24px;transition:border-color .2s ease;}
-.rec:hover{border-color:var(--text-faint);}
-.rec img{width:100%;display:block;}
-.rec-link{display:inline-block;margin-top:18px;font-size:15px;font-weight:600;color:var(--accent);}
-@media (max-width:860px){.skill-grid{grid-template-columns:1fr 1fr;}}
-@media (max-width:560px){.skill-grid{grid-template-columns:1fr 1fr;gap:10px;}
-.skill-group{padding:16px 14px;border-radius:16px;}
-.skill-group h3{font-size:14px;margin-bottom:8px;}
-.skill-list li{font-size:13px;line-height:1.35;padding:5px 0 5px 14px;border-top:0;}
-.skill-list li:first-child{padding-top:5px;}
-.skill-list li::before,.skill-list li:first-child::before{width:5px;height:5px;left:0;top:12px;margin-top:0;}.rec{padding:12px;}}
-.edu{display:flex;align-items:center;gap:18px;background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:20px 24px;}
-.edu-logo{width:56px;height:56px;border-radius:12px;object-fit:contain;flex-shrink:0;background:#fff;}
-.edu-body{flex:1;min-width:0;}
-@media (max-width:760px){.hero-contacts{display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:22px;font-size:15px;}
-.hero-contacts a{color:var(--text);border-bottom:1px solid var(--line);padding-bottom:2px;}
-.hero-contacts a:hover{border-color:var(--text-faint);}
-.skill-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
-.skill-grid > *{min-width:0;}
-.skill-group{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:24px;}
-.skill-group h3{font-size:16px;font-weight:700;margin-bottom:14px;}
-.skill-list{list-style:none;margin:0;padding:0;}
-.skill-list li{font-size:15px;color:var(--text-mute);padding:9px 0 9px 22px;border-top:1px solid var(--line);position:relative;}
-.skill-list li:first-child{border-top:0;padding-top:2px;}
-.skill-list li::before{content:'';position:absolute;left:2px;top:50%;width:7px;height:7px;margin-top:-3px;border-radius:50%;background:var(--accent);opacity:.75;}
-.skill-list li:first-child::before{margin-top:-6px;}
-.rec-list{display:grid;gap:16px;}
-.rec{display:block;background:#fff;border:1px solid var(--line);border-radius:18px;padding:20px 24px;transition:border-color .2s ease;}
-.rec:hover{border-color:var(--text-faint);}
-.rec img{width:100%;display:block;}
-.rec-link{display:inline-block;margin-top:18px;font-size:15px;font-weight:600;color:var(--accent);}
-@media (max-width:860px){.skill-grid{grid-template-columns:1fr 1fr;}}
-@media (max-width:560px){.skill-grid{grid-template-columns:1fr 1fr;gap:10px;}
-.skill-group{padding:16px 14px;border-radius:16px;}
-.skill-group h3{font-size:14px;margin-bottom:8px;}
-.skill-list li{font-size:13px;line-height:1.35;padding:5px 0 5px 14px;border-top:0;}
-.skill-list li:first-child{padding-top:5px;}
-.skill-list li::before,.skill-list li:first-child::before{width:5px;height:5px;left:0;top:12px;margin-top:0;}.rec{padding:12px;}}
-.edu{flex-wrap:wrap;}.edu .exp-period{width:100%;padding-left:74px;margin-top:-8px;}}
-.exp-results{list-style:none;margin:14px 0 0;padding:0;max-width:680px;}
-.exp-results li{position:relative;padding-left:20px;font-size:15px;line-height:1.55;color:var(--text);margin:6px 0;}
-.exp-results li::before{content:'';position:absolute;left:3px;top:.62em;width:6px;height:6px;border-radius:50%;background:var(--accent);}
-.co-link{color:var(--text);border-bottom:1px solid var(--line);}
-.co-link:hover{border-color:var(--text-faint);}
-.exp-desc{font-size:15px;line-height:1.6;color:var(--text-mute);max-width:640px;}
-
-/* Testimonials */
-.testimonial-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
-.testimonial-grid > *{min-width:0;}
-.testimonial-card{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:32px;display:flex;flex-direction:column;}
-.testimonial-quote{font-size:15px;line-height:1.6;color:var(--text-mute);margin-bottom:24px;}
-.testimonial-footer{display:flex;align-items:center;gap:12px;margin-top:auto;}
-.testimonial-avatar{width:40px;height:40px;border-radius:50%;object-fit:cover;flex-shrink:0;background:var(--surface-2);}
-.testimonial-name{font-family:var(--font-display);font-weight:600;font-size:15px;margin-bottom:2px;}
-.verify{display:inline-block;margin-top:18px;font-size:12.5px;white-space:nowrap;font-weight:600;color:var(--accent);}
-.verify:hover{text-decoration:underline;}
-.testimonial-role{font-size:13px;color:var(--text-faint);}
-
-/* Contact */
-.contact{scroll-margin-top:90px;margin-top:var(--gap-block);padding-bottom:60px;}
-.contact h2{font-size:clamp(32px,5vw,52px);font-weight:700;letter-spacing:-0.02em;margin-bottom:40px;line-height:1.1;}
-.contact-links{display:flex;gap:28px;flex-wrap:wrap;}
-.contact-links a{font-size:15px;color:var(--text-mute);border-bottom:1px solid var(--line);padding-bottom:4px;}
-.contact-links a:hover{color:var(--text);border-color:var(--text-faint);}
-.footer{padding:32px 0 48px;font-size:13px;color:var(--text-faint);}
-
-@media (max-width:860px){
-  .svc-grid,.cert-grid{grid-template-columns:repeat(2,1fr);}
-}
-@media (max-width:760px){
-  :root{--gap-block:72px;}
-  .wrap,.nav-inner{padding:0 20px;}
-  .nav-links{display:none;}
-  .nav{position:fixed;top:0;left:auto;right:0;padding:12px 16px;background:transparent;-webkit-backdrop-filter:none;backdrop-filter:none;border:0;pointer-events:none;}
-  .nav.scrolled{border:0;}
-  .nav-inner{padding:0;justify-content:flex-end;}
-  .nav-name{display:none;}
-  .nav-toggle{display:flex;pointer-events:auto;width:48px;height:48px;border-radius:50%;align-items:center;gap:4px;background:rgba(255,255,255,.72);-webkit-backdrop-filter:saturate(180%) blur(16px);backdrop-filter:saturate(180%) blur(16px);border:1px solid rgba(0,0,0,.06);box-shadow:0 6px 20px rgba(20,30,40,.12);}
-  .nav-toggle span{width:18px;height:1.5px;}
-  .nav-mobile{pointer-events:auto;position:absolute;top:70px;right:16px;width:220px;padding:6px 20px;border-radius:18px;background:rgba(255,255,255,.72);-webkit-backdrop-filter:saturate(180%) blur(16px);backdrop-filter:saturate(180%) blur(16px);border:1px solid rgba(0,0,0,.06);box-shadow:0 6px 20px rgba(20,30,40,.12);background:rgba(255,255,255,.92);}
-  .nav-mobile a{color:var(--text);}
-  .nav-mobile a:last-child{border-bottom:0;}
-  .hero{padding:84px 0 0;grid-template-columns:1fr;gap:40px;}
-  .hero-photo{display:none;}
-  .hero-mini{display:block;}
-  .hero-li-m{display:inline-block;margin-top:0;align-self:center;}
-  .hero-sub{font-size:16px;}
-  .case-card{grid-template-columns:1fr;gap:28px;padding:24px;border-radius:20px;}
-  .case-media{aspect-ratio:auto;}
-  .cover{min-height:260px;gap:32px;}
-  .cover > div:first-child{padding:28px 24px 0;}
-  .cover-title{font-size:26px;}
-  .cover-sub br{display:none;}
-  .cover-foot{padding:12px 24px;}
-  .about-grid{grid-template-columns:1fr;gap:24px;}
-  .testimonial-grid{grid-template-columns:1fr;}
-  .exp-item-head{flex-direction:column;gap:4px;align-items:flex-start;}
-}
-@media (max-width:560px){
-  .svc-grid,.cert-grid{grid-template-columns:1fr;}
-}
-.copy-email{cursor:pointer;position:relative;}
-.copy-email .copy-hint{margin-left:8px;font-size:12px;color:var(--text-faint);transition:color .2s ease;}
-.copy-email.copied .copy-hint{color:var(--accent);}
-.lang-switch{display:inline-flex;gap:2px;padding:3px;border:1px solid var(--line);border-radius:980px;background:var(--surface);}
-.lang-switch a{font-size:12px;font-weight:600;letter-spacing:.02em;color:var(--text-faint);padding:5px 11px;border-radius:980px;line-height:1;}
-.lang-switch a:hover{color:var(--text);}
-.lang-switch a.on{background:var(--text);color:#fff;}
-.nav-right{display:flex;align-items:center;gap:12px;}
-@media screen and (max-width:760px){.nav .lang-switch{pointer-events:auto;height:48px;align-items:center;padding:4px;background:rgba(255,255,255,.72);-webkit-backdrop-filter:saturate(180%) blur(16px);backdrop-filter:saturate(180%) blur(16px);border:1px solid rgba(0,0,0,.06);box-shadow:0 6px 20px rgba(20,30,40,.12);}.nav .lang-switch button{padding:10px 12px;font-size:13px;}}
-.lang-switch button{font:inherit;font-size:12px;font-weight:600;letter-spacing:.02em;color:var(--text-faint);background:none;border:0;padding:5px 11px;border-radius:980px;line-height:1;cursor:pointer;}
-.lang-switch button:hover{color:var(--text);}
-.lang-switch button.on{background:var(--text);color:#fff;}
 </style>
-</head>
-<body>
+</head><body>
+<style>.tabs{display:flex;gap:4px;max-width:1240px;margin:0 auto 14px;padding:4px;border-radius:10px;background:rgba(127,127,140,.14);width:fit-content;font-family:"IBM Plex Sans","Segoe UI",system-ui,sans-serif}.tabs a{padding:7px 14px;border-radius:7px;font-size:14px;font-weight:500;color:inherit;opacity:.7;text-decoration:none}.tabs a:hover{opacity:1}.tabs a[aria-current]{opacity:1;background:rgba(127,127,140,.28)}</style><nav class="tabs"><a href="index.html" aria-current="page">Календарь</a><a href="globe.html">Глобус</a><a href="path.html">Мой путь</a></nav>
+<div class="wrap">
+<header><h1>Календарь по карте</h1><p class="sub">натальная карта 6.04.1992, 6:00, Тараз · время Алматы · листайте месяцы стрелками или свайпом</p></header>
+<div class="legend"><span><i style="background:var(--good)"></i>лёгкий день</span><span><i style="background:var(--line)"></i>обычный</span><span><i style="background:var(--bad)"></i>напряжённый</span><span>✓ делать · ✕ не делать</span></div>
+<div id="cal"></div>
+<p class="foot">Записи «Реальность» хранятся в этом браузере и не зависят от файлов прогноза: при добавлении новых месяцев и обновлении сайта они остаются. Чтобы не потерять их при очистке браузера или перенести на другое устройство, раз в месяц скачивайте Excel — его же можно загрузить обратно. <button id="all">Скачать копию всех записей</button> · <label style="color:var(--accent);text-decoration:underline;cursor:pointer">загрузить копию<input type="file" id="allimp" accept=".json" hidden></label></p>
+<p class="foot">Быстрые планеты задают настроение дня, а не крупные события. Это толкование, а не доказанное знание.</p>
+</div>
+<dialog id="dlg"><form method="dialog" id="frm"><div id="dh"></div><label for="ta" style="font-weight:600;display:block;margin:10px 0 6px">Что было на самом деле</label><textarea id="ta" placeholder="События дня, настроение, ответы на письма…"></textarea><div class="row"><button value="cancel">Отмена</button><button value="save" class="primary">Сохранить</button></div></form></dialog>
 
-<header class="nav" id="siteNav">
-  <div class="nav-inner">
-    <span class="nav-name" data-ru="Анастасия Волкова">Anastasia Volkova</span>
-    <nav class="nav-links">
-      <a href="#services" data-ru="Услуги">Services</a>
-      <a href="#work" data-ru="Кейсы">Cases</a>
-      <a href="#certifications" data-ru="Сертификаты">Certifications</a>
-      <a href="#skills" data-ru="Навыки">Skills</a>
-      <a href="#contact" data-ru="Контакты">Contact</a>
-      <a href="cv.html">CV</a>
-    </nav>
-    <div class="nav-right">
-      <div class="lang-switch" role="group" aria-label="Language"><button type="button" data-lang="en" class="on">EN</button><button type="button" data-lang="ru">RU</button></div>
-      <button class="nav-toggle" id="navToggle" aria-label="Open menu" data-ru-label="Открыть меню" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-  </div>
-  <nav class="nav-mobile" id="navMobile">
-    <a href="#services" data-ru="Услуги">Services</a>
-    <a href="#work" data-ru="Кейсы">Cases</a>
-    <a href="#certifications" data-ru="Сертификаты">Certifications</a>
-    <a href="#skills" data-ru="Навыки">Skills</a>
-    <a href="#contact" data-ru="Контакты">Contact</a>
-      <a href="cv.html">CV</a>
-  </nav>
-</header>
-
-<main class="wrap">
-
-  <!-- ============ HERO ============ -->
-  <section class="hero">
-    <div class="hero-copy">
-      <span class="status-pill"><span class="status-dot"></span>Open to work · Remote · US hours</span>
-      <h1>Bookkeeper for<br class="br-d"> <em>US businesses</em></h1>
-      <div class="hero-intro">
-        <img class="hero-mini" src="assets/sia-photo.webp" alt="Anastasia Volkova">
-        <p class="hero-sub">I'm Anastasia. I keep books on accrual and cash basis, with expertise in payroll, inventory and reporting.</p>
-      </div>
-      <div class="hero-cta">
-        <a class="btn btn-primary" href="#contact">Get in touch</a>
-        <a class="btn btn-ghost" href="#work">See cases →</a>
-        <a class="hero-li hero-li-m" href="https://www.linkedin.com/in/siavolkova" target="_blank" rel="noopener">LinkedIn profile ↗</a>
-      </div>
-      <div class="hero-proof">
-        <img src="assets/qbo-level-1.webp" alt="QuickBooks Level 1">
-        <img src="assets/qbo-level-2.webp" alt="QuickBooks Level 2">
-        <span><b>QuickBooks Online Certified</b><br>Intuit ProAdvisor · Level 1 &amp; 2</span>
-      </div>
-    </div>
-    <div class="hero-photo">
-      <img src="assets/sia-photo.webp" alt="Anastasia Volkova">
-      <div class="hero-tag"><b>Anastasia Volkova</b>Bookkeeper</div>
-      <a class="hero-li" href="https://www.linkedin.com/in/siavolkova" target="_blank" rel="noopener">LinkedIn profile ↗</a>
-    </div>
-  </section>
-
-  <!-- ============ УСЛУГИ ============ -->
-  <section class="section" id="services">
-    <p class="section-label reveal">Services</p>
-    <h2 class="section-title reveal">How I can help your company</h2>
-    <div class="svc-grid">
-      <!-- УСЛУГА: чтобы добавить, скопируй блок <div class="svc">…</div> -->
-      <div class="svc reveal"><div class="svc-num">01</div><h3>Monthly bookkeeping</h3><p>Accrual or cash basis. Recording and categorizing transactions, journal entries, chart of accounts, loans, depreciation, inventory, payroll, etc. Work with QuickBooks, Xero, Zoho and other software.</p></div>
-      <div class="svc reveal"><div class="svc-num">02</div><h3>Bank, AR/AP reconciliation</h3><p>Bank, accounts receivable and accounts payable matched every month, with discrepancies and overdue balances found.</p></div>
-      <div class="svc reveal"><div class="svc-num">03</div><h3>Reporting</h3><p>Reporting for management, CPAs and tax authorities.</p></div>
-      <div class="svc reveal"><div class="svc-num">04</div><h3>Tax accounting</h3><p>Books prepared for tax purposes, taxation forecast and communication with your CPA.</p></div>
-      <div class="svc reveal"><div class="svc-num">05</div><h3>Payroll accounting</h3><p>W-2 and 1099 payroll, 940/941 forms, W-9, W-4 and I-9 forms. Work with QuickBooks Payroll, ADP, Gusto, Deel, etc. Filing 1099 forms.</p></div>
-      <div class="svc reveal"><div class="svc-num">06</div><h3>Inventory</h3><p>Inventory accounting, FIFO, LIFO, inventory reconciliation.</p></div>
-      <div class="svc reveal"><div class="svc-num">07</div><h3>Sales tax bookkeeping</h3><p>Sales tax returns, taxable sales calculations, sales tax reconciliation.</p></div>
-    </div>
-  </section>
-
-  <!-- ============ КЕЙСЫ ============ -->
-  <section class="section" id="work" style="margin-bottom:0;">
-    <p class="section-label reveal">Cases</p>
-  </section>
-
-  <!-- КЕЙС: чтобы добавить, скопируй весь <section class="case case-tight">…</section> -->
-  <section class="case">
-    <div class="case-card">
-      <div class="case-copy reveal">
-        <div class="case-tags"><span>QuickBooks Online</span><span>Bank reconciliation</span><span>A/R &amp; A/P</span><span>Sales tax</span><span>Credit memos &amp; refunds</span><span>Financial statements</span></div>
-        <h3>Harlow Tax &amp; Advisory LLC</h3>
-        <p class="case-metric-inline">Six months of books for a Dallas service company in QuickBooks Online. I recorded January–June, reconciled the bank to a 0.00 difference and prepared the statements and the Texas sales tax liability.</p>
-        <a href="harlow-case.html" class="case-btn"><span>View case</span> <span>→</span></a>
-      </div>
-      <div class="case-media">
-        <div class="cover">
-          <div>
-            <div class="cover-tag">Bookkeeping case</div>
-            <div class="cover-title">Harlow Tax<br>&amp; Advisory LLC</div>
-            <div class="cover-sub">Six months from the bank feed <br>to financial statements</div>
-          </div>
-          <div class="cover-foot">QuickBooks Online</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="case case-tight">
-    <div class="case-card">
-      <div class="case-copy reveal">
-        <div class="case-tags"><span>Bank reconciliation</span><span>Payroll</span><span>Inventory (FIFO)</span><span>Loans</span><span>Financial statements</span></div>
-        <h3>Whitfield Interiors &amp; Doors LLC</h3>
-        <p class="case-metric-inline">The company sells and installs doors and had kept no books. The task was to prepare the books for Q1 for a sales tax return in one week. The client wanted to save on software, so the books were kept in Google Sheets.</p>
-        <a href="whitfield-case.html" class="case-btn"><span>View case</span> <span>→</span></a>
-      </div>
-      <div class="case-media">
-        <div class="cover">
-          <div>
-            <div class="cover-tag">Bookkeeping case</div>
-            <div class="cover-title">Whitfield<br>Interiors &amp; Doors LLC</div>
-            <div class="cover-sub">Q1 closed from raw documents <br>to financial statements</div>
-          </div>
-          <div class="cover-foot">Google Sheets</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ СЕРТИФИКАТЫ ============ -->
-  <section class="section" id="certifications">
-    <p class="section-label reveal">Certifications</p>
-    <div class="cert-grid">
-      <!-- СЕРТИФИКАТ: скопируй блок <div class="cert">…</div> -->
-      <div class="cert reveal">
-        <div class="cert-badge"><img src="assets/qbo-level-2.webp" alt="QuickBooks Level 2 badge"></div>
-        <h3>Intuit QuickBooks Certification Level 2</h3>
-        <p>Intuit ProAdvisor · Oct 2026</p>
-        <a href="https://www.credly.com/badges/3b1962f8-57c2-4432-a786-ff900c0e7fef" target="_blank" rel="noopener">Verify on Credly →</a>
-      </div>
-      <div class="cert reveal">
-        <div class="cert-badge"><img src="assets/qbo-level-1.webp" alt="QuickBooks Level 1 badge"></div>
-        <h3>Intuit QuickBooks Certification Level 1</h3>
-        <p>Intuit ProAdvisor · Oct 2026</p>
-        <a href="https://www.credly.com/badges/707a9143-3d06-423c-b488-7f5261569943" target="_blank" rel="noopener">Verify on Credly →</a>
-      </div>
-      <div class="cert reveal">
-        <div class="cert-badge logo"><img src="assets/accountingschool-logo.webp" alt="AccountingSchool.online logo"></div>
-        <h3>Tax Accounting</h3>
-        <p>AccountingSchool.online · 2026</p>
-        <span class="cert-status">In progress</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ НАВЫКИ ============ -->
-  <section class="section" id="skills">
-    <p class="section-label reveal">Skills</p>
-    <div class="skill-grid">
-      <div class="skill-group reveal"><h3>Accounting</h3><ul class="skill-list"><li>Accrual and cash basis</li><li>US GAAP</li><li>Journal entries</li><li>Chart of accounts</li><li>Month-end close</li><li>Adjusting entries</li></ul></div>
-      <div class="skill-group reveal"><h3>Reconciliation</h3><ul class="skill-list"><li>Bank</li><li>Credit card</li><li>Accounts receivable</li><li>Accounts payable</li></ul></div>
-      <div class="skill-group reveal"><h3>Payroll</h3><ul class="skill-list"><li>W-2 payroll</li><li>1099 filing</li><li>940/941 forms</li><li>W-4, I-9, W-9</li><li>Payroll accruals</li><li>Software: ADP, Gusto, QB Payroll</li></ul></div>
-      <div class="skill-group reveal"><h3>Inventory and assets</h3><ul class="skill-list"><li>FIFO inventory</li><li>COGS</li><li>Depreciation</li><li>Loan amortization</li></ul></div>
-      <div class="skill-group reveal"><h3>Reporting and tax</h3><ul class="skill-list"><li>Income Statement</li><li>Balance Sheet</li><li>Trial Balance</li><li>Sales tax</li><li>Reports for CPAs</li></ul></div>
-      <div class="skill-group reveal"><h3>Software</h3><ul class="skill-list"><li>QuickBooks</li><li>Excel / Google Sheets</li><li>Xero</li><li>Sage</li><li>Wave</li></ul></div>
-    </div>
-  </section>
-
-  <!-- ============ ОПЫТ ============ -->
-  <section class="section">
-    <p class="section-label reveal">Experience</p>
-    <div class="exp-list">
-      <div class="exp-item reveal">
-        <div class="exp-item-head">
-          <div><div class="exp-role">Bookkeeper</div><div class="exp-co">Self-employed · Remote</div></div>
-          <div class="exp-period">2026 — Present</div>
-        </div>
-        <p class="exp-desc">Bookkeeping projects across the full cycle: a quarter of books prepared from scratch for a sales tax return in Google Sheets; now completing a QuickBooks Online project with payroll, 1099 filing and a pre-tax review.</p>
-        <ul class="exp-results"><li>Closed a full quarter of books in 1 week, ready for the sales tax return.</li><li>Reconciled 77 bank transactions and 70 source documents: the Balance Sheet balanced to the cent.</li><li>Identified expenses missing receipts, an unused vendor credit and an underpaid invoice.</li><li>Split loan payments into interest and principal.</li><li>Accrued payroll at every month-end.</li><li>Calculated COGS using FIFO.</li></ul>
-      </div>
-      <div class="exp-item reveal">
-        <div class="exp-item-head">
-          <div><div class="exp-role">Digital Assets Specialist</div><div class="exp-co"><a class="co-link" href="https://www.uula.com/kw" target="_blank" rel="noopener">UULA ↗</a> · Remote</div></div>
-          <div class="exp-period">2022 — 2025</div>
-        </div>
-        <p class="exp-desc">Managed end-to-end production workflows in the core product team, working to strict specifications and deadlines; automated key parts of the team's daily routine.</p>
-        <ul class="exp-results"><li>Cut time to market by 20% by building a template structure for recurring launches.</li><li>Improved launch effectiveness by 10% through structured A/B testing and analysis of results.</li><li>Worked with research and engineering teams to turn test data into decisions.</li></ul>
-      </div>
-      <div class="exp-item reveal">
-        <div class="exp-item-head">
-          <div><div class="exp-role">Digital Assets Specialist</div><div class="exp-co"><a class="co-link" href="https://dataduck.com/" target="_blank" rel="noopener">Dataduck ↗</a> · Remote</div></div>
-          <div class="exp-period">2019 — 2021</div>
-        </div>
-        <p class="exp-desc">Produced materials for a global FinTech trading platform, gaining a working understanding of digital financial services and user flows.</p>
-        <ul class="exp-results"><li>Cut production costs by 40% by automating a recurring process with JavaScript templates.</li><li>Scaled one workflow to 10 languages without redoing the work, reaching new markets 50% faster.</li><li>Reduced repeated support questions by 18–25% by explaining financial tools to users step by step.</li></ul>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ ОТЗЫВЫ ============ -->
-  <section class="section" id="testimonials">
-    <p class="section-label reveal">Recommendations</p>
-    <div class="testimonial-grid">
-      <div class="testimonial-card reveal">
-        <p class="testimonial-quote">“I’ve worked alongside Anastasia on bookkeeping projects. She is careful with details, checks entries against source documents and meets her deadlines. Easy to work with and clear in how she explains her work.”</p>
-        <div class="testimonial-footer">
-          <img class="testimonial-avatar" src="assets/testimonial-aliya.webp" alt="">
-          <div><p class="testimonial-name">Aliya Zholdassova</p><p class="testimonial-role">Bookkeeper</p></div>
-        </div>
-        <a class="verify" href="https://www.linkedin.com/in/siavolkova/details/recommendations/" target="_blank" rel="noopener">October 24, 2026 · Verify on LinkedIn ↗</a>
-      </div>
-      <div class="testimonial-card reveal">
-        <p class="testimonial-quote">“I truly appreciated Anastasia's ability to bring consistent and high-quality results even under extreme timing- and load pressure.”</p>
-        <div class="testimonial-footer">
-          <img class="testimonial-avatar" src="assets/testimonial-german.webp" alt="">
-          <div><p class="testimonial-name">German Shalov</p><p class="testimonial-role">Sr Product Design Manager, managed Anastasia directly</p></div>
-        </div>
-        <a class="verify" href="https://www.linkedin.com/in/siavolkova/details/recommendations/" target="_blank" rel="noopener">July 10, 2024 · Verify on LinkedIn ↗</a>
-      </div>
-      <div class="testimonial-card reveal">
-        <p class="testimonial-quote">“I highly recommend Anastasia for her exceptional professionalism and timely delivery of projects.”</p>
-        <div class="testimonial-footer">
-          <img class="testimonial-avatar" src="assets/testimonial-ahmad.webp" alt="">
-          <div><p class="testimonial-name">Ahmad Al-Karmi</p><p class="testimonial-role">Senior Product Manager at Al Jazeera</p></div>
-        </div>
-        <a class="verify" href="https://www.linkedin.com/in/siavolkova/details/recommendations/" target="_blank" rel="noopener">July 10, 2024 · Verify on LinkedIn ↗</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ ОБРАЗОВАНИЕ ============ -->
-  <section class="section">
-    <p class="section-label reveal">Education</p>
-    <div class="edu reveal">
-      <img class="edu-logo" src="data:image/webp;base64,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" alt="Saint Petersburg State University of Finance and Economics logo">
-      <div class="edu-body">
-        <div class="exp-role">Saint Petersburg State University of Finance and Economics</div>
-        <div class="exp-co">Bachelor's degree</div>
-      </div>
-      <div class="exp-period">2010 — 2014</div>
-    </div>
-  </section>
-
-  <!-- ============ КОНТАКТЫ ============ -->
-  <section class="contact" id="contact">
-    <h2 class="reveal">Let's get your<br>books in order.</h2>
-    <div class="contact-links reveal">
-      <a href="#" class="copy-email" data-email="volkova.workpost@gmail.com" title="Click to copy"><span class="copy-text">volkova.workpost@gmail.com</span><span class="copy-hint">Copy</span></a>
-      <a href="#" class="copy-email" data-email="+13252389424" title="Click to copy"><span class="copy-text">+1 (325) 238-9424</span><span class="copy-hint">Copy</span></a>
-      <a href="https://www.linkedin.com/in/siavolkova" target="_blank" rel="noopener">LinkedIn ↗</a>
-      <a href="cv.html">CV</a>
-    </div>
-  </section>
-
-  <div class="footer">© 2026</div>
-
-</main>
-
-<template id="main-ru">
-
-  <!-- ============ HERO ============ -->
-  <section class="hero">
-    <div class="hero-copy">
-      <span class="status-pill"><span class="status-dot"></span>Открыта к работе · Удалённо · По времени США</span>
-      <h1>Бухгалтер для<br class="br-d"> <em>бизнеса в США</em></h1>
-      <div class="hero-intro">
-        <img class="hero-mini" src="assets/sia-photo.webp" alt="Анастасия Волкова">
-        <p class="hero-sub">Я Анастасия. Веду учёт по методу начисления и кассовому методу (accrual и cash basis), специализируюсь на зарплате, товарных запасах и отчётности.</p>
-      </div>
-      <div class="hero-cta">
-        <a class="btn btn-primary" href="#contact">Связаться</a>
-        <a class="btn btn-ghost" href="#work">Смотреть кейсы →</a>
-        <a class="hero-li hero-li-m" href="https://www.linkedin.com/in/siavolkova" target="_blank" rel="noopener">Профиль в LinkedIn ↗</a>
-      </div>
-      <div class="hero-proof">
-        <img src="assets/qbo-level-1.webp" alt="QuickBooks Level 1">
-        <img src="assets/qbo-level-2.webp" alt="QuickBooks Level 2">
-        <span><b>Сертифицирована по QuickBooks Online</b><br>Intuit ProAdvisor · Level 1 и 2</span>
-      </div>
-    </div>
-    <div class="hero-photo">
-      <img src="assets/sia-photo.webp" alt="Анастасия Волкова">
-      <div class="hero-tag"><b>Анастасия Волкова</b>Бухгалтер</div>
-      <a class="hero-li" href="https://www.linkedin.com/in/siavolkova" target="_blank" rel="noopener">Профиль в LinkedIn ↗</a>
-    </div>
-  </section>
-
-  <!-- ============ УСЛУГИ ============ -->
-  <section class="section" id="services">
-    <p class="section-label reveal">Услуги</p>
-    <h2 class="section-title reveal">Чем я могу помочь вашей компании</h2>
-    <div class="svc-grid">
-      <!-- УСЛУГА: чтобы добавить, скопируй блок <div class="svc">…</div> -->
-      <div class="svc reveal"><div class="svc-num">01</div><h3>Ежемесячный бухучёт</h3><p>Accrual или cash basis. Запись и категоризация операций, проводки, план счетов, кредиты, амортизация, товарные запасы, зарплата и другое. Работаю в QuickBooks, Xero, Zoho и других программах.</p></div>
-      <div class="svc reveal"><div class="svc-num">02</div><h3>Сверка банка, AR и AP</h3><p>Ежемесячная сверка банка, дебиторской и кредиторской задолженности, поиск расхождений и просроченных долгов.</p></div>
-      <div class="svc reveal"><div class="svc-num">03</div><h3>Отчётность</h3><p>Отчёты для руководства, CPA и налоговых органов.</p></div>
-      <div class="svc reveal"><div class="svc-num">04</div><h3>Налоговый учёт</h3><p>Подготовка учёта для налоговых целей, прогноз налогов, общение с вашим CPA.</p></div>
-      <div class="svc reveal"><div class="svc-num">05</div><h3>Учёт зарплаты</h3><p>Зарплата по W-2 и 1099, формы 940/941, W-9, W-4 и I-9. Работаю с QuickBooks Payroll, ADP, Gusto, Deel и другими. Подача форм 1099.</p></div>
-      <div class="svc reveal"><div class="svc-num">06</div><h3>Товарные запасы</h3><p>Учёт запасов, FIFO, LIFO, сверка остатков.</p></div>
-      <div class="svc reveal"><div class="svc-num">07</div><h3>Учёт налога с продаж</h3><p>Декларации по sales tax, расчёт облагаемых продаж, сверка sales tax.</p></div>
-    </div>
-  </section>
-
-  <!-- ============ КЕЙСЫ ============ -->
-  <section class="section" id="work" style="margin-bottom:0;">
-    <p class="section-label reveal">Кейсы</p>
-  </section>
-
-  <!-- КЕЙС: чтобы добавить, скопируй весь <section class="case case-tight">…</section> -->
-  <section class="case">
-    <div class="case-card">
-      <div class="case-copy reveal">
-        <div class="case-tags"><span>QuickBooks Online</span><span>Сверка банка</span><span>A/R и A/P</span><span>Налог с продаж</span><span>Кредит-ноты и возвраты</span><span>Финансовая отчётность</span></div>
-        <h3>Harlow Tax &amp; Advisory LLC</h3>
-        <p class="case-metric-inline">Полгода учёта сервисной компании из Далласа в QuickBooks Online. Я внесла январь–июнь, сверила банк до нулевого расхождения и подготовила отчётность и налог с продаж к уплате в Техасе.</p>
-        <a href="harlow-case.html" class="case-btn"><span>Смотреть кейс</span> <span>→</span></a>
-      </div>
-      <div class="case-media">
-        <div class="cover">
-          <div>
-            <div class="cover-tag">Бухгалтерский кейс</div>
-            <div class="cover-title">Harlow Tax<br>&amp; Advisory LLC</div>
-            <div class="cover-sub">Полгода от банковской ленты <br>до финансовой отчётности</div>
-          </div>
-          <div class="cover-foot">QuickBooks Online</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="case case-tight">
-    <div class="case-card">
-      <div class="case-copy reveal">
-        <div class="case-tags"><span>Сверка банка</span><span>Зарплата</span><span>Запасы (FIFO)</span><span>Кредиты</span><span>Финансовая отчётность</span></div>
-        <h3>Whitfield Interiors &amp; Doors LLC</h3>
-        <p class="case-metric-inline">Компания продаёт и устанавливает двери, учёт не вёлся. Задача: подготовить учёт за первый квартал для декларации по налогу с продаж за одну неделю. Клиент хотел сэкономить на софте, поэтому учёт вели в Google Sheets.</p>
-        <a href="whitfield-case.html" class="case-btn"><span>Смотреть кейс</span> <span>→</span></a>
-      </div>
-      <div class="case-media">
-        <div class="cover">
-          <div>
-            <div class="cover-tag">Бухгалтерский кейс</div>
-            <div class="cover-title">Whitfield<br>Interiors &amp; Doors LLC</div>
-            <div class="cover-sub">Квартал закрыт от первичных документов <br>до финансовой отчётности</div>
-          </div>
-          <div class="cover-foot">Google Sheets</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ СЕРТИФИКАТЫ ============ -->
-  <section class="section" id="certifications">
-    <p class="section-label reveal">Сертификаты</p>
-    <div class="cert-grid">
-      <!-- СЕРТИФИКАТ: скопируй блок <div class="cert">…</div> -->
-      <div class="cert reveal">
-        <div class="cert-badge"><img src="assets/qbo-level-2.webp" alt="QuickBooks Level 2 badge"></div>
-        <h3>Intuit QuickBooks Certification Level 2</h3>
-        <p>Intuit ProAdvisor · октябрь 2026</p>
-        <a href="https://www.credly.com/badges/3b1962f8-57c2-4432-a786-ff900c0e7fef" target="_blank" rel="noopener">Проверить на Credly →</a>
-      </div>
-      <div class="cert reveal">
-        <div class="cert-badge"><img src="assets/qbo-level-1.webp" alt="QuickBooks Level 1 badge"></div>
-        <h3>Intuit QuickBooks Certification Level 1</h3>
-        <p>Intuit ProAdvisor · октябрь 2026</p>
-        <a href="https://www.credly.com/badges/707a9143-3d06-423c-b488-7f5261569943" target="_blank" rel="noopener">Проверить на Credly →</a>
-      </div>
-      <div class="cert reveal">
-        <div class="cert-badge logo"><img src="assets/accountingschool-logo.webp" alt="AccountingSchool.online logo"></div>
-        <h3>Налоговый учёт (Tax Accounting)</h3>
-        <p>AccountingSchool.online · 2026</p>
-        <span class="cert-status">В процессе</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ НАВЫКИ ============ -->
-  <section class="section" id="skills">
-    <p class="section-label reveal">Навыки</p>
-    <div class="skill-grid">
-      <div class="skill-group reveal"><h3>Бухучёт</h3><ul class="skill-list"><li>Accrual и cash basis</li><li>US GAAP</li><li>Проводки</li><li>План счетов</li><li>Закрытие месяца</li><li>Корректирующие проводки</li></ul></div>
-      <div class="skill-group reveal"><h3>Сверки</h3><ul class="skill-list"><li>Банк</li><li>Кредитные карты</li><li>Дебиторка (AR)</li><li>Кредиторка (AP)</li></ul></div>
-      <div class="skill-group reveal"><h3>Зарплата</h3><ul class="skill-list"><li>Зарплата по W-2</li><li>Подача 1099</li><li>Формы 940/941</li><li>W-4, I-9, W-9</li><li>Начисления по зарплате</li><li>Программы: ADP, Gusto, QB Payroll</li></ul></div>
-      <div class="skill-group reveal"><h3>Запасы и активы</h3><ul class="skill-list"><li>Запасы по FIFO</li><li>COGS</li><li>Амортизация</li><li>Графики по кредитам</li></ul></div>
-      <div class="skill-group reveal"><h3>Отчётность и налоги</h3><ul class="skill-list"><li>Income Statement</li><li>Balance Sheet</li><li>Trial Balance</li><li>Налог с продаж</li><li>Отчёты для CPA</li></ul></div>
-      <div class="skill-group reveal"><h3>Программы</h3><ul class="skill-list"><li>QuickBooks</li><li>Excel / Google Sheets</li><li>Xero</li><li>Sage</li><li>Wave</li></ul></div>
-    </div>
-  </section>
-
-  <!-- ============ ОПЫТ ============ -->
-  <section class="section">
-    <p class="section-label reveal">Опыт</p>
-    <div class="exp-list">
-      <div class="exp-item reveal">
-        <div class="exp-item-head">
-          <div><div class="exp-role">Бухгалтер</div><div class="exp-co">Самозанятость · Удалённо</div></div>
-          <div class="exp-period">2026 — сейчас</div>
-        </div>
-        <p class="exp-desc">Проекты по полному циклу учёта: квартал учёта с нуля для декларации по налогу с продаж в Google Sheets; сейчас заканчиваю проект в QuickBooks Online с зарплатой, подачей 1099 и проверкой перед налоговой декларацией.</p>
-        <ul class="exp-results"><li>Закрыла квартал учёта за 1 неделю, учёт готов к декларации по sales tax.</li><li>Сверила 77 банковских операций и 70 первичных документов: баланс сошёлся до цента.</li><li>Выявила расходы без чеков, неиспользованную кредит-ноту поставщика и недоплату по инвойсу.</li><li>Разделила платежи по кредитам на проценты и тело.</li><li>Начисляла зарплату на конец каждого месяца.</li><li>Рассчитала себестоимость (COGS) по FIFO.</li></ul>
-      </div>
-      <div class="exp-item reveal">
-        <div class="exp-item-head">
-          <div><div class="exp-role">Digital Assets Specialist</div><div class="exp-co"><a class="co-link" href="https://www.uula.com/kw" target="_blank" rel="noopener">UULA ↗</a> · Удалённо</div></div>
-          <div class="exp-period">2022 — 2025</div>
-        </div>
-        <p class="exp-desc">Вела производственные процессы от начала до конца в основной продуктовой команде, работала по строгим спецификациям и срокам; автоматизировала ключевые части ежедневной рутины команды.</p>
-        <ul class="exp-results"><li>Сократила time to market на 20% за счёт шаблонной структуры для регулярных запусков.</li><li>Повысила эффективность запусков на 10% через A/B-тестирование и анализ результатов.</li><li>Работала с ресёрчем и разработкой, превращая данные тестов в решения.</li></ul>
-      </div>
-      <div class="exp-item reveal">
-        <div class="exp-item-head">
-          <div><div class="exp-role">Digital Assets Specialist</div><div class="exp-co"><a class="co-link" href="https://dataduck.com/" target="_blank" rel="noopener">Dataduck ↗</a> · Удалённо</div></div>
-          <div class="exp-period">2019 — 2021</div>
-        </div>
-        <p class="exp-desc">Готовила материалы для международной финтех-платформы для трейдинга, разобралась в устройстве цифровых финансовых сервисов.</p>
-        <ul class="exp-results"><li>Снизила производственные затраты на 40%, автоматизировав повторяющийся процесс через шаблоны на JavaScript.</li><li>Масштабировала один процесс на 10 языков без переделки работы, выход на новые рынки стал на 50% быстрее.</li><li>Сократила повторяющиеся вопросы в поддержку на 18–25%, пошагово объясняя пользователям, как работают финансовые инструменты.</li></ul>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ ОТЗЫВЫ ============ -->
-  <section class="section" id="testimonials">
-    <p class="section-label reveal">Рекомендации</p>
-    <div class="testimonial-grid">
-      <div class="testimonial-card reveal">
-        <p class="testimonial-quote">“I’ve worked alongside Anastasia on bookkeeping projects. She is careful with details, checks entries against source documents and meets her deadlines. Easy to work with and clear in how she explains her work.”</p>
-        <div class="testimonial-footer">
-          <img class="testimonial-avatar" src="assets/testimonial-aliya.webp" alt="">
-          <div><p class="testimonial-name">Aliya Zholdassova</p><p class="testimonial-role">Бухгалтер</p></div>
-        </div>
-        <a class="verify" href="https://www.linkedin.com/in/siavolkova/details/recommendations/" target="_blank" rel="noopener">24 октября 2026 · Оригинал в LinkedIn ↗</a>
-      </div>
-      <div class="testimonial-card reveal">
-        <p class="testimonial-quote">“I truly appreciated Anastasia's ability to bring consistent and high-quality results even under extreme timing- and load pressure.”</p>
-        <div class="testimonial-footer">
-          <img class="testimonial-avatar" src="assets/testimonial-german.webp" alt="">
-          <div><p class="testimonial-name">German Shalov</p><p class="testimonial-role">Sr Product Design Manager, мой непосредственный руководитель</p></div>
-        </div>
-        <a class="verify" href="https://www.linkedin.com/in/siavolkova/details/recommendations/" target="_blank" rel="noopener">10 июля 2024 · Оригинал в LinkedIn ↗</a>
-      </div>
-      <div class="testimonial-card reveal">
-        <p class="testimonial-quote">“I highly recommend Anastasia for her exceptional professionalism and timely delivery of projects.”</p>
-        <div class="testimonial-footer">
-          <img class="testimonial-avatar" src="assets/testimonial-ahmad.webp" alt="">
-          <div><p class="testimonial-name">Ahmad Al-Karmi</p><p class="testimonial-role">Senior Product Manager в Al Jazeera</p></div>
-        </div>
-        <a class="verify" href="https://www.linkedin.com/in/siavolkova/details/recommendations/" target="_blank" rel="noopener">10 июля 2024 · Оригинал в LinkedIn ↗</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ ОБРАЗОВАНИЕ ============ -->
-  <section class="section">
-    <p class="section-label reveal">Образование</p>
-    <div class="edu reveal">
-      <img class="edu-logo" src="data:image/webp;base64,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" alt="Saint Petersburg State University of Finance and Economics logo">
-      <div class="edu-body">
-        <div class="exp-role">Санкт-Петербургский государственный университет экономики и финансов</div>
-        <div class="exp-co">Бакалавриат</div>
-      </div>
-      <div class="exp-period">2010 — 2014</div>
-    </div>
-  </section>
-
-  <!-- ============ КОНТАКТЫ ============ -->
-  <section class="contact" id="contact">
-    <h2 class="reveal">Наведём порядок<br>в вашем учёте.</h2>
-    <div class="contact-links reveal">
-      <a href="#" class="copy-email" data-email="volkova.workpost@gmail.com" title="Нажмите, чтобы скопировать"><span class="copy-text">volkova.workpost@gmail.com</span><span class="copy-hint">Копировать</span></a>
-      <a href="#" class="copy-email" data-email="+13252389424" title="Нажмите, чтобы скопировать"><span class="copy-text">+1 (325) 238-9424</span><span class="copy-hint">Копировать</span></a>
-      <a href="https://www.linkedin.com/in/siavolkova" target="_blank" rel="noopener">LinkedIn ↗</a>
-      <a href="cv.html">CV (англ.)</a>
-    </div>
-  </section>
-
-  <div class="footer">© 2026</div>
-
-</template>
-
-
+<script>window.MONTHS=[];</script>
+<!-- Новый месяц: положите файл в папку months и добавьте строку ниже -->
+<script src="months/2026-10.js"></script>
+<script src="months/2026-11.js"></script>
+<script src="months/2026-12.js"></script>
+<script src="months/2027-01.js"></script>
+<script src="months/2027-02.js"></script>
+<script src="months/2027-03.js"></script>
+<script src="months/2027-04.js"></script>
+<script src="months/2027-05.js"></script>
+<script src="months/2027-06.js"></script>
+<script src="months/2027-07.js"></script>
+<script src="months/2027-08.js"></script>
+<script src="months/2027-09.js"></script>
+<script src="months/2027-10.js"></script>
+<script src="months/2027-11.js"></script>
+<script src="months/2027-12.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
 <script>
-const navToggle = document.getElementById('navToggle');
-const navMobile = document.getElementById('navMobile');
-navToggle.addEventListener('click', () => {
-  const isOpen = navMobile.classList.toggle('open');
-  navToggle.setAttribute('aria-expanded', String(isOpen));
+const KEY="natal-cal-notes-v1";
+let NOTES={};try{NOTES=JSON.parse(localStorage.getItem(KEY)||"{}")}catch(e){}
+function persist(){try{localStorage.setItem(KEY,JSON.stringify(NOTES));return true}catch(e){alert("Браузер не дал сохранить. Скачайте копию записей.");return false}}
+const WD=["Воскресенье","Понедельник","Вторник","Среда","Четверг","Пятница","Суббота"],WDM=["Понедельник","Вторник","Среда","Четверг","Пятница","Суббота","Воскресенье"],MG=["января","февраля","марта","апреля","мая","июня","июля","августа","сентября","октября","ноября","декабря"];
+const esc=s=>String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const today=new Date(Date.now()+5*3600e3).toISOString().slice(0,10);
+const BY={};MONTHS.forEach(m=>m.days.forEach(x=>BY[x.d]=x));
+function cell(k,d,x){
+  const dt=new Date(k+"T00:00:00Z"),wd=WD[dt.getUTCDay()].toLowerCase();
+  if(!x)return `<div class="c off"><span class="b">${d}</span></div>`;
+  const note=NOTES[k];
+  return `<div class="c ${x.tone}${k===today?" today":""}"><span class="b">${d}<span class="wdm">${wd}</span></span><span class="dot"></span>`+
+   (x.label?`<span class="sp ${x.labelKind||""}">${esc(x.label)}</span>`:"")+(x.full?`<span class="ev">${esc(x.full.split("; ").map(t=>t.split(" — ")[1]||"").filter(Boolean).join("; "))}</span>`:"")+
+   `<span>${esc(x.expect.slice(0,2).join("; "))}</span><span class="y">✓ ${esc(x.do.join(", "))}</span>`+
+   (x.dont.length?`<span class="n">✕ ${esc(x.dont.join(", "))}</span>`:"")+
+   (note?`<span class="prev">${esc(note)}</span>`:"")+
+   `<button class="real${note?" has":""}" data-d="${k}">${note?"Реальность ✓":"Реальность"}</button></div>`;
+}
+function month(m,idx){
+  const [y,mo]=m.id.split("-").map(Number),first=(new Date(Date.UTC(y,mo-1,1)).getUTCDay()+6)%7,n=new Date(Date.UTC(y,mo,0)).getUTCDate();
+  let h=`<section class="month"><div class="mhead"><div class="mnav"><button class="arr" data-go="-1" aria-label="Предыдущий месяц"${idx===0?" disabled":""}>‹</button><div class="mname">${esc(m.title)}</div><button class="arr" data-go="1" aria-label="Следующий месяц"${idx===MONTHS.length-1?" disabled":""}>›</button></div><div class="mtools"><button data-x="${m.id}">Скачать Excel</button><label>Загрузить Excel<input type="file" accept=".xlsx" data-imp="${m.id}"></label></div></div><div class="wds">${WDM.map(w=>`<div>${w}</div>`).join("")}</div><div class="grid">`;
+  for(let i=0;i<first;i++)h+=`<div class="c pad"></div>`;
+  for(let d=1;d<=n;d++){const k=`${m.id}-${String(d).padStart(2,"0")}`;h+=cell(k,d,BY[k]);}
+  const t=(7-(first+n)%7)%7;for(let i=0;i<t;i++)h+=`<div class="c pad"></div>`;
+  return h+"</div></section>";
+}
+MONTHS.sort((a,b)=>a.id<b.id?-1:1);
+let IDX=Math.max(0,MONTHS.findIndex(m=>m.id===today.slice(0,7)));
+if(MONTHS.findIndex(m=>m.id===today.slice(0,7))<0&&MONTHS.length&&today>MONTHS[MONTHS.length-1].id)IDX=MONTHS.length-1;
+function draw(){document.getElementById("cal").innerHTML=MONTHS.length?month(MONTHS[IDX],IDX):"";}
+function go(dir){const n=IDX+dir;if(n<0||n>=MONTHS.length)return;IDX=n;draw();window.scrollTo({top:0,behavior:"smooth"});}
+document.addEventListener("keydown",e=>{if(document.querySelector("dialog[open]"))return;if(e.key==="ArrowLeft")go(-1);if(e.key==="ArrowRight")go(1);});
+let tx=null,ty=null;const calEl=document.getElementById("cal");
+calEl.addEventListener("touchstart",e=>{tx=e.touches[0].clientX;ty=e.touches[0].clientY},{passive:true});
+calEl.addEventListener("touchend",e=>{if(tx===null)return;const dx=e.changedTouches[0].clientX-tx,dy=e.changedTouches[0].clientY-ty;if(Math.abs(dx)>70&&Math.abs(dx)>Math.abs(dy)*1.5)go(dx<0?1:-1);tx=null},{passive:true});
+draw();
+const dlg=document.getElementById("dlg"),ta=document.getElementById("ta");let cur=null;
+document.getElementById("cal").addEventListener("click",e=>{
+  const b=e.target.closest(".real");if(b){cur=b.dataset.d;const x=BY[cur],dt=new Date(cur+"T00:00:00Z");
+    document.getElementById("dh").innerHTML=`<h3>${dt.getUTCDate()} ${MG[dt.getUTCMonth()]}, ${WD[dt.getUTCDay()].toLowerCase()}</h3>`+(x.full?`<p><b>${esc(x.full)}</b></p>`:"")+
+    `<p>${esc(x.expect.join("; "))}</p><p class="tr">${esc(x.transits.join(" · "))}<br>${esc(x.moon)}</p>`;
+    ta.value=NOTES[cur]||"";dlg.showModal();setTimeout(()=>ta.focus(),30);return;}
+  const xb=e.target.closest("[data-x]");if(xb)exportMonth(xb.dataset.x);const ar=e.target.closest("[data-go]");if(ar)go(+ar.dataset.go);
 });
-navMobile.querySelectorAll('a').forEach(link => {
-  link.addEventListener('click', () => {
-    navMobile.classList.remove('open');
-    navToggle.setAttribute('aria-expanded', 'false');
-  });
-});
-
-const siteNav = document.getElementById('siteNav');
-window.addEventListener('scroll', () => {
-  siteNav.classList.toggle('scrolled', window.scrollY > 8);
-});
-
-const revealObserver = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if(entry.isIntersecting){
-      entry.target.classList.add('in-view');
-      revealObserver.unobserve(entry.target);
-    }
-  });
-}, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
-document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
-
+document.getElementById("cal").addEventListener("change",async e=>{const id=e.target.dataset.imp;if(!id)return;const f=e.target.files[0];if(!f)return;
+  try{const wb=XLSX.read(await f.arrayBuffer());const rows=XLSX.utils.sheet_to_json(wb.Sheets[wb.SheetNames[0]],{header:1});let c=0;
+    for(const r of rows.slice(1)){const m=String(r[1]||"").match(/(\d{1,2})\.(\d{2})\.(\d{4})/);if(!m||!r[3])continue;NOTES[`${m[3]}-${m[2]}-${m[1].padStart(2,"0")}`]=String(r[3]);c++;}
+    persist();draw();alert("Загружено записей: "+c);}catch(err){alert("Не получилось прочитать файл")}e.target.value="";});
+dlg.addEventListener("close",()=>{if(dlg.returnValue==="save"&&cur){const v=ta.value.trim();if(v)NOTES[cur]=v;else delete NOTES[cur];persist();draw();}});
+function cardText(x){return [x.full,x.expect.join("; "),"Делать: "+x.do.join(", "),x.dont.length?"Не делать: "+x.dont.join(", "):"","Транзиты: "+x.transits.join(", "),x.moon].filter(Boolean).join("\n");}
+function exportMonth(id){const m=MONTHS.find(z=>z.id===id);if(!window.XLSX){alert("Не загрузилась библиотека Excel, проверьте интернет");return;}
+  const rows=[["Месяц","Дата","Карта","Реальность"]];
+  for(const x of m.days){const [y,mo,d]=x.d.split("-");rows.push([m.title,`${+d}.${mo}.${y}`,cardText(x),NOTES[x.d]||""]);}
+  const ws=XLSX.utils.aoa_to_sheet(rows);ws["!cols"]=[{wch:14},{wch:12},{wch:80},{wch:60}];const wb=XLSX.utils.book_new();XLSX.utils.book_append_sheet(wb,ws,m.title.slice(0,31));XLSX.writeFile(wb,`карта-${id}.xlsx`);}
+document.getElementById("all").onclick=()=>{const b=new Blob([JSON.stringify(NOTES,null,1)],{type:"application/json"});const a=document.createElement("a");a.href=URL.createObjectURL(b);a.download="записи-календаря.json";a.click();};
+document.getElementById("allimp").onchange=async e=>{const f=e.target.files[0];if(!f)return;try{Object.assign(NOTES,JSON.parse(await f.text()));persist();draw();alert("Записи загружены")}catch(err){alert("Не получилось прочитать файл")}};
 </script>
-
-<script>
-(function(){
-  var LANG_KEY='siteLang';
-  var meta={"en": {"title": "Anastasia Volkova — Bookkeeper", "desc": "Remote bookkeeper for US businesses: accrual and cash basis, payroll, inventory, reporting and sales tax. QuickBooks Online certified."}, "ru": {"title": "Анастасия Волкова — бухгалтер", "desc": "Удалённый бухгалтер для бизнеса в США: accrual и cash basis, зарплата, запасы, отчётность и налог с продаж. Сертификат QuickBooks Online."}};
-  var main=document.querySelector('main');
-  var tplRu=document.getElementById('main-ru');
-  var mainEn=main.innerHTML;
-  var current='en';
-
-  function blocks(){ return Array.prototype.slice.call(main.children); }
-  function position(){
-    var bs=blocks(), y=window.scrollY+90, i=0;
-    for(var k=0;k<bs.length;k++){ if(bs[k].offsetTop<=y) i=k; }
-    var b=bs[i]; return {i:i, r: b && b.offsetHeight ? (window.scrollY-b.offsetTop)/b.offsetHeight : 0, top: window.scrollY<5};
-  }
-  function restore(p){
-    if(!p || p.top) return;
-    var b=blocks()[p.i]; if(!b) return;
-    var html=document.documentElement, prev=html.style.scrollBehavior;
-    html.style.scrollBehavior='auto';
-    window.scrollTo(0, Math.max(0, b.offsetTop + p.r*b.offsetHeight));
-    html.style.scrollBehavior=prev;
-  }
-  function apply(lang, keepPos){
-    if(lang===current) return;
-    var p=keepPos ? position() : null;
-    main.innerHTML = lang==='ru' ? tplRu.innerHTML : mainEn;
-    main.querySelectorAll('.reveal').forEach(function(el){ el.classList.add('in-view'); });
-    document.querySelectorAll('[data-ru]').forEach(function(el){
-      if(!el.hasAttribute('data-en')) el.setAttribute('data-en', el.innerHTML);
-      el.innerHTML = lang==='ru' ? el.getAttribute('data-ru') : el.getAttribute('data-en');
-    });
-    document.querySelectorAll('[data-ru-label]').forEach(function(el){
-      if(!el.hasAttribute('data-en-label')) el.setAttribute('data-en-label', el.getAttribute('aria-label'));
-      el.setAttribute('aria-label', lang==='ru' ? el.getAttribute('data-ru-label') : el.getAttribute('data-en-label'));
-    });
-    document.documentElement.lang=lang;
-    document.title=meta[lang].title;
-    var d=document.querySelector('meta[name="description"]'); if(d) d.setAttribute('content', meta[lang].desc);
-    document.querySelectorAll('.lang-switch button').forEach(function(b){ b.classList.toggle('on', b.dataset.lang===lang); });
-    current=lang;
-    try{ sessionStorage.setItem(LANG_KEY, lang); }catch(e){}
-    if(p) restore(p);
-  }
-  document.querySelectorAll('.lang-switch button').forEach(function(b){
-    b.addEventListener('click', function(){ apply(b.dataset.lang, true); });
-  });
-  var saved=null; try{ saved=sessionStorage.getItem(LANG_KEY); }catch(e){}
-  if(saved==='ru') apply('ru', false);
-
-  // copy email / phone (works after language swap too)
-  document.addEventListener('click', function(e){
-    var el=e.target.closest('.copy-email'); if(!el) return;
-    e.preventDefault();
-    var hint=el.querySelector('.copy-hint');
-    try{ navigator.clipboard.writeText(el.dataset.email); }catch(err){}
-    el.classList.add('copied'); hint.textContent = current==='ru' ? 'Скопировано' : 'Copied';
-    clearTimeout(el._t); el._t=setTimeout(function(){ el.classList.remove('copied'); hint.textContent = current==='ru' ? 'Копировать' : 'Copy'; }, 1800);
-  });
-})();
-</script>
-</body>
-</html>
+</body></html>
