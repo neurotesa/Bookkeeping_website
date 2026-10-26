@@ -231,7 +231,7 @@ body.lb-on{overflow:hidden;}
     </div>
     <div class="inputs">
       <div class="input"><div class="input-num">217</div><h3>Transactions</h3><p>Recorded in QuickBooks Online</p></div>
-      <div class="input"><div class="input-num">127</div><h3>Bank transactions</h3><p>94 payments and 33 deposits</p></div>
+      <div class="input"><div class="input-num">127</div><h3>Bank transactions</h3><p>94 payments and 33 deposits, all reconciled</p></div>
       <div class="input"><div class="input-num">42</div><h3>Source documents</h3><p>Bills, invoices, credit memos, sales receipts and checks</p></div>
       <div class="input"><div class="input-num">0.00</div><h3>Difference</h3><p>Bank reconciliation as of June 30</p></div>
     </div>
@@ -259,7 +259,7 @@ body.lb-on{overflow:hidden;}
     <h2>Every vendor and customer payment through A/P and A/R</h2>
     <p class="lead">Every vendor payment went through Accounts Payable and every customer payment through Accounts Receivable, even when there was no bill or invoice yet.</p>
     <p class="lead">Once a bill meets its payment, the vendor balance nets to zero. The same goes for customers. <b>Anything left over is a signal:</b> a missing bill, an unused credit or a payment nobody explained.</p>
-    <p class="lead">Undeposited Funds only for paper checks. Card settlements came in net of fees, so each deposit was recorded in full and the fee went to Bank Expenses.</p>
+    <p class="lead">Undeposited Funds only for paper checks. When a customer payment arrived net of a bank fee, the payment was recorded in full and the fee went to Bank Expenses.</p>
   </section>
 
   <section>
@@ -289,7 +289,7 @@ body.lb-on{overflow:hidden;}
       <div class="card">
         <figure class="shot in-card"><a href="img/harlow-returned-check.webp" class="zoom"><img src="img/harlow-returned-check.webp" alt="Expense reopening 3,000 in Accounts Receivable for a returned customer check" loading="lazy"></a></figure>
         <h3>Returned check</h3>
-        <p>A 3,000 customer check bounced. I reopened the balance in A/R for 3,000 and posted the 35 bank fee to Bank Expenses as a separate line. The invoice is open again until the customer pays.</p>
+        <p>A 3,000 customer check bounced. I reopened the balance in A/R for 3,000 and posted the 35 bank fee to Bank Expenses as a separate transaction. The invoice is open again until the customer pays.</p>
       </div>
       <div class="card">
         <figure class="shot in-card"><a href="img/harlow-bad-debt.webp" class="zoom"><img src="img/harlow-bad-debt.webp" alt="Credit memo writing off 1,500: 1,385.68 to Bad Debts plus 114.32 sales tax" loading="lazy"></a></figure>
@@ -477,7 +477,7 @@ body.lb-on{overflow:hidden;}
     </div>
     <div class="inputs">
       <div class="input"><div class="input-num">217</div><h3>Операций</h3><p>Внесено в QuickBooks Online</p></div>
-      <div class="input"><div class="input-num">127</div><h3>Банковских операций</h3><p>94 списания и 33 поступления</p></div>
+      <div class="input"><div class="input-num">127</div><h3>Банковских операций</h3><p>94 списания и 33 поступления, все сверены</p></div>
       <div class="input"><div class="input-num">42</div><h3>Первичных документа</h3><p>Счета, инвойсы, кредит-ноты, чеки продаж и выписанные чеки</p></div>
       <div class="input"><div class="input-num">0.00</div><h3>Расхождение</h3><p>Сверка банка на 30 июня</p></div>
     </div>
@@ -505,7 +505,7 @@ body.lb-on{overflow:hidden;}
     <h2>Все платежи поставщикам и от клиентов через A/P и A/R</h2>
     <p class="lead">Каждый платёж поставщику шёл через Accounts Payable, а каждый платёж от клиента через Accounts Receivable, даже если счёта или инвойса ещё не было.</p>
     <p class="lead">Когда счёт встречается с оплатой, баланс поставщика обнуляется. С клиентами так же. <b>Любой остаток — это сигнал:</b> нет счёта, не использована кредит-нота или платёж без объяснения.</p>
-    <p class="lead">Undeposited Funds только для бумажных чеков. Поступления по картам приходили за вычетом комиссии, поэтому поступление внесено полной суммой, а комиссия ушла в Bank Expenses.</p>
+    <p class="lead">Undeposited Funds только для бумажных чеков. Если оплата клиента приходила за вычетом комиссии банка, оплата внесена полной суммой, а комиссия ушла в Bank Expenses.</p>
   </section>
 
   <section>
@@ -535,7 +535,7 @@ body.lb-on{overflow:hidden;}
       <div class="card">
         <figure class="shot in-card"><a href="img/harlow-returned-check.webp" class="zoom"><img src="img/harlow-returned-check.webp" alt="Расход, восстанавливающий долг 3,000 в Accounts Receivable по вернувшемуся чеку" loading="lazy"></a></figure>
         <h3>Вернувшийся чек</h3>
-        <p>Чек клиента на 3,000 вернулся без оплаты. Я восстановила долг в A/R на 3,000, а комиссию банка 35 провела отдельной строкой в Bank Expenses. Инвойс снова открыт до оплаты.</p>
+        <p>Чек клиента на 3,000 вернулся без оплаты. Я восстановила долг в A/R на 3,000, а комиссию банка 35 провела отдельной операцией в Bank Expenses. Инвойс снова открыт до оплаты.</p>
       </div>
       <div class="card">
         <figure class="shot in-card"><a href="img/harlow-bad-debt.webp" class="zoom"><img src="img/harlow-bad-debt.webp" alt="Кредит-нота: списание 1,500, из них 1,385.68 на Bad Debts и 114.32 налога" loading="lazy"></a></figure>
