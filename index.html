@@ -129,6 +129,12 @@ p{margin:0;}
 .case-note{font-size:14px;line-height:1.55;color:var(--text-mute);border:1px dashed var(--line);padding:14px 18px;border-radius:12px;max-width:420px;}
 .case-media{aspect-ratio:1/1;border-radius:18px;overflow:hidden;}
 .case-media img{width:100%;height:100%;object-fit:cover;display:block;}
+.case-card.case-wide{grid-template-columns:1fr;gap:32px;}
+.case-wide .case-copy .case-metric-inline{max-width:640px;}
+.case-media.case-media-wide{aspect-ratio:auto;display:block;border:1px solid var(--line);background:var(--bg);}
+.case-media.case-media-wide img{height:auto;object-fit:contain;transition:transform .4s ease;}
+.case-media.case-media-wide:hover img{transform:scale(1.015);}
+
 /* Обложка без картинки (в стиле Whitfield). Если есть своя картинка — замени блок на <img> */
 .cover{width:100%;height:100%;background:#3B5C4F;color:#fff;display:flex;flex-direction:column;justify-content:space-between;}
 .cover > div:first-child{padding:36px 36px 0;}
@@ -380,6 +386,18 @@ p{margin:0;}
 
   <!-- КЕЙС: чтобы добавить, скопируй весь <section class="case case-tight">…</section> -->
   <section class="case">
+    <div class="case-card case-wide">
+      <div class="case-copy reveal">
+        <div class="case-tags"><span>Excel</span><span>Sales analysis</span><span>Dashboard</span><span>Journal entries</span><span>Cash forecast</span></div>
+        <h3>Sales analysis and cash forecast</h3>
+        <p class="case-metric-inline">13,031 sales lines of a California delivery retailer turned into a dashboard and a report on products, brands, the sales team and regions. Plus a year of journal entries and a cash forecast for a second client.</p>
+        <a href="finance-case.html" class="case-btn"><span>View case</span> <span>→</span></a>
+      </div>
+      <a class="case-media case-media-wide" href="finance-case.html"><img src="img/finance-dashboard.webp" alt="Sales dashboard: KPIs, profit by day, by category and by brand" loading="lazy"></a>
+    </div>
+  </section>
+
+  <section class="case case-tight">
     <div class="case-card">
       <div class="case-copy reveal">
         <div class="case-tags"><span>QuickBooks Online</span><span>Bank reconciliation</span><span>A/R &amp; A/P</span><span>Sales tax</span><span>Credit memos &amp; refunds</span><span>Financial statements</span></div>
@@ -602,6 +620,18 @@ p{margin:0;}
 
   <!-- КЕЙС: чтобы добавить, скопируй весь <section class="case case-tight">…</section> -->
   <section class="case">
+    <div class="case-card case-wide">
+      <div class="case-copy reveal">
+        <div class="case-tags"><span>Excel</span><span>Анализ продаж</span><span>Дашборд</span><span>Проводки</span><span>Прогноз денег</span></div>
+        <h3>Анализ продаж и прогноз денег</h3>
+        <p class="case-metric-inline">13 031 строка продаж калифорнийского сервиса доставки превращена в дашборд и отчёт по товарам, брендам, продавцам и регионам. Плюс проводки за год и прогноз денег для второго клиента.</p>
+        <a href="finance-case.html" class="case-btn"><span>Смотреть кейс</span> <span>→</span></a>
+      </div>
+      <a class="case-media case-media-wide" href="finance-case.html"><img src="img/finance-dashboard.webp" alt="Дашборд продаж: ключевые цифры, прибыль по дням, категориям и брендам" loading="lazy"></a>
+    </div>
+  </section>
+
+  <section class="case case-tight">
     <div class="case-card">
       <div class="case-copy reveal">
         <div class="case-tags"><span>QuickBooks Online</span><span>Сверка банка</span><span>A/R и A/P</span><span>Налог с продаж</span><span>Кредит-ноты и возвраты</span><span>Финансовая отчётность</span></div>

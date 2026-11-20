@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Sales analysis and cash forecast — Finance &amp; Accounting case</title>
+<meta name="description" content="13,031 sales lines turned into an owner report, plus journal entries and a 12-month cash forecast. A case by Anastasia Volkova.">
+<link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAMh0lEQVR42u2bWXBV15WGv7X3OXeQhAAHzGQsMyMwgxAgQGBsd7mTdMXBruTGmdyp6uryS1f1az8kVbK6+qUfu7rLDz08pDy0bVwpB7vsmI4NGAmEBAqDJcd2iPGEAQESQsMdzt6rH87VMRdwm6kJQd5Vp1S695y79/r3v9b699pnC5drirQ82SKtra0eYOPPHmlE9Zt4fUiRWYreKchEbqGm6DlBTgn6GUb+B5E32n758gGAlpYW0/pkqyLoxc/JxR+0tLSYMcM3/PUjfymq/wBstDZIKYp6BVVU9VayHxEBEcQIguBcVATa1Ms/73n25e0X23ZZAHK5nN26datb++i37kpNyP6bGNkiIrhShKr6ckfyZeD9yUkAaHlmRMTYMEBVUee3FX3+7zqf/c2nYzZeAsDYFxt+vGWlteYlk7LzonzRq6CCmFvQ4K8ERFEvigSZlHFFd9Q7//09z/364IUgSNl6y9atrvmHDy+VlH1bjLnDlaJIRAJug6aqkQ2DQJ0/qyV3X/vzr/SQw7IVZwDDkiW6+UffmUJoXzLW3lbGl90hcKUoMoG9g8BsXfP4I99oWdKigLHkcoannvKzltc/E2ZSm6JC6bYy/gIQjHcuCjPpaZSi+c/867+/QA4jAOse/87mlE3vjKIoErB/hv5+FXEBZwMbRMVo897ntr1tADFefhHnSJXb2PhyzFMRERXhF4BI8w8fXkoo3aikGFdNi6I0GIz9rrVhaizPjwvTVb0NwpSq2WIw+pCiXE4m3saOoLHN+pABnaFeKYudcWK/GPUKojMCVaZTVo/jKACIqqLKdCMik1Bl3DVVRGSSYZy3rwH4GoBx3m74oscYg1wmoXj1l1SRRARzUfZVFO/9Nfd1uX5uGgAiwtDIMM65clbV5G8mnSYVppLBiQilqMRoPn9BbUYJgoCqTPYrjRARRkZHKEXRBX1BNpMlDIIrBiG4kcYXikWeyP2URffMxXvFGEn+vrT9NToOd1OdyQIwkh9h7bIGfvCth3Heg4IxQnfvO/z3ay9Tlc1+KROMGEbyIzz27S2sXroc7xUErDG88Po2ut45RFUmg78CEIIbZXwpipg6+Q7+5tHHSIWpy9xjaD/YFa/HVDHGcnqgn/vXbKi4b9nCel7ZuZ1SFGGMuYzbgFNPNpPl8Ye/x/Qpd1Z8/9Tzv8SYK9f1NyQIGjGMFvI0LV9FKkxRiko473DOETmH857GJcuYPW0GxVIJgEw6zQfH/siOrj045yiWSkQu4hsTJ7N84RJGC3m+qL9WApkv5Kmfu4A775hCVH7WOceurr188NGHZNKZK3aBGwKAolhjeGBtPJvW2PiylsBaBJhQXUPT8lWMFvIYkbLXKru6Or64TwQRYVPjWpxzlw2mIkIURTSvXB0HQYHAxn29fWAf5XXNzUuDIkKxWGT29JmsWrIsic7nhgbpONwdR+ayL//Fuo2E1qKqeFWy6QydR7o5N3QeY74oPK9fuZrJtROJXHSJMc45aqqq2dCwpiIbnB8eYt/hbjKZNP4qVvbmhtC/WKBpeQPV2SoiFwHwyYnj/PqtN5IBAjQsvpe6mbMplIoAhGHI532n6Dh0INHnqspd02awdMHi2A2MXNCXkC8UWFA3l3mz6yrG0fXOIT47daIi09wUAFSV0AY8uLY5+R/g6MfH6DxykHyxgDEG5xyZdJrmhjXkC4UEFIA3O9piNhlJZu++xiac8xUMEGMoRiXWr1iV/OZYnNjR2Y7q1S9pzXWnvlKBu2fMYsXipQkjAHqOvs/nfSc5+vGxCmAebGomnUrjfSxYsukM3e8e4dTZ0xWiqHnlaibV1iaMAvDOU5XJ0LxqTQUDBwYH2d9ziGw6fUWp74YBYIwhXyiwfkUj2XQG5xzWWiLn6D36AV49+3sOJ2Apyr3zF7Ggbg6FQgEpu0Ff/xnau7vGImrsBtNnsnTeIkbLbIl1RoG5d9Wx6J75FWlu35HfceJ0H2EYXvWe5XUB4L0nFaZ4sKk5yQYAH376MR8d/5SqTJaudw4lYHnvCYKA+xqbKJSKiMR53hrLjs49FfcBbGpswrkokcyFUpGmZQ2EQYD3PokPO7vaudaKjrku+heLzL3rbpYtXDxWagKg+90jDA4PUZ2toveP73PidF/sq+XJuX/NBqqzVXjvEjc49F4vn5w4XpH7mxtWM2nCRKIoQjUGe+OqtUnANGI4PdDPgZ4jZNOZq6b/dQFgxFAoFli/spFUmMJ5nwS2Az2HSQUBmVSKc4ODHCi7wRhLFtTNoX7ugkTsBEHAwPlzvL2/oyK4zp4+k0Vz5lEsFSlFEbOnz2DJ/IUV4+g4uJ9TZ08TBuE1bdlfMwBePZl0OpGyGpeYOH7qBDs79zKcH6Wvv5/+8+f41Zuv4VURY/AuBur+tRsoRTG9VZUwCNjZtTeWydbgvEdEaFrekKi9FYuXxjN9Af13dO1J4stNWw6PSd8FdXO4d/6isvqLsXTe88QPfkIYhOU44cikM0QuIhWE+DLF71u9jv946VkiF2HEkEln6D36Pn/4+BgL6uYkq7s1964gm84wWsizeumKJPYEQcDJM30c/H0v2XQG9f7mASAiFEtFmhvWEAQBzjussSgxbf/2ez/+PzOHqlI3YxbLFixm76ED1FRVY4xhYPAcO7v2lAGIgVpYN49pU6Zy8nQfK8updmyu23/Xxen+s0yaUIvz7uZVhLw6splsQv+x4HelGnxM7DzQ1JyIHfVKKgzZtb8jSafOx262sG4Os6bNYOad01EgsPGwd3buxVpzzfS/JgYYEUYLeernLqR+7vyEEQCFYpHzw0PlYKgXV6GZVFuLNTYRPJsa1jJl8mRG83mstWTSGT746EN6jr7P8oX1eO+wxrBs4RKqs9UIEEURQRDw2cnPOfx+bxITbhoAYgyFUolNjWtjOerjVZuI8C/P/CfbdmyntqYG574YlLWGwaEhfv7E3/PtTQ/iyxlj2pSpNCy+lzf3tVFbXQMI+UKeHfvaWb6wPmHUqvqlzJ42o0Jr7O7upH/wHJNqJ5YrUDepKOqcoyZbxebV65NSljGG4dERdh/YR75QYGBwkMHh819cQ0MMDp3nt2XNb4xJ3ODBdRuTfRlVTyaVpq27k0KxQBDE87PonvmsW9EYz5iNP9vVtZfABtf9tpq52uifLxRYNGc+8+6+J34Dq3wdeq+Xz/tOUl1VVV7fB8klIkyoruHwe7309Z+p0ATrVzQyfcpUiqUSCqRTKT48/gkHf9+DqibxIJ1KJVQ/dvwT3vnDe2Qz10f/qwZATFzIfKBpA7asz8cKGbu7O8sFSiqAGbsCG9DXf4bOIwcREaxYBGFy7UTWXVgoEUMpinhrX3t8n7UV7ici7N6/j8Gh8xXf3RQAoiiitmYCjfXLGMmPMjQywkh+lP7Bc3QdOZis8r6samTE8FZHG6P5PMP5EYZGhhnJj7KhYTXWWrScIbKpNHsO7qfv7BlG83lG8qOM5EcZLfe5s2vPNSu/Sya1+adbrupXjDFMqK7hwg1V5z1DI8NX/BsTayZcBA4MDp2/pM5QU1VNcNEsqyqDw0N/uo0R5x1nBs5WrL0EroqOZ84NXDqQi543IgwOn7/sxnVwA6h/7WkQSWTuxTNzpS0Mgq98Xi+I+NfT1/+LFL7eAVzp8zfjheyvd4e/BmC8A6CqA4iMP8vjQsyAQegrr+bG05tSGp8woc+gnIwLluPnVTFFvRgBlc8Nwm/jmtp4mn8kPlkkrxvBvuyiKBIZP4FARIyLSkXBbzPt85YfUXSXDQNR1I0D+rv4MJXsant227uG1lYv4p9Ur4DobR4MFUTVK2LcPwJqcrmcbX/61TZXil4M02GgevuyQFVdmE4FURS90P70q225XM4KYFpaWnjj072TbCHbZoOgPirdfueGVDUKwjBwUfSuK6Q2fnPJkoHW1lYM4FtppeO/tp8tqX7fe98fhGGgqtHtZrz3vp/I5zq2bj3bSiuAj6VwKz6Xy9nOZ7f1RpHf7J3rCTPpQDU+d/nnGhcUdaqqYSYdeOd6SsXo/vbnX+nJ5XKWVjzEJ8QA6O3t1VwuZ7e/8KsTU5fOf9GozLTWrrCBNeq9lI/UqCCa7IPccvbGL9mUlZ4EYWgQEV9yT7vCyGP7Xnz92JcenR1rFx4wbv7ZlvvF8XMV7rM2SEG5yOlvzcPTYqS8SSM45woiujtS908dT7+662LbvhSAsc9zuZwZQ2rTTx5d5UX/CtgIfqYqd4nI5FvMz/sFPkP4TMTsxvGbtufi4/PlWfeXc+X/BWjTQw4OZ4s2AAAAAElFTkSuQmCC">
+<link rel="apple-touch-icon" href="data:image/png;base64,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">
+<meta name="theme-color" content="#EBEEF2">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#EBEEF2; --surface:#FFFFFF; --surface-2:#F5F5F7; --line:#DCE0E6;
+  --text:#1D1D1F; --text-mute:#6E6E73; --text-faint:#86868B;
+  --accent:#2F6B4F; --accent-bg:#E8F3EE; --green:#3B5C4F;
+  --font-display: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Helvetica Neue', Inter, Arial, sans-serif; --font-body: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Inter, Arial, sans-serif;
+  --container:880px;
+}
+*,*::before,*::after{box-sizing:border-box;}
+html{background:#EBEEF2;}
+html{scroll-behavior:smooth;}
+body{margin:0;letter-spacing:-0.01em;background:var(--bg);color:var(--text);font-family:var(--font-body);-webkit-font-smoothing:antialiased;}
+a{color:inherit;text-decoration:none;}
+h1,h2,h3{font-family:var(--font-display);margin:0;}
+p{margin:0;}
+.wrap{max-width:var(--container);margin:0 auto;padding:0 32px;}
+
+/* Nav */
+.nav{padding:18px 0;position:sticky;top:0;z-index:50;background:rgba(235,238,242,0.8);-webkit-backdrop-filter:saturate(180%) blur(16px);backdrop-filter:saturate(180%) blur(16px);border-bottom:1px solid var(--line);}
+.nav-inner{max-width:var(--container);margin:0 auto;padding:0 32px;display:flex;align-items:center;justify-content:space-between;gap:16px;}
+.back{font-size:14px;color:var(--text-mute);display:inline-flex;align-items:center;gap:8px;}
+.back:hover{color:var(--text);}
+.btn{display:inline-flex;align-items:center;gap:8px;font-size:15px;font-weight:500;padding:11px 20px;border-radius:980px;white-space:nowrap;}
+.btn-primary{background:var(--text);color:#fff;}
+.btn-primary:hover{background:#000000;}
+.btn-sm{padding:9px 14px;font-size:13px;}
+
+/* Cover */
+.cover{margin-top:40px;background:var(--green);color:#fff;border-radius:24px;padding:56px 48px;}
+.cover-tag{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#BFD4C9;font-weight:600;}
+.cover h1{font-size:clamp(34px,5.5vw,54px);font-weight:700;line-height:1.05;letter-spacing:-0.02em;margin:16px 0 16px;}
+.cover-sub{font-size:18px;color:#DCE7E1;line-height:1.5;max-width:520px;}
+.cover-meta{margin-top:32px;padding-top:20px;border-top:1px solid rgba(255,255,255,.18);font-size:13px;color:#BFD4C9;}
+.under-cover{margin-top:20px;}
+
+/* Sections */
+section{margin-top:88px;}
+.label{font-size:13px;color:var(--text-faint);letter-spacing:.02em;margin-bottom:14px;}
+h2{font-size:clamp(26px,3.6vw,34px);font-weight:700;letter-spacing:-0.02em;line-height:1.15;margin-bottom:20px;}
+.lead{font-size:17px;line-height:1.65;color:var(--text-mute);max-width:680px;}
+.lead + .lead{margin-top:14px;}
+.lead b{color:var(--text);font-weight:600;}
+
+/* Facts */
+.facts{margin-top:16px;margin-bottom:4px;background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:4px 24px;}
+.facts div{display:flex;justify-content:space-between;gap:20px;padding:14px 0;border-bottom:1px solid var(--line);font-size:15px;}
+.facts div:last-child{border-bottom:0;}
+.facts dt{color:var(--text-mute);}
+.facts dd{margin:0;font-weight:600;text-align:right;}
+
+/* Goal */
+.sub-h{font-size:20px;font-weight:700;letter-spacing:-0.01em;margin:44px 0 0;}
+.reasons{margin-top:18px;display:grid;grid-template-columns:repeat(2,1fr);gap:12px;}
+.reasons > *{min-width:0;}
+.reason{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:22px;}
+.reason h3{font-size:16px;font-weight:700;margin-bottom:6px;}
+.reason p{font-size:14px;line-height:1.55;color:var(--text-mute);}
+@media (max-width:700px){.reasons{grid-template-columns:1fr;}}
+
+/* Inputs */
+.inputs{margin-top:16px;margin-bottom:4px;display:grid;grid-template-columns:repeat(4,1fr);gap:12px;}
+.inputs > *{min-width:0;}
+.input{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:22px;}
+.input-num{font-family:var(--font-display);font-size:30px;font-weight:800;color:var(--accent);line-height:1;margin-bottom:14px;}
+.input h3{font-size:16px;font-weight:700;margin-bottom:4px;}
+.input p{font-size:14px;color:var(--text-mute);line-height:1.5;}
+.docs{margin-top:16px;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;}
+.docs img{width:100%;border-radius:14px;border:1px solid var(--line);display:block;background:var(--surface);}
+@media (max-width:700px){.inputs{grid-template-columns:1fr 1fr;}}
+
+/* Steps */
+.steps{margin-top:16px;display:grid;gap:12px;}
+.step{display:grid;grid-template-columns:44px 1fr;gap:16px;align-items:start;background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:20px 22px;}
+.step-num{width:36px;height:36px;border-radius:10px;background:var(--accent-bg);color:var(--accent);font-family:var(--font-display);font-weight:700;display:flex;align-items:center;justify-content:center;}
+.step h3{font-size:17px;font-weight:700;margin-bottom:4px;}
+.step p{font-size:14px;color:var(--text-mute);line-height:1.5;}
+
+/* Tricky */
+.cards{margin-top:28px;display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+.cards > *{min-width:0;}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:28px;}
+.card h3{font-size:19px;font-weight:700;margin-bottom:10px;}
+.card p{font-size:15px;line-height:1.6;color:var(--text-mute);}
+
+/* Statements */
+.statement{margin-top:28px;background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:28px 28px 20px;overflow-x:auto;}
+.statement-head{display:flex;justify-content:space-between;align-items:baseline;gap:16px;margin-bottom:12px;}
+.statement-head h3{font-size:18px;font-weight:700;}
+.statement-head span{font-size:13px;color:var(--text-faint);}
+table{width:100%;border-collapse:collapse;font-size:14px;font-variant-numeric:tabular-nums;}
+td{padding:7px 0;border-bottom:1px solid var(--surface-2);vertical-align:top;}
+td.n{text-align:right;white-space:nowrap;padding-left:24px;}
+td.ind{padding-left:16px;color:var(--text-mute);}
+tr.group td{padding-top:18px;font-weight:600;color:var(--text);border-bottom:1px solid var(--line);}
+tr.total td{font-weight:600;}
+tr.grand td{font-weight:700;border-top:2px solid var(--text);border-bottom:0;padding-top:10px;}
+tr.neg td.n{color:#A33B2F;}
+td.desc{color:var(--text-mute);padding-left:16px;}
+
+.note{margin-top:16px;background:var(--accent-bg);border-radius:14px;padding:16px 20px;font-size:14px;line-height:1.55;color:#24493A;}
+.note b{font-weight:600;}
+
+/* Deliverables */
+.deliv{margin-top:28px;display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+.deliv li{list-style:none;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 16px;font-size:15px;display:flex;gap:10px;align-items:center;}
+.deliv li::before{content:'✓';color:var(--accent);font-weight:700;}
+ul.deliv{padding:0;}
+
+.end{margin-top:88px;padding:48px;border-radius:24px;background:var(--surface);border:1px solid var(--line);text-align:center;}
+.end h2{margin-bottom:12px;}
+.end p{color:var(--text-mute);margin-bottom:24px;}
+.end-actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;}
+.btn-ghost{border:1px solid var(--line);color:var(--text-mute);background:var(--surface);}
+.btn-ghost:hover{border-color:var(--text-faint);color:var(--text);}
+.footer{padding:40px 0 56px;font-size:13px;color:var(--text-faint);}
+
+@media (max-width:700px){
+  .wrap,.nav-inner{padding:0 20px;}
+  .cover{padding:36px 24px;border-radius:20px;margin-top:24px;}
+  section{margin-top:64px;}
+  .cards,.deliv{grid-template-columns:1fr;}
+  .statement{padding:20px 18px 14px;}
+  table{font-size:13px;}
+  .end{padding:32px 20px;}
+  .nav .btn-label-long{display:none;}
+}
+@media (min-width:701px){ .nav .btn-label-short{display:none;} }
+.copy-email{cursor:pointer;position:relative;}
+.copy-email .copy-hint{margin-left:8px;font-size:12px;color:var(--text-faint);transition:color .2s ease;}
+.copy-email.copied .copy-hint{color:var(--accent);}
+@media screen and (max-width:700px){
+  .nav{position:fixed;top:0;left:0;right:0;padding:12px 0;background:transparent;-webkit-backdrop-filter:none;backdrop-filter:none;border:0;pointer-events:none;}
+  .nav-inner{padding:0 16px;}
+  .nav-inner > *{pointer-events:auto;}
+  .back{display:inline-flex;align-items:center;width:44px;height:44px;border-radius:50%;justify-content:center;font-size:18px;color:var(--text);background:rgba(255,255,255,.72);-webkit-backdrop-filter:saturate(180%) blur(16px);backdrop-filter:saturate(180%) blur(16px);border:1px solid rgba(0,0,0,.06);box-shadow:0 6px 20px rgba(20,30,40,.12);}
+  .back span{display:none;}
+  .nav .btn{box-shadow:0 6px 20px rgba(20,30,40,.14);}
+  .nav .btn-ghost{background:rgba(255,255,255,.72);-webkit-backdrop-filter:saturate(180%) blur(16px);backdrop-filter:saturate(180%) blur(16px);border:1px solid rgba(0,0,0,.06);box-shadow:0 6px 20px rgba(20,30,40,.12);}
+  main{padding-top:60px;}
+}
+.lang-switch{display:inline-flex;gap:2px;padding:3px;border:1px solid var(--line);border-radius:980px;background:var(--surface);}
+.lang-switch a{font-size:12px;font-weight:600;letter-spacing:.02em;color:var(--text-faint);padding:5px 11px;border-radius:980px;line-height:1;}
+.lang-switch a:hover{color:var(--text);}
+.lang-switch a.on{background:var(--text);color:#fff;}
+.nav-right{display:flex;align-items:center;gap:12px;}
+@media screen and (max-width:700px){.nav .lang-switch{pointer-events:auto;height:44px;align-items:center;padding:4px;background:rgba(255,255,255,.72);-webkit-backdrop-filter:saturate(180%) blur(16px);backdrop-filter:saturate(180%) blur(16px);border:1px solid rgba(0,0,0,.06);box-shadow:0 6px 20px rgba(20,30,40,.12);}.nav .lang-switch button{padding:9px 11px;font-size:13px;}}
+.lang-switch button{font:inherit;font-size:12px;font-weight:600;letter-spacing:.02em;color:var(--text-faint);background:none;border:0;padding:5px 11px;border-radius:980px;line-height:1;cursor:pointer;}
+.lang-switch button:hover{color:var(--text);}
+.lang-switch button.on{background:var(--text);color:#fff;}
+.statement td{padding-right:12px;}
+.statement td:last-child{padding-right:0;}
+/* Dashboard */
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:8px;}
+.kpis > *{min-width:0;}
+.kpi{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:20px 22px;}
+.kpi-l{font-size:13px;color:var(--text-mute);}
+.kpi-v{font-family:var(--font-display);font-size:32px;font-weight:700;letter-spacing:-0.02em;line-height:1.1;margin:8px 0 6px;font-variant-numeric:tabular-nums;}
+.kpi-s{font-size:12px;color:var(--text-faint);}
+.panel{margin-top:12px;background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:24px 24px 20px;}
+.panels{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+.panels > *{min-width:0;}
+.panels .panel{margin-top:12px;}
+.panel-head{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:18px;}
+.panel-head h3{font-size:17px;font-weight:700;}
+.panel-head span{font-size:12px;color:var(--text-faint);}
+[data-tip]{position:relative;outline:none;}
+[data-tip]:hover::after,[data-tip]:focus::after{content:attr(data-tip);position:absolute;z-index:5;bottom:calc(100% + 8px);left:50%;transform:translateX(-50%);background:var(--text);color:#fff;font-size:12px;font-weight:500;line-height:1.3;padding:7px 10px;border-radius:8px;white-space:nowrap;pointer-events:none;}
+.cols{position:relative;display:flex;align-items:flex-end;gap:2px;height:200px;border-bottom:1px solid var(--line);}
+.col{flex:1;height:100%;display:flex;align-items:flex-end;cursor:default;}
+.col-bar{position:relative;width:100%;background:#A8C7B7;border-radius:4px 4px 0 0;}
+.col.we .col-bar{background:var(--accent);}
+.col:hover .col-bar,.col:focus .col-bar{filter:brightness(0.88);}
+.col-top{position:absolute;bottom:calc(100% + 4px);left:50%;transform:translateX(-50%);font-size:11px;font-weight:600;white-space:nowrap;color:var(--text);}
+.avg-line{position:absolute;left:0;right:0;bottom:var(--avg);border-top:1px dashed var(--text-faint);pointer-events:none;z-index:1;}
+.avg-line span{position:absolute;right:0;bottom:3px;font-size:11px;color:var(--text-mute);background:rgba(255,255,255,.85);padding:0 4px;border-radius:4px;}
+.cols-x{display:flex;gap:2px;margin-top:6px;}
+.cols-x span{flex:1;text-align:center;font-size:11px;color:var(--text-faint);font-variant-numeric:tabular-nums;}
+.cols-team{height:150px;}
+.cols-team .col-bar{background:#C9D9D0;}
+.cols-team .col.top .col-bar{background:var(--accent);}
+.cols-team .col.low .col-bar{background:#C0573F;}
+.legend{display:flex;gap:20px;flex-wrap:wrap;margin-top:12px;font-size:12px;color:var(--text-mute);}
+.legend span{display:inline-flex;align-items:center;gap:6px;}
+.sw{width:10px;height:10px;border-radius:3px;display:inline-block;}
+.sw-top{background:var(--accent);}
+.sw-low{background:#C0573F;}
+.hrow{display:grid;grid-template-columns:minmax(90px,150px) 1fr 64px;align-items:center;gap:12px;padding:5px 0;font-size:13px;}
+.hrow[data-tip]:hover::after,.hrow[data-tip]:focus::after{left:auto;right:0;transform:none;}
+.hname{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.htrack{height:12px;}
+.hfill{display:block;height:100%;background:var(--accent);border-radius:0 4px 4px 0;}
+.hrow.muted .hfill{background:#C9D9D0;}
+.hrow:hover .hfill,.hrow:focus .hfill{filter:brightness(0.88);}
+.hval{text-align:right;font-variant-numeric:tabular-nums;color:var(--text);font-weight:500;}
+@media (max-width:700px){
+  .kpis{grid-template-columns:1fr 1fr;}
+  .kpi-v{font-size:26px;}
+  .panels{grid-template-columns:1fr;}
+  .panel{padding:20px 16px 16px;}
+  .cols{height:160px;gap:1px;}
+  .cols-x{gap:1px;}
+  .hrow{grid-template-columns:112px 1fr 56px;gap:8px;}
+  [data-tip]:hover::after,[data-tip]:focus::after{white-space:normal;width:180px;}
+}
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a class="back" href="index.html">← <span data-ru="На главную">Back to portfolio</span></a>
+    <div class="nav-right">
+      <div class="lang-switch" role="group" aria-label="Language"><button type="button" data-lang="en" class="on">EN</button><button type="button" data-lang="ru">RU</button></div>
+      <!-- Ссылка на таблицу -->
+      <a class="btn btn-primary btn-sm" href="#spreadsheet" target="_blank" rel="noopener"><span class="btn-label-long" data-ru="Открыть таблицу">Open the spreadsheet</span><span class="btn-label-short" data-ru="Таблица">Spreadsheet</span></a>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <div class="cover">
+    <div class="cover-tag">Finance &amp; Accounting case</div>
+    <h1>Sales analysis and year-end cash forecast</h1>
+    <p class="cover-sub">A month of raw sales data turned into a report for the owner, plus a year of journal entries and a 12-month cash forecast for a second client.</p>
+    <p class="cover-meta">Excel · Sales analysis · Journal entries · Forecast</p>
+  </div>
+  <div class="under-cover">
+    <a class="btn btn-primary" href="#spreadsheet" target="_blank" rel="noopener">Open the spreadsheet</a>
+  </div>
+
+  <section>
+    <p class="label">The clients</p>
+    <h2>Two clients: sales analysis and a year-end forecast</h2>
+    <p class="lead"><b>Part 1.</b> The owner of a California cannabis delivery retailer sent a point-of-sale export for October 2024: 13,031 order lines and 89 columns. He asked four questions and wanted a report on the best and worst products, brands and categories, margins, the sales team and the regions.</p>
+    <p class="lead"><b>Part 2.</b> A company selling on Net 30 terms needed its main transactions for the year recorded: receivables and bad debts, an equipment loan, inventory, prepaid insurance. Then a year-end forecast to see whether it can repay a $2.15M note.</p>
+    <div class="inputs">
+      <div class="input"><div class="input-num">13,031</div><h3>Order lines</h3><p>5,143 transactions in one month</p></div>
+      <div class="input"><div class="input-num">509</div><h3>Products</h3><p>From 91 brands in 11 categories</p></div>
+      <div class="input"><div class="input-num">39</div><h3>Employees</h3><p>Sales team results compared</p></div>
+      <div class="input"><div class="input-num">11</div><h3>Regions</h3><p>Delivery zones across the Bay Area</p></div>
+    </div>
+  </section>
+
+  <section>
+    <p class="label">Part 1 · Data check</p>
+    <h2>Before counting, I checked the data</h2>
+    <div class="steps">
+      <div class="step"><div class="step-num">1</div><div><h3>Checked every formula in the profit column</h3><p>Profit = Gross Receipt − COGs. One row had a hardcoded 1 instead of the formula (true profit $30.16), two rows pointed to the next row. Fixed and highlighted.</p></div></div>
+      <div class="step"><div class="step-num">2</div><div><h3>Fixed a miscategorized line</h3><p>A Gelato vape was filed under the category "Accountants" and the brand "Alex". The other 13 lines of the same product are Vape Cartridges / Gelato.</p></div></div>
+      <div class="step"><div class="step-num">3</div><div><h3>Converted text to numbers</h3><p>Quantity Sold was stored as text ("2.0 ea"). A helper column turns it into numbers with VALUE(SUBSTITUTE()).</p></div></div>
+      <div class="step"><div class="step-num">4</div><div><h3>Flagged what needs the owner's confirmation</h3><p>102 lines with no region, 154 accessories with no brand, 4 lines on Hold in a Completed report, a delivery fee recorded as a product.</p></div></div>
+    </div>
+  </section>
+
+  <section>
+    <p class="label">Part 1 · Questions</p>
+    <h2>The owner's four questions, answered with formulas</h2>
+    <div class="statement">
+      <table>
+        <tr class="group"><td>Question</td><td>Answer</td><td style="padding-left:16px">Formulas</td></tr>
+        <tr><td>Day with the highest profit</td><td>Sunday, Oct 6: $16,558.10</td><td class="desc">SUMIFS by day, INDEX/MATCH on MAX</td></tr>
+        <tr><td>Profit of lines with a negative value</td><td>90 lines: −$689.68</td><td class="desc">SUMIF, COUNTIF, checked with SUMPRODUCT</td></tr>
+        <tr><td>Most profitable category</td><td>Flowers: $127,532 (37.4% of profit)</td><td class="desc">INDEX/MATCH on MAX</td></tr>
+        <tr><td>Table of 15 products to complete</td><td>SKU, category, brand, units and profit for the month</td><td class="desc">INDEX/MATCH, SUMIFS</td></tr>
+      </table>
+    </div>
+  </section>
+
+  <section>
+    <p class="label">Part 1 · Dashboard</p>
+    <h2>October 2024 at a glance</h2>
+    <div class="kpis">
+      <div class="kpi"><p class="kpi-l">Gross Receipt</p><p class="kpi-v">$484.6K</p><p class="kpi-s">Net Sales: $357.4K</p></div>
+      <div class="kpi"><p class="kpi-l">Profit</p><p class="kpi-v">$340.7K</p><p class="kpi-s">COGs: $143.9K</p></div>
+      <div class="kpi"><p class="kpi-l">Profit margin</p><p class="kpi-v">70.3%</p><p class="kpi-s">Product gross margin: 59.7%</p></div>
+      <div class="kpi"><p class="kpi-l">Order lines</p><p class="kpi-v">13,031</p><p class="kpi-s">16,264 units sold</p></div>
+    </div>
+    <div class="panel">
+      <div class="panel-head"><h3>Profit by day</h3><span>Weekends in dark green, dashed line: daily average $10,990. Oct 31 is a partial day.</span></div>
+      <div class="cols" style="--avg:66.4%"><div class="avg-line"></div><div class="col" data-tip="Tue, Oct 1: $12,939 · 474 lines" tabindex="0"><div class="col-bar" style="height:78.1%"></div></div><div class="col" data-tip="Wed, Oct 2: $10,040 · 387 lines" tabindex="0"><div class="col-bar" style="height:60.6%"></div></div><div class="col" data-tip="Thu, Oct 3: $11,410 · 406 lines" tabindex="0"><div class="col-bar" style="height:68.9%"></div></div><div class="col" data-tip="Fri, Oct 4: $11,126 · 425 lines" tabindex="0"><div class="col-bar" style="height:67.2%"></div></div><div class="col we" data-tip="Sat, Oct 5: $11,855 · 469 lines" tabindex="0"><div class="col-bar" style="height:71.6%"></div></div><div class="col we" data-tip="Sun, Oct 6: $16,558 · 645 lines" tabindex="0"><div class="col-bar" style="height:100.0%"><span class="col-top">$16.6K</span></div></div><div class="col" data-tip="Mon, Oct 7: $13,936 · 548 lines" tabindex="0"><div class="col-bar" style="height:84.2%"></div></div><div class="col" data-tip="Tue, Oct 8: $12,979 · 476 lines" tabindex="0"><div class="col-bar" style="height:78.4%"></div></div><div class="col" data-tip="Wed, Oct 9: $12,439 · 507 lines" tabindex="0"><div class="col-bar" style="height:75.1%"></div></div><div class="col" data-tip="Thu, Oct 10: $10,895 · 367 lines" tabindex="0"><div class="col-bar" style="height:65.8%"></div></div><div class="col" data-tip="Fri, Oct 11: $9,860 · 387 lines" tabindex="0"><div class="col-bar" style="height:59.5%"></div></div><div class="col we" data-tip="Sat, Oct 12: $12,051 · 422 lines" tabindex="0"><div class="col-bar" style="height:72.8%"></div></div><div class="col we" data-tip="Sun, Oct 13: $14,965 · 539 lines" tabindex="0"><div class="col-bar" style="height:90.4%"></div></div><div class="col" data-tip="Mon, Oct 14: $13,367 · 521 lines" tabindex="0"><div class="col-bar" style="height:80.7%"></div></div><div class="col" data-tip="Tue, Oct 15: $13,126 · 478 lines" tabindex="0"><div class="col-bar" style="height:79.3%"></div></div><div class="col" data-tip="Wed, Oct 16: $10,599 · 388 lines" tabindex="0"><div class="col-bar" style="height:64.0%"></div></div><div class="col" data-tip="Thu, Oct 17: $9,450 · 336 lines" tabindex="0"><div class="col-bar" style="height:57.1%"></div></div><div class="col" data-tip="Fri, Oct 18: $10,256 · 375 lines" tabindex="0"><div class="col-bar" style="height:61.9%"></div></div><div class="col we" data-tip="Sat, Oct 19: $11,201 · 449 lines" tabindex="0"><div class="col-bar" style="height:67.6%"></div></div><div class="col we" data-tip="Sun, Oct 20: $11,457 · 484 lines" tabindex="0"><div class="col-bar" style="height:69.2%"></div></div><div class="col" data-tip="Mon, Oct 21: $9,548 · 397 lines" tabindex="0"><div class="col-bar" style="height:57.7%"></div></div><div class="col" data-tip="Tue, Oct 22: $10,218 · 427 lines" tabindex="0"><div class="col-bar" style="height:61.7%"></div></div><div class="col" data-tip="Wed, Oct 23: $8,326 · 327 lines" tabindex="0"><div class="col-bar" style="height:50.3%"></div></div><div class="col" data-tip="Thu, Oct 24: $10,728 · 413 lines" tabindex="0"><div class="col-bar" style="height:64.8%"></div></div><div class="col" data-tip="Fri, Oct 25: $9,264 · 352 lines" tabindex="0"><div class="col-bar" style="height:55.9%"></div></div><div class="col we" data-tip="Sat, Oct 26: $9,173 · 355 lines" tabindex="0"><div class="col-bar" style="height:55.4%"></div></div><div class="col we" data-tip="Sun, Oct 27: $12,263 · 488 lines" tabindex="0"><div class="col-bar" style="height:74.1%"></div></div><div class="col" data-tip="Mon, Oct 28: $10,069 · 392 lines" tabindex="0"><div class="col-bar" style="height:60.8%"></div></div><div class="col" data-tip="Tue, Oct 29: $8,248 · 323 lines" tabindex="0"><div class="col-bar" style="height:49.8%"></div></div><div class="col" data-tip="Wed, Oct 30: $8,864 · 346 lines" tabindex="0"><div class="col-bar" style="height:53.5%"></div></div><div class="col" data-tip="Thu, Oct 31: $3,494 · 128 lines" tabindex="0"><div class="col-bar" style="height:21.1%"></div></div></div>
+      <div class="cols-x"><span>1</span><span></span><span></span><span></span><span></span><span>6</span><span></span><span></span><span></span><span></span><span></span><span></span><span>13</span><span></span><span></span><span></span><span></span><span></span><span></span><span>20</span><span></span><span></span><span></span><span></span><span></span><span></span><span>27</span><span></span><span></span><span></span><span>31</span></div>
+    </div>
+    <div class="panels">
+      <div class="panel">
+        <div class="panel-head"><h3>Profit by category</h3><span>Share of total profit</span></div>
+        <div class="hrow" data-tip="$127,532 · margin 71.4%" tabindex="0"><span class="hname">Flowers</span><span class="htrack"><span class="hfill" style="width:100.0%"></span></span><span class="hval">37.4%</span></div>
+        <div class="hrow" data-tip="$102,428 · margin 69.0%" tabindex="0"><span class="hname">Vape Cartridges</span><span class="htrack"><span class="hfill" style="width:80.3%"></span></span><span class="hval">30.1%</span></div>
+        <div class="hrow" data-tip="$47,640 · margin 67.5%" tabindex="0"><span class="hname">Edibles</span><span class="htrack"><span class="hfill" style="width:37.4%"></span></span><span class="hval">14.0%</span></div>
+        <div class="hrow" data-tip="$24,767 · margin 69.5%" tabindex="0"><span class="hname">Infused Pre Roll</span><span class="htrack"><span class="hfill" style="width:19.4%"></span></span><span class="hval">7.3%</span></div>
+        <div class="hrow" data-tip="$17,967 · margin 72.4%" tabindex="0"><span class="hname">Concentrates</span><span class="htrack"><span class="hfill" style="width:14.1%"></span></span><span class="hval">5.3%</span></div>
+        <div class="hrow" data-tip="$14,236 · margin 73.4%" tabindex="0"><span class="hname">Prerolls</span><span class="htrack"><span class="hfill" style="width:11.2%"></span></span><span class="hval">4.2%</span></div>
+        <div class="hrow muted" data-tip="$6,133" tabindex="0"><span class="hname">Other 5 categories</span><span class="htrack"><span class="hfill" style="width:4.8%"></span></span><span class="hval">1.8%</span></div>
+      </div>
+      <div class="panel">
+        <div class="panel-head"><h3>Top 8 brands by profit</h3><span>Share of total profit</span></div>
+        <div class="hrow" data-tip="$43,386 · margin 76.0%" tabindex="0"><span class="hname">Gelato</span><span class="htrack"><span class="hfill" style="width:100.0%"></span></span><span class="hval">12.7%</span></div>
+        <div class="hrow" data-tip="$22,747 · margin 71.0%" tabindex="0"><span class="hname">Lazy Bud</span><span class="htrack"><span class="hfill" style="width:52.4%"></span></span><span class="hval">6.7%</span></div>
+        <div class="hrow" data-tip="$18,925 · margin 67.5%" tabindex="0"><span class="hname">Stiiizy</span><span class="htrack"><span class="hfill" style="width:43.6%"></span></span><span class="hval">5.6%</span></div>
+        <div class="hrow" data-tip="$16,443 · margin 68.7%" tabindex="0"><span class="hname">Allswell</span><span class="htrack"><span class="hfill" style="width:37.9%"></span></span><span class="hval">4.8%</span></div>
+        <div class="hrow" data-tip="$14,281 · margin 68.1%" tabindex="0"><span class="hname">WYLD</span><span class="htrack"><span class="hfill" style="width:32.9%"></span></span><span class="hval">4.2%</span></div>
+        <div class="hrow" data-tip="$14,102 · margin 68.4%" tabindex="0"><span class="hname">Americanna</span><span class="htrack"><span class="hfill" style="width:32.5%"></span></span><span class="hval">4.1%</span></div>
+        <div class="hrow" data-tip="$13,649 · margin 63.6%" tabindex="0"><span class="hname">Absolute Xtracts</span><span class="htrack"><span class="hfill" style="width:31.5%"></span></span><span class="hval">4.0%</span></div>
+        <div class="hrow" data-tip="$9,032 · margin 75.1%" tabindex="0"><span class="hname">Mr. Zips</span><span class="htrack"><span class="hfill" style="width:20.8%"></span></span><span class="hval">2.7%</span></div>
+      </div>
+    </div>
+    <div class="panel">
+      <div class="panel-head"><h3>Sales by region</h3><span>Gross Receipt, 10 regions (102 lines with no region not shown)</span></div>
+      <div class="hrow" data-tip="23.9% · $81,477 profit" tabindex="0"><span class="hname">Walnut Creek</span><span class="htrack"><span class="hfill" style="width:100.0%"></span></span><span class="hval">$115.9K</span></div>
+        <div class="hrow" data-tip="21.7% · $74,339 profit" tabindex="0"><span class="hname">Concord</span><span class="htrack"><span class="hfill" style="width:91.0%"></span></span><span class="hval">$105.4K</span></div>
+        <div class="hrow" data-tip="16.5% · $55,699 profit" tabindex="0"><span class="hname">Bag and Carry</span><span class="htrack"><span class="hfill" style="width:68.9%"></span></span><span class="hval">$79.8K</span></div>
+        <div class="hrow" data-tip="11.4% · $38,909 profit" tabindex="0"><span class="hname">San Ramon</span><span class="htrack"><span class="hfill" style="width:47.7%"></span></span><span class="hval">$55.3K</span></div>
+        <div class="hrow" data-tip="7.6% · $25,948 profit" tabindex="0"><span class="hname">Antioch</span><span class="htrack"><span class="hfill" style="width:32.0%"></span></span><span class="hval">$37.0K</span></div>
+        <div class="hrow" data-tip="7.0% · $24,046 profit" tabindex="0"><span class="hname">Peninsula</span><span class="htrack"><span class="hfill" style="width:29.1%"></span></span><span class="hval">$33.8K</span></div>
+        <div class="hrow" data-tip="3.6% · $12,470 profit" tabindex="0"><span class="hname">SF City</span><span class="htrack"><span class="hfill" style="width:15.2%"></span></span><span class="hval">$17.7K</span></div>
+        <div class="hrow" data-tip="3.3% · $11,251 profit" tabindex="0"><span class="hname">Tracy/Lodi/Stockton</span><span class="htrack"><span class="hfill" style="width:13.9%"></span></span><span class="hval">$16.0K</span></div>
+        <div class="hrow" data-tip="2.3% · $7,892 profit" tabindex="0"><span class="hname">Richmond</span><span class="htrack"><span class="hfill" style="width:9.7%"></span></span><span class="hval">$11.2K</span></div>
+        <div class="hrow" data-tip="1.9% · $6,187 profit" tabindex="0"><span class="hname">San Jose to Fremont</span><span class="htrack"><span class="hfill" style="width:7.8%"></span></span><span class="hval">$9.0K</span></div>
+    </div>
+    <div class="panel">
+      <div class="panel-head"><h3>Profit by employee</h3><span>39 employees, sorted by profit</span></div>
+      <div class="cols cols-team"><div class="col top" data-tip="Employee 1: $22,159 · margin 70.7% · $26.89/line" tabindex="0"><div class="col-bar" style="height:100.0%"></div></div><div class="col top" data-tip="Employee 2: $18,661 · margin 70.2% · $25.74/line" tabindex="0"><div class="col-bar" style="height:84.2%"></div></div><div class="col top" data-tip="Employee 3: $18,623 · margin 70.8% · $26.80/line" tabindex="0"><div class="col-bar" style="height:84.0%"></div></div><div class="col top" data-tip="Employee 4: $17,726 · margin 69.7% · $25.50/line" tabindex="0"><div class="col-bar" style="height:80.0%"></div></div><div class="col top" data-tip="Employee 5: $17,286 · margin 70.8% · $26.55/line" tabindex="0"><div class="col-bar" style="height:78.0%"></div></div><div class="col" data-tip="Employee 6: $17,269 · margin 71.4% · $26.49/line" tabindex="0"><div class="col-bar" style="height:77.9%"></div></div><div class="col" data-tip="Employee 7: $16,485 · margin 70.4% · $25.84/line" tabindex="0"><div class="col-bar" style="height:74.4%"></div></div><div class="col" data-tip="Employee 8: $15,701 · margin 70.5% · $26.12/line" tabindex="0"><div class="col-bar" style="height:70.9%"></div></div><div class="col" data-tip="Employee 9: $15,158 · margin 70.1% · $26.92/line" tabindex="0"><div class="col-bar" style="height:68.4%"></div></div><div class="col" data-tip="Employee 10: $14,753 · margin 69.5% · $26.77/line" tabindex="0"><div class="col-bar" style="height:66.6%"></div></div><div class="col" data-tip="Employee 11: $14,529 · margin 69.3% · $24.75/line" tabindex="0"><div class="col-bar" style="height:65.6%"></div></div><div class="col" data-tip="Employee 12: $13,355 · margin 70.3% · $25.59/line" tabindex="0"><div class="col-bar" style="height:60.3%"></div></div><div class="col" data-tip="Employee 13: $13,222 · margin 69.5% · $25.14/line" tabindex="0"><div class="col-bar" style="height:59.7%"></div></div><div class="col" data-tip="Employee 14: $11,989 · margin 71.0% · $28.48/line" tabindex="0"><div class="col-bar" style="height:54.1%"></div></div><div class="col" data-tip="Employee 15: $11,847 · margin 70.6% · $29.11/line" tabindex="0"><div class="col-bar" style="height:53.5%"></div></div><div class="col" data-tip="Employee 16: $11,666 · margin 70.5% · $26.82/line" tabindex="0"><div class="col-bar" style="height:52.6%"></div></div><div class="col" data-tip="Employee 17: $9,854 · margin 70.5% · $27.45/line" tabindex="0"><div class="col-bar" style="height:44.5%"></div></div><div class="col" data-tip="Employee 18: $9,340 · margin 70.0% · $24.97/line" tabindex="0"><div class="col-bar" style="height:42.2%"></div></div><div class="col" data-tip="Employee 19: $7,588 · margin 71.5% · $27.69/line" tabindex="0"><div class="col-bar" style="height:34.2%"></div></div><div class="col" data-tip="Employee 20: $7,275 · margin 70.4% · $28.98/line" tabindex="0"><div class="col-bar" style="height:32.8%"></div></div><div class="col" data-tip="Employee 21: $6,967 · margin 70.9% · $26.09/line" tabindex="0"><div class="col-bar" style="height:31.4%"></div></div><div class="col" data-tip="Employee 22: $6,049 · margin 70.5% · $23.82/line" tabindex="0"><div class="col-bar" style="height:27.3%"></div></div><div class="col" data-tip="Employee 23: $5,840 · margin 69.6% · $25.50/line" tabindex="0"><div class="col-bar" style="height:26.4%"></div></div><div class="col" data-tip="Employee 24: $4,821 · margin 70.5% · $29.04/line" tabindex="0"><div class="col-bar" style="height:21.8%"></div></div><div class="col" data-tip="Employee 25: $4,173 · margin 71.1% · $26.41/line" tabindex="0"><div class="col-bar" style="height:18.8%"></div></div><div class="col" data-tip="Employee 26: $4,142 · margin 69.4% · $27.61/line" tabindex="0"><div class="col-bar" style="height:18.7%"></div></div><div class="col" data-tip="Employee 27: $3,900 · margin 70.2% · $24.38/line" tabindex="0"><div class="col-bar" style="height:17.6%"></div></div><div class="col" data-tip="Employee 28: $3,540 · margin 72.1% · $22.99/line" tabindex="0"><div class="col-bar" style="height:16.0%"></div></div><div class="col" data-tip="Employee 29: $3,192 · margin 71.7% · $22.48/line" tabindex="0"><div class="col-bar" style="height:14.4%"></div></div><div class="col" data-tip="Employee 30: $2,573 · margin 70.9% · $30.63/line" tabindex="0"><div class="col-bar" style="height:11.6%"></div></div><div class="col" data-tip="Employee 31: $2,494 · margin 71.0% · $28.02/line" tabindex="0"><div class="col-bar" style="height:11.3%"></div></div><div class="col" data-tip="Employee 32: $2,405 · margin 71.1% · $24.54/line" tabindex="0"><div class="col-bar" style="height:10.9%"></div></div><div class="col low" data-tip="Employee 33: $2,095 · margin 60.9% · $14.97/line" tabindex="0"><div class="col-bar" style="height:9.5%"></div></div><div class="col" data-tip="Employee 34: $1,905 · margin 72.0% · $27.21/line" tabindex="0"><div class="col-bar" style="height:8.6%"></div></div><div class="col" data-tip="Employee 35: $1,060 · margin 71.1% · $24.66/line" tabindex="0"><div class="col-bar" style="height:4.8%"></div></div><div class="col low" data-tip="Employee 36: $806 · margin 54.1% · $11.86/line" tabindex="0"><div class="col-bar" style="height:3.6%"></div></div><div class="col" data-tip="Employee 37: $152 · margin 73.4% · $38.00/line" tabindex="0"><div class="col-bar" style="height:0.8%"></div></div><div class="col" data-tip="Employee 38: $78 · margin 74.3% · $39.06/line" tabindex="0"><div class="col-bar" style="height:0.8%"></div></div><div class="col low" data-tip="Employee 39: $25 · margin 62.2% · $12.36/line" tabindex="0"><div class="col-bar" style="height:0.8%"></div></div></div>
+      <div class="legend"><span><i class="sw sw-top"></i>Top 5: 27.7% of profit</span><span><i class="sw sw-low"></i>⚠ Margin well below the 70% average</span></div>
+    </div>
+  </section>
+
+  <section>
+    <p class="label">Part 1 · Findings</p>
+    <h2>What the numbers say</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Two categories bring two thirds of profit</h3>
+        <p>Flowers (37.4%) and Vape Cartridges (30.1%). Accessories have the highest margin, 91.9%, but bring less than 1% of profit.</p>
+      </div>
+      <div class="card">
+        <h3>One brand leads</h3>
+        <p>Gelato earned $43.4K, 12.7% of profit, about twice the next brand. The 10 weakest brands sold 1–3 units each in the month.</p>
+      </div>
+      <div class="card">
+        <h3>Sales team</h3>
+        <p>The top 5 of 39 employees bring 27.7% of profit. Two employees have margins of 61% and 54% against a 70% average and earn $15 and $12 per line against $26. Their discounts should be reviewed.</p>
+      </div>
+      <div class="card">
+        <h3>Regions and days</h3>
+        <p>Walnut Creek, Concord and Bag and Carry drive 62% of sales. The two best days were Sundays, Oct 6 and Oct 13: weekends are worth planning staff and stock around.</p>
+      </div>
+    </div>
+
+    <div class="note"><b>Note:</b> "Profit" as defined in the data (Gross Receipt − COGs) includes excise, city and sales taxes and delivery fees, which are not the company's income. I showed Net Sales − COGs next to it as the more accurate gross margin: 59.7% instead of 70.3%.</div>
+  </section>
+
+  <section>
+    <p class="label">Part 2 · Transactions of the year</p>
+    <h2>From journal entries to a year-end forecast</h2>
+    <div class="steps">
+      <div class="step"><div class="step-num">1</div><div><h3>Receivables on Net 30</h3><p>$1M of sales: 85% collected on time, 7% after 60 days, 4% after 90 days, 4% uncollectable. Allowance method: bad debt expense in January, write-off on April 1.</p></div></div>
+      <div class="step"><div class="step-num">2</div><div><h3>Equipment bought with a loan</h3><p>$500K equipment, 15% down, $425K loan at 1.5% a month. Amortization table with PMT: 10 payments of $46,084.53, $35,845 of interest. Straight-line depreciation at 12.5% a year.</p></div></div>
+      <div class="step"><div class="step-num">3</div><div><h3>Inventory and cycle count</h3><p>2,500 units for $800K, half sold at a 35% markup ($540K). 50 missing and 2 defective units written off. Ending inventory of $383,360 ties to the account.</p></div></div>
+      <div class="step"><div class="step-num">4</div><div><h3>Prepaid insurance</h3><p>$120K policy from July 1: $10K expense a month, $60K still prepaid at Dec 31.</p></div></div>
+      <div class="step"><div class="step-num">5</div><div><h3>Year-end forecast</h3><p>Monthly P&amp;L, cash flow, A/R and A/P and the balance sheet at Dec 31, built from all the transactions above with 1% monthly sales growth.</p></div></div>
+    </div>
+
+    <div class="statement">
+      <div class="statement-head"><h3>Journal entries: receivables on Net 30</h3><span>Jan 1 – Apr 1</span></div>
+      <table>
+        <tr class="group"><td>Date</td><td>Account</td><td class="n">Debit</td><td class="n">Credit</td></tr>
+        <tr><td>1/1</td><td>Accounts Receivable</td><td class="n">1,000,000.00</td><td class="n"></td></tr>
+        <tr><td></td><td class="ind">Sales Revenue</td><td class="n"></td><td class="n">1,000,000.00</td></tr>
+        <tr><td>1/31</td><td>Bad Debt Expense</td><td class="n">40,000.00</td><td class="n"></td></tr>
+        <tr><td></td><td class="ind">Allowance for Doubtful Accounts</td><td class="n"></td><td class="n">40,000.00</td></tr>
+        <tr><td>1/31</td><td>Cash</td><td class="n">850,000.00</td><td class="n"></td></tr>
+        <tr><td></td><td class="ind">Accounts Receivable</td><td class="n"></td><td class="n">850,000.00</td></tr>
+        <tr><td>3/2</td><td>Cash</td><td class="n">70,000.00</td><td class="n"></td></tr>
+        <tr><td></td><td class="ind">Accounts Receivable</td><td class="n"></td><td class="n">70,000.00</td></tr>
+        <tr><td>4/1</td><td>Cash</td><td class="n">40,000.00</td><td class="n"></td></tr>
+        <tr><td></td><td class="ind">Accounts Receivable</td><td class="n"></td><td class="n">40,000.00</td></tr>
+        <tr><td>4/1</td><td>Allowance for Doubtful Accounts</td><td class="n">40,000.00</td><td class="n"></td></tr>
+        <tr><td></td><td class="ind">Accounts Receivable</td><td class="n"></td><td class="n">40,000.00</td></tr>
+      </table>
+    </div>
+  </section>
+
+  <section>
+    <p class="label">Part 2 · Forecast</p>
+    <h2>Can the company repay a $2.15M note on Dec 31? No.</h2>
+    <p class="lead">The year is profitable: $13.2M revenue and $2.62M net income, a 19.8% net margin. But only <b>$1.35M is left in cash on Dec 31, about $795K short.</b></p>
+    <p class="lead">The difference between profit and cash is tied up in the balance sheet: $288K in receivables, $383K in unsold inventory, $533K in equipment and CapEx, $60K in prepaid insurance.</p>
+
+    <div class="statement">
+      <div class="statement-head"><h3>Assets and liabilities</h3><span>As of 12/31</span></div>
+      <table>
+        <tr class="group"><td colspan="2">Assets</td></tr>
+        <tr><td class="ind">Cash</td><td class="n">1,354,727.01</td></tr>
+        <tr><td class="ind">Accounts Receivable, net</td><td class="n">287,979.36</td></tr>
+        <tr><td class="ind">Inventory (1,198 units)</td><td class="n">383,360.00</td></tr>
+        <tr><td class="ind">Prepaid Insurance</td><td class="n">60,000.00</td></tr>
+        <tr><td class="ind">Equipment, net</td><td class="n">447,916.67</td></tr>
+        <tr><td class="ind">CapEx additions, net</td><td class="n">84,843.75</td></tr>
+        <tr class="grand"><td>Total Assets</td><td class="n">2,618,826.79</td></tr>
+        <tr class="group"><td colspan="2">Liabilities</td></tr>
+        <tr><td class="ind">Accounts Payable</td><td class="n">–</td></tr>
+        <tr><td class="ind">Short-term Loan (paid off in December)</td><td class="n">–</td></tr>
+        <tr><td class="ind">Note Payable</td><td class="n">2,150,000.00</td></tr>
+        <tr class="grand"><td>Total Liabilities</td><td class="n">2,150,000.00</td></tr>
+      </table>
+    </div>
+
+    <div class="note"><b>Recommendations:</b> refinance or extend the note before Dec 31, sell the remaining inventory (about $517K at the 35% markup), tighten credit terms to cut 4% bad debts ($507K a year), and keep a monthly cash forecast next to the P&amp;L. Current ratio: 0.97.</div>
+  </section>
+
+  <section>
+    <p class="label">Judgment calls</p>
+    <h2>Where I had to make a call</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Bad debts hit the P&amp;L once</h3>
+        <p>The expense is estimated in January, against January sales. The write-off on April 1 moves the balance from the Allowance against A/R and does not touch the P&amp;L again.</p>
+      </div>
+      <div class="card">
+        <h3>Missing inputs as assumptions</h3>
+        <p>No opening cash or balance sheet was given. I assumed zero and put every assumption in input cells, so the whole forecast updates when an input changes.</p>
+      </div>
+      <div class="card">
+        <h3>A/P is zero</h3>
+        <p>COGS and payroll are paid in the same month, inventory and insurance in cash. The equipment loan and the note are loans, not Accounts Payable.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <p class="label">Deliverables</p>
+    <h2>What's in the Excel workbook</h2>
+    <ul class="deliv">
+      <li>Answers with formulas</li>
+      <li>Daily profit table with ranks</li>
+      <li>Owner report: categories, brands, products</li>
+      <li>Sales team and regions</li>
+      <li>Data corrections log</li>
+      <li>A/R schedule, allowance and write-off</li>
+      <li>Loan amortization (PMT) and depreciation</li>
+      <li>Inventory entries with shrinkage</li>
+      <li>Prepaid insurance schedule</li>
+      <li>12-month P&amp;L, cash flow and balance sheet</li>
+    </ul>
+  </section>
+
+  <div class="end">
+    <h2>See the full workbook</h2>
+    <p>Every formula, entry and schedule is in the spreadsheet. Feedback from accountants is welcome.</p>
+    <div class="end-actions">
+      <a class="btn btn-primary" href="#spreadsheet" target="_blank" rel="noopener">Open the spreadsheet</a>
+      <a href="#" class="btn btn-ghost copy-email" data-email="volkova.workpost@gmail.com" title="Click to copy"><span class="copy-text">volkova.workpost@gmail.com</span><span class="copy-hint">Copy</span></a>
+    </div>
+  </div>
+
+  <div class="footer">Finance &amp; Accounting case · Excel</div>
+
+</main>
+
+<template id="main-ru">
+
+  <div class="cover">
+    <div class="cover-tag">Финансовый кейс</div>
+    <h1>Анализ продаж и прогноз денег на конец года</h1>
+    <p class="cover-sub">Месяц сырых данных о продажах превращён в отчёт для владельца, плюс проводки за год и прогноз денег на 12 месяцев для второго клиента.</p>
+    <p class="cover-meta">Excel · Анализ продаж · Проводки · Прогноз</p>
+  </div>
+  <div class="under-cover">
+    <a class="btn btn-primary" href="#spreadsheet" target="_blank" rel="noopener">Открыть таблицу</a>
+  </div>
+
+  <section>
+    <p class="label">Клиенты</p>
+    <h2>Два клиента: анализ продаж и прогноз на конец года</h2>
+    <p class="lead"><b>Часть 1.</b> Владелец калифорнийского сервиса доставки каннабиса прислал выгрузку из кассовой системы за октябрь 2024: 13 031 строка заказов и 89 колонок. Он задал четыре вопроса и попросил отчёт: лучшие и худшие товары, бренды и категории, маржа, работа продавцов и регионы.</p>
+    <p class="lead"><b>Часть 2.</b> Компании, которая продаёт с отсрочкой Net 30, нужно было провести основные операции за год: дебиторку и безнадёжные долги, кредит на оборудование, запасы, предоплаченную страховку. А затем сделать прогноз на конец года: сможет ли компания погасить вексель на $2,15 млн.</p>
+    <div class="inputs">
+      <div class="input"><div class="input-num">13 031</div><h3>Строк заказов</h3><p>5 143 транзакции за месяц</p></div>
+      <div class="input"><div class="input-num">509</div><h3>Товаров</h3><p>91 бренд в 11 категориях</p></div>
+      <div class="input"><div class="input-num">39</div><h3>Сотрудников</h3><p>Сравнила результаты продавцов</p></div>
+      <div class="input"><div class="input-num">11</div><h3>Регионов</h3><p>Зоны доставки в районе Залива</p></div>
+    </div>
+  </section>
+
+  <section>
+    <p class="label">Часть 1 · Проверка данных</p>
+    <h2>Прежде чем считать, проверила данные</h2>
+    <div class="steps">
+      <div class="step"><div class="step-num">1</div><div><h3>Проверила каждую формулу в колонке прибыли</h3><p>Profit = Gross Receipt − COGs. В одной строке вместо формулы стояла 1 (реальная прибыль $30,16), две строки ссылались на следующую строку. Исправила и выделила цветом.</p></div></div>
+      <div class="step"><div class="step-num">2</div><div><h3>Исправила строку с неверной категорией</h3><p>Вейп Gelato был записан в категорию «Accountants» и бренд «Alex». Остальные 13 строк этого товара — Vape Cartridges / Gelato.</p></div></div>
+      <div class="step"><div class="step-num">3</div><div><h3>Перевела текст в числа</h3><p>Количество хранилось как текст («2.0 ea»). Вспомогательная колонка переводит его в числа через VALUE(SUBSTITUTE()).</p></div></div>
+      <div class="step"><div class="step-num">4</div><div><h3>Отметила то, что нужно подтвердить у владельца</h3><p>102 строки без региона, 154 аксессуара без бренда, 4 строки в статусе Hold в отчёте Completed, плата за доставку записана как товар.</p></div></div>
+    </div>
+  </section>
+
+  <section>
+    <p class="label">Часть 1 · Вопросы</p>
+    <h2>Четыре вопроса владельца, ответы формулами</h2>
+    <div class="statement">
+      <table>
+        <tr class="group"><td>Вопрос</td><td>Ответ</td><td style="padding-left:16px">Формулы</td></tr>
+        <tr><td>День с наибольшей прибылью</td><td>Воскресенье, 6 октября: $16 558,10</td><td class="desc">SUMIFS по дням, INDEX/MATCH по MAX</td></tr>
+        <tr><td>Прибыль строк с отрицательным значением</td><td>90 строк: −$689,68</td><td class="desc">SUMIF, COUNTIF, проверка через SUMPRODUCT</td></tr>
+        <tr><td>Самая прибыльная категория</td><td>Flowers: $127 532 (37,4% прибыли)</td><td class="desc">INDEX/MATCH по MAX</td></tr>
+        <tr><td>Таблица из 15 товаров</td><td>SKU, категория, бренд, количество и прибыль за месяц</td><td class="desc">INDEX/MATCH, SUMIFS</td></tr>
+      </table>
+    </div>
+  </section>
+
+  <section>
+    <p class="label">Часть 1 · Дашборд</p>
+    <h2>Октябрь 2024 на одном экране</h2>
+    <div class="kpis">
+      <div class="kpi"><p class="kpi-l">Gross Receipt</p><p class="kpi-v">$484 582</p><p class="kpi-s">Net Sales: $357,4 тыс.</p></div>
+      <div class="kpi"><p class="kpi-l">Прибыль</p><p class="kpi-v">$340 702</p><p class="kpi-s">COGs: $143,9 тыс.</p></div>
+      <div class="kpi"><p class="kpi-l">Маржа прибыли</p><p class="kpi-v">70,3%</p><p class="kpi-s">Валовая маржа по товарам: 59,7%</p></div>
+      <div class="kpi"><p class="kpi-l">Строк заказов</p><p class="kpi-v">13 031</p><p class="kpi-s">16 264 единицы продано</p></div>
+    </div>
+    <div class="panel">
+      <div class="panel-head"><h3>Прибыль по дням</h3><span>Выходные тёмно-зелёные, пунктир: среднее за день $10 990. 31 октября — неполный день.</span></div>
+      <div class="cols" style="--avg:66.4%"><div class="avg-line"></div><div class="col" data-tip="вт, 1 окт: $12 939 · 474 строк" tabindex="0"><div class="col-bar" style="height:78.1%"></div></div><div class="col" data-tip="ср, 2 окт: $10 040 · 387 строк" tabindex="0"><div class="col-bar" style="height:60.6%"></div></div><div class="col" data-tip="чт, 3 окт: $11 410 · 406 строк" tabindex="0"><div class="col-bar" style="height:68.9%"></div></div><div class="col" data-tip="пт, 4 окт: $11 126 · 425 строк" tabindex="0"><div class="col-bar" style="height:67.2%"></div></div><div class="col we" data-tip="сб, 5 окт: $11 855 · 469 строк" tabindex="0"><div class="col-bar" style="height:71.6%"></div></div><div class="col we" data-tip="вс, 6 окт: $16 558 · 645 строк" tabindex="0"><div class="col-bar" style="height:100.0%"><span class="col-top">$16,6K</span></div></div><div class="col" data-tip="пн, 7 окт: $13 936 · 548 строк" tabindex="0"><div class="col-bar" style="height:84.2%"></div></div><div class="col" data-tip="вт, 8 окт: $12 979 · 476 строк" tabindex="0"><div class="col-bar" style="height:78.4%"></div></div><div class="col" data-tip="ср, 9 окт: $12 439 · 507 строк" tabindex="0"><div class="col-bar" style="height:75.1%"></div></div><div class="col" data-tip="чт, 10 окт: $10 895 · 367 строк" tabindex="0"><div class="col-bar" style="height:65.8%"></div></div><div class="col" data-tip="пт, 11 окт: $9 860 · 387 строк" tabindex="0"><div class="col-bar" style="height:59.5%"></div></div><div class="col we" data-tip="сб, 12 окт: $12 051 · 422 строк" tabindex="0"><div class="col-bar" style="height:72.8%"></div></div><div class="col we" data-tip="вс, 13 окт: $14 965 · 539 строк" tabindex="0"><div class="col-bar" style="height:90.4%"></div></div><div class="col" data-tip="пн, 14 окт: $13 367 · 521 строк" tabindex="0"><div class="col-bar" style="height:80.7%"></div></div><div class="col" data-tip="вт, 15 окт: $13 126 · 478 строк" tabindex="0"><div class="col-bar" style="height:79.3%"></div></div><div class="col" data-tip="ср, 16 окт: $10 599 · 388 строк" tabindex="0"><div class="col-bar" style="height:64.0%"></div></div><div class="col" data-tip="чт, 17 окт: $9 450 · 336 строк" tabindex="0"><div class="col-bar" style="height:57.1%"></div></div><div class="col" data-tip="пт, 18 окт: $10 256 · 375 строк" tabindex="0"><div class="col-bar" style="height:61.9%"></div></div><div class="col we" data-tip="сб, 19 окт: $11 201 · 449 строк" tabindex="0"><div class="col-bar" style="height:67.6%"></div></div><div class="col we" data-tip="вс, 20 окт: $11 457 · 484 строк" tabindex="0"><div class="col-bar" style="height:69.2%"></div></div><div class="col" data-tip="пн, 21 окт: $9 548 · 397 строк" tabindex="0"><div class="col-bar" style="height:57.7%"></div></div><div class="col" data-tip="вт, 22 окт: $10 218 · 427 строк" tabindex="0"><div class="col-bar" style="height:61.7%"></div></div><div class="col" data-tip="ср, 23 окт: $8 326 · 327 строк" tabindex="0"><div class="col-bar" style="height:50.3%"></div></div><div class="col" data-tip="чт, 24 окт: $10 728 · 413 строк" tabindex="0"><div class="col-bar" style="height:64.8%"></div></div><div class="col" data-tip="пт, 25 окт: $9 264 · 352 строк" tabindex="0"><div class="col-bar" style="height:55.9%"></div></div><div class="col we" data-tip="сб, 26 окт: $9 173 · 355 строк" tabindex="0"><div class="col-bar" style="height:55.4%"></div></div><div class="col we" data-tip="вс, 27 окт: $12 263 · 488 строк" tabindex="0"><div class="col-bar" style="height:74.1%"></div></div><div class="col" data-tip="пн, 28 окт: $10 069 · 392 строк" tabindex="0"><div class="col-bar" style="height:60.8%"></div></div><div class="col" data-tip="вт, 29 окт: $8 248 · 323 строк" tabindex="0"><div class="col-bar" style="height:49.8%"></div></div><div class="col" data-tip="ср, 30 окт: $8 864 · 346 строк" tabindex="0"><div class="col-bar" style="height:53.5%"></div></div><div class="col" data-tip="чт, 31 окт: $3 494 · 128 строк" tabindex="0"><div class="col-bar" style="height:21.1%"></div></div></div>
+      <div class="cols-x"><span>1</span><span></span><span></span><span></span><span></span><span>6</span><span></span><span></span><span></span><span></span><span></span><span></span><span>13</span><span></span><span></span><span></span><span></span><span></span><span></span><span>20</span><span></span><span></span><span></span><span></span><span></span><span></span><span>27</span><span></span><span></span><span></span><span>31</span></div>
+    </div>
+    <div class="panels">
+      <div class="panel">
+        <div class="panel-head"><h3>Прибыль по категориям</h3><span>Доля в общей прибыли</span></div>
+        <div class="hrow" data-tip="$127 532 · маржа 71,4%" tabindex="0"><span class="hname">Flowers</span><span class="htrack"><span class="hfill" style="width:100.0%"></span></span><span class="hval">37,4%</span></div>
+        <div class="hrow" data-tip="$102 428 · маржа 69,0%" tabindex="0"><span class="hname">Vape Cartridges</span><span class="htrack"><span class="hfill" style="width:80.3%"></span></span><span class="hval">30,1%</span></div>
+        <div class="hrow" data-tip="$47 640 · маржа 67,5%" tabindex="0"><span class="hname">Edibles</span><span class="htrack"><span class="hfill" style="width:37.4%"></span></span><span class="hval">14,0%</span></div>
+        <div class="hrow" data-tip="$24 767 · маржа 69,5%" tabindex="0"><span class="hname">Infused Pre Roll</span><span class="htrack"><span class="hfill" style="width:19.4%"></span></span><span class="hval">7,3%</span></div>
+        <div class="hrow" data-tip="$17 967 · маржа 72,4%" tabindex="0"><span class="hname">Concentrates</span><span class="htrack"><span class="hfill" style="width:14.1%"></span></span><span class="hval">5,3%</span></div>
+        <div class="hrow" data-tip="$14 236 · маржа 73,4%" tabindex="0"><span class="hname">Prerolls</span><span class="htrack"><span class="hfill" style="width:11.2%"></span></span><span class="hval">4,2%</span></div>
+        <div class="hrow muted" data-tip="$6 133" tabindex="0"><span class="hname">Остальные 5 категорий</span><span class="htrack"><span class="hfill" style="width:4.8%"></span></span><span class="hval">1,8%</span></div>
+      </div>
+      <div class="panel">
+        <div class="panel-head"><h3>Топ-8 брендов по прибыли</h3><span>Доля в общей прибыли</span></div>
+        <div class="hrow" data-tip="$43 386 · маржа 76,0%" tabindex="0"><span class="hname">Gelato</span><span class="htrack"><span class="hfill" style="width:100.0%"></span></span><span class="hval">12,7%</span></div>
+        <div class="hrow" data-tip="$22 747 · маржа 71,0%" tabindex="0"><span class="hname">Lazy Bud</span><span class="htrack"><span class="hfill" style="width:52.4%"></span></span><span class="hval">6,7%</span></div>
+        <div class="hrow" data-tip="$18 925 · маржа 67,5%" tabindex="0"><span class="hname">Stiiizy</span><span class="htrack"><span class="hfill" style="width:43.6%"></span></span><span class="hval">5,6%</span></div>
+        <div class="hrow" data-tip="$16 443 · маржа 68,7%" tabindex="0"><span class="hname">Allswell</span><span class="htrack"><span class="hfill" style="width:37.9%"></span></span><span class="hval">4,8%</span></div>
+        <div class="hrow" data-tip="$14 281 · маржа 68,1%" tabindex="0"><span class="hname">WYLD</span><span class="htrack"><span class="hfill" style="width:32.9%"></span></span><span class="hval">4,2%</span></div>
+        <div class="hrow" data-tip="$14 102 · маржа 68,4%" tabindex="0"><span class="hname">Americanna</span><span class="htrack"><span class="hfill" style="width:32.5%"></span></span><span class="hval">4,1%</span></div>
+        <div class="hrow" data-tip="$13 649 · маржа 63,6%" tabindex="0"><span class="hname">Absolute Xtracts</span><span class="htrack"><span class="hfill" style="width:31.5%"></span></span><span class="hval">4,0%</span></div>
+        <div class="hrow" data-tip="$9 032 · маржа 75,1%" tabindex="0"><span class="hname">Mr. Zips</span><span class="htrack"><span class="hfill" style="width:20.8%"></span></span><span class="hval">2,7%</span></div>
+      </div>
+    </div>
+    <div class="panel">
+      <div class="panel-head"><h3>Продажи по регионам</h3><span>Gross Receipt, 10 регионов (102 строки без региона не показаны)</span></div>
+      <div class="hrow" data-tip="23,9% · прибыль $81 477" tabindex="0"><span class="hname">Walnut Creek</span><span class="htrack"><span class="hfill" style="width:100.0%"></span></span><span class="hval">$115,9 тыс.</span></div>
+        <div class="hrow" data-tip="21,7% · прибыль $74 339" tabindex="0"><span class="hname">Concord</span><span class="htrack"><span class="hfill" style="width:91.0%"></span></span><span class="hval">$105,4 тыс.</span></div>
+        <div class="hrow" data-tip="16,5% · прибыль $55 699" tabindex="0"><span class="hname">Bag and Carry</span><span class="htrack"><span class="hfill" style="width:68.9%"></span></span><span class="hval">$79,8 тыс.</span></div>
+        <div class="hrow" data-tip="11,4% · прибыль $38 909" tabindex="0"><span class="hname">San Ramon</span><span class="htrack"><span class="hfill" style="width:47.7%"></span></span><span class="hval">$55,3 тыс.</span></div>
+        <div class="hrow" data-tip="7,6% · прибыль $25 948" tabindex="0"><span class="hname">Antioch</span><span class="htrack"><span class="hfill" style="width:32.0%"></span></span><span class="hval">$37,0 тыс.</span></div>
+        <div class="hrow" data-tip="7,0% · прибыль $24 046" tabindex="0"><span class="hname">Peninsula</span><span class="htrack"><span class="hfill" style="width:29.1%"></span></span><span class="hval">$33,8 тыс.</span></div>
+        <div class="hrow" data-tip="3,6% · прибыль $12 470" tabindex="0"><span class="hname">SF City</span><span class="htrack"><span class="hfill" style="width:15.2%"></span></span><span class="hval">$17,7 тыс.</span></div>
+        <div class="hrow" data-tip="3,3% · прибыль $11 251" tabindex="0"><span class="hname">Tracy/Lodi/Stockton</span><span class="htrack"><span class="hfill" style="width:13.9%"></span></span><span class="hval">$16,0 тыс.</span></div>
+        <div class="hrow" data-tip="2,3% · прибыль $7 892" tabindex="0"><span class="hname">Richmond</span><span class="htrack"><span class="hfill" style="width:9.7%"></span></span><span class="hval">$11,2 тыс.</span></div>
+        <div class="hrow" data-tip="1,9% · прибыль $6 187" tabindex="0"><span class="hname">San Jose to Fremont</span><span class="htrack"><span class="hfill" style="width:7.8%"></span></span><span class="hval">$9,0 тыс.</span></div>
+    </div>
+    <div class="panel">
+      <div class="panel-head"><h3>Прибыль по сотрудникам</h3><span>39 сотрудников по убыванию прибыли</span></div>
+      <div class="cols cols-team"><div class="col top" data-tip="Сотрудник 1: $22 159 · маржа 70,7% · $26,89/строку" tabindex="0"><div class="col-bar" style="height:100.0%"></div></div><div class="col top" data-tip="Сотрудник 2: $18 661 · маржа 70,2% · $25,74/строку" tabindex="0"><div class="col-bar" style="height:84.2%"></div></div><div class="col top" data-tip="Сотрудник 3: $18 623 · маржа 70,8% · $26,80/строку" tabindex="0"><div class="col-bar" style="height:84.0%"></div></div><div class="col top" data-tip="Сотрудник 4: $17 726 · маржа 69,7% · $25,50/строку" tabindex="0"><div class="col-bar" style="height:80.0%"></div></div><div class="col top" data-tip="Сотрудник 5: $17 286 · маржа 70,8% · $26,55/строку" tabindex="0"><div class="col-bar" style="height:78.0%"></div></div><div class="col" data-tip="Сотрудник 6: $17 269 · маржа 71,4% · $26,49/строку" tabindex="0"><div class="col-bar" style="height:77.9%"></div></div><div class="col" data-tip="Сотрудник 7: $16 485 · маржа 70,4% · $25,84/строку" tabindex="0"><div class="col-bar" style="height:74.4%"></div></div><div class="col" data-tip="Сотрудник 8: $15 701 · маржа 70,5% · $26,12/строку" tabindex="0"><div class="col-bar" style="height:70.9%"></div></div><div class="col" data-tip="Сотрудник 9: $15 158 · маржа 70,1% · $26,92/строку" tabindex="0"><div class="col-bar" style="height:68.4%"></div></div><div class="col" data-tip="Сотрудник 10: $14 753 · маржа 69,5% · $26,77/строку" tabindex="0"><div class="col-bar" style="height:66.6%"></div></div><div class="col" data-tip="Сотрудник 11: $14 529 · маржа 69,3% · $24,75/строку" tabindex="0"><div class="col-bar" style="height:65.6%"></div></div><div class="col" data-tip="Сотрудник 12: $13 355 · маржа 70,3% · $25,59/строку" tabindex="0"><div class="col-bar" style="height:60.3%"></div></div><div class="col" data-tip="Сотрудник 13: $13 222 · маржа 69,5% · $25,14/строку" tabindex="0"><div class="col-bar" style="height:59.7%"></div></div><div class="col" data-tip="Сотрудник 14: $11 989 · маржа 71,0% · $28,48/строку" tabindex="0"><div class="col-bar" style="height:54.1%"></div></div><div class="col" data-tip="Сотрудник 15: $11 847 · маржа 70,6% · $29,11/строку" tabindex="0"><div class="col-bar" style="height:53.5%"></div></div><div class="col" data-tip="Сотрудник 16: $11 666 · маржа 70,5% · $26,82/строку" tabindex="0"><div class="col-bar" style="height:52.6%"></div></div><div class="col" data-tip="Сотрудник 17: $9 854 · маржа 70,5% · $27,45/строку" tabindex="0"><div class="col-bar" style="height:44.5%"></div></div><div class="col" data-tip="Сотрудник 18: $9 340 · маржа 70,0% · $24,97/строку" tabindex="0"><div class="col-bar" style="height:42.2%"></div></div><div class="col" data-tip="Сотрудник 19: $7 588 · маржа 71,5% · $27,69/строку" tabindex="0"><div class="col-bar" style="height:34.2%"></div></div><div class="col" data-tip="Сотрудник 20: $7 275 · маржа 70,4% · $28,98/строку" tabindex="0"><div class="col-bar" style="height:32.8%"></div></div><div class="col" data-tip="Сотрудник 21: $6 967 · маржа 70,9% · $26,09/строку" tabindex="0"><div class="col-bar" style="height:31.4%"></div></div><div class="col" data-tip="Сотрудник 22: $6 049 · маржа 70,5% · $23,82/строку" tabindex="0"><div class="col-bar" style="height:27.3%"></div></div><div class="col" data-tip="Сотрудник 23: $5 840 · маржа 69,6% · $25,50/строку" tabindex="0"><div class="col-bar" style="height:26.4%"></div></div><div class="col" data-tip="Сотрудник 24: $4 821 · маржа 70,5% · $29,04/строку" tabindex="0"><div class="col-bar" style="height:21.8%"></div></div><div class="col" data-tip="Сотрудник 25: $4 173 · маржа 71,1% · $26,41/строку" tabindex="0"><div class="col-bar" style="height:18.8%"></div></div><div class="col" data-tip="Сотрудник 26: $4 142 · маржа 69,4% · $27,61/строку" tabindex="0"><div class="col-bar" style="height:18.7%"></div></div><div class="col" data-tip="Сотрудник 27: $3 900 · маржа 70,2% · $24,38/строку" tabindex="0"><div class="col-bar" style="height:17.6%"></div></div><div class="col" data-tip="Сотрудник 28: $3 540 · маржа 72,1% · $22,99/строку" tabindex="0"><div class="col-bar" style="height:16.0%"></div></div><div class="col" data-tip="Сотрудник 29: $3 192 · маржа 71,7% · $22,48/строку" tabindex="0"><div class="col-bar" style="height:14.4%"></div></div><div class="col" data-tip="Сотрудник 30: $2 573 · маржа 70,9% · $30,63/строку" tabindex="0"><div class="col-bar" style="height:11.6%"></div></div><div class="col" data-tip="Сотрудник 31: $2 494 · маржа 71,0% · $28,02/строку" tabindex="0"><div class="col-bar" style="height:11.3%"></div></div><div class="col" data-tip="Сотрудник 32: $2 405 · маржа 71,1% · $24,54/строку" tabindex="0"><div class="col-bar" style="height:10.9%"></div></div><div class="col low" data-tip="Сотрудник 33: $2 095 · маржа 60,9% · $14,97/строку" tabindex="0"><div class="col-bar" style="height:9.5%"></div></div><div class="col" data-tip="Сотрудник 34: $1 905 · маржа 72,0% · $27,21/строку" tabindex="0"><div class="col-bar" style="height:8.6%"></div></div><div class="col" data-tip="Сотрудник 35: $1 060 · маржа 71,1% · $24,66/строку" tabindex="0"><div class="col-bar" style="height:4.8%"></div></div><div class="col low" data-tip="Сотрудник 36: $806 · маржа 54,1% · $11,86/строку" tabindex="0"><div class="col-bar" style="height:3.6%"></div></div><div class="col" data-tip="Сотрудник 37: $152 · маржа 73,4% · $38,00/строку" tabindex="0"><div class="col-bar" style="height:0.8%"></div></div><div class="col" data-tip="Сотрудник 38: $78 · маржа 74,3% · $39,06/строку" tabindex="0"><div class="col-bar" style="height:0.8%"></div></div><div class="col low" data-tip="Сотрудник 39: $25 · маржа 62,2% · $12,36/строку" tabindex="0"><div class="col-bar" style="height:0.8%"></div></div></div>
+      <div class="legend"><span><i class="sw sw-top"></i>Топ-5: 27,7% прибыли</span><span><i class="sw sw-low"></i>⚠ Маржа сильно ниже средних 70%</span></div>
+    </div>
+  </section>
+
+  <section>
+    <p class="label">Часть 1 · Выводы</p>
+    <h2>Что показывают цифры</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Две категории дают две трети прибыли</h3>
+        <p>Flowers (37,4%) и Vape Cartridges (30,1%). У аксессуаров самая высокая маржа, 91,9%, но они дают меньше 1% прибыли.</p>
+      </div>
+      <div class="card">
+        <h3>Один бренд-лидер</h3>
+        <p>Gelato принёс $43,4 тыс., 12,7% прибыли, примерно вдвое больше следующего бренда. 10 самых слабых брендов продали по 1–3 единицы за месяц.</p>
+      </div>
+      <div class="card">
+        <h3>Продавцы</h3>
+        <p>Топ-5 из 39 сотрудников дают 27,7% прибыли. У двух сотрудников маржа 61% и 54% при средней 70%, и они зарабатывают $15 и $12 на строку при средних $26. Их скидки стоит проверить.</p>
+      </div>
+      <div class="card">
+        <h3>Регионы и дни</h3>
+        <p>Walnut Creek, Concord и Bag and Carry дают 62% продаж. Два лучших дня — воскресенья, 6 и 13 октября: под выходные стоит планировать смены и запасы.</p>
+      </div>
+    </div>
+
+    <div class="note"><b>Примечание:</b> «Прибыль» в данных (Gross Receipt − COGs) включает акцизы, городской налог, налог с продаж и плату за доставку, а это не доход компании. Рядом я показала Net Sales − COGs как более точную валовую маржу: 59,7% вместо 70,3%.</div>
+  </section>
+
+  <section>
+    <p class="label">Часть 2 · Операции за год</p>
+    <h2>От проводок до прогноза на конец года</h2>
+    <div class="steps">
+      <div class="step"><div class="step-num">1</div><div><h3>Дебиторка с отсрочкой Net 30</h3><p>Продажи на $1 млн: 85% оплачено вовремя, 7% через 60 дней, 4% через 90 дней, 4% безнадёжны. Метод резерва: расход по безнадёжным долгам в январе, списание 1 апреля.</p></div></div>
+      <div class="step"><div class="step-num">2</div><div><h3>Оборудование в кредит</h3><p>Оборудование за $500 тыс., 15% сразу, кредит $425 тыс. под 1,5% в месяц. График платежей через PMT: 10 платежей по $46 084,53, проценты $35 845. Линейная амортизация 12,5% в год.</p></div></div>
+      <div class="step"><div class="step-num">3</div><div><h3>Запасы и инвентаризация</h3><p>2 500 единиц за $800 тыс., половина продана с наценкой 35% ($540 тыс.). Списаны 50 недостающих и 2 бракованные единицы. Остаток запасов $383 360 сходится со счётом.</p></div></div>
+      <div class="step"><div class="step-num">4</div><div><h3>Предоплаченная страховка</h3><p>Полис за $120 тыс. с 1 июля: $10 тыс. расхода в месяц, $60 тыс. остаётся в предоплате на 31 декабря.</p></div></div>
+      <div class="step"><div class="step-num">5</div><div><h3>Прогноз на конец года</h3><p>Помесячные P&amp;L, движение денег, A/R и A/P и баланс на 31 декабря, собранные из всех операций выше, с ростом продаж 1% в месяц.</p></div></div>
+    </div>
+
+    <div class="statement">
+      <div class="statement-head"><h3>Проводки: дебиторка с отсрочкой Net 30</h3><span>1 января – 1 апреля</span></div>
+      <table>
+        <tr class="group"><td>Дата</td><td>Счёт</td><td class="n">Дебет</td><td class="n">Кредит</td></tr>
+        <tr><td>1/1</td><td>Accounts Receivable</td><td class="n">1,000,000.00</td><td class="n"></td></tr>
+        <tr><td></td><td class="ind">Sales Revenue</td><td class="n"></td><td class="n">1,000,000.00</td></tr>
+        <tr><td>1/31</td><td>Bad Debt Expense</td><td class="n">40,000.00</td><td class="n"></td></tr>
+        <tr><td></td><td class="ind">Allowance for Doubtful Accounts</td><td class="n"></td><td class="n">40,000.00</td></tr>
+        <tr><td>1/31</td><td>Cash</td><td class="n">850,000.00</td><td class="n"></td></tr>
+        <tr><td></td><td class="ind">Accounts Receivable</td><td class="n"></td><td class="n">850,000.00</td></tr>
+        <tr><td>3/2</td><td>Cash</td><td class="n">70,000.00</td><td class="n"></td></tr>
+        <tr><td></td><td class="ind">Accounts Receivable</td><td class="n"></td><td class="n">70,000.00</td></tr>
+        <tr><td>4/1</td><td>Cash</td><td class="n">40,000.00</td><td class="n"></td></tr>
+        <tr><td></td><td class="ind">Accounts Receivable</td><td class="n"></td><td class="n">40,000.00</td></tr>
+        <tr><td>4/1</td><td>Allowance for Doubtful Accounts</td><td class="n">40,000.00</td><td class="n"></td></tr>
+        <tr><td></td><td class="ind">Accounts Receivable</td><td class="n"></td><td class="n">40,000.00</td></tr>
+      </table>
+    </div>
+  </section>
+
+  <section>
+    <p class="label">Часть 2 · Прогноз</p>
+    <h2>Сможет ли компания погасить вексель на $2,15 млн 31 декабря? Нет.</h2>
+    <p class="lead">Год прибыльный: выручка $13,2 млн и чистая прибыль $2,62 млн, чистая маржа 19,8%. Но <b>денег на 31 декабря остаётся $1,35 млн, не хватает около $795 тыс.</b></p>
+    <p class="lead">Разница между прибылью и деньгами лежит в балансе: $288 тыс. в дебиторке, $383 тыс. в непроданных запасах, $533 тыс. в оборудовании и капвложениях, $60 тыс. в предоплаченной страховке.</p>
+
+    <div class="statement">
+      <div class="statement-head"><h3>Активы и обязательства</h3><span>на 31.12</span></div>
+      <table>
+        <tr class="group"><td colspan="2">Assets</td></tr>
+        <tr><td class="ind">Cash</td><td class="n">1,354,727.01</td></tr>
+        <tr><td class="ind">Accounts Receivable, net</td><td class="n">287,979.36</td></tr>
+        <tr><td class="ind">Inventory (1,198 units)</td><td class="n">383,360.00</td></tr>
+        <tr><td class="ind">Prepaid Insurance</td><td class="n">60,000.00</td></tr>
+        <tr><td class="ind">Equipment, net</td><td class="n">447,916.67</td></tr>
+        <tr><td class="ind">CapEx additions, net</td><td class="n">84,843.75</td></tr>
+        <tr class="grand"><td>Total Assets</td><td class="n">2,618,826.79</td></tr>
+        <tr class="group"><td colspan="2">Liabilities</td></tr>
+        <tr><td class="ind">Accounts Payable</td><td class="n">–</td></tr>
+        <tr><td class="ind">Short-term Loan (погашен в декабре)</td><td class="n">–</td></tr>
+        <tr><td class="ind">Note Payable</td><td class="n">2,150,000.00</td></tr>
+        <tr class="grand"><td>Total Liabilities</td><td class="n">2,150,000.00</td></tr>
+      </table>
+    </div>
+
+    <div class="note"><b>Рекомендации:</b> рефинансировать или продлить вексель до 31 декабря, продать оставшиеся запасы (около $517 тыс. при наценке 35%), ужесточить условия отсрочки, чтобы снизить безнадёжные долги в 4% ($507 тыс. в год), и вести помесячный прогноз денег рядом с P&amp;L. Коэффициент текущей ликвидности: 0,97.</div>
+  </section>
+
+  <section>
+    <p class="label">Решения</p>
+    <h2>Где пришлось принимать решение</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Безнадёжные долги попадают в P&amp;L один раз</h3>
+        <p>Расход оценивается в январе, против январских продаж. Списание 1 апреля переносит сумму с резерва против A/R и в P&amp;L больше не попадает.</p>
+      </div>
+      <div class="card">
+        <h3>Недостающие данные как допущения</h3>
+        <p>Начальные деньги и баланс не даны. Я приняла их за ноль и вынесла все допущения в ячейки ввода, так что весь прогноз пересчитывается при изменении любого из них.</p>
+      </div>
+      <div class="card">
+        <h3>A/P равен нулю</h3>
+        <p>COGS и зарплата оплачиваются в том же месяце, запасы и страховка — сразу. Кредит на оборудование и вексель — это займы, а не Accounts Payable.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <p class="label">Что сделано</p>
+    <h2>Что в Excel-файле</h2>
+    <ul class="deliv">
+      <li>Ответы с формулами</li>
+      <li>Прибыль по дням с рейтингом</li>
+      <li>Отчёт: категории, бренды, товары</li>
+      <li>Продавцы и регионы</li>
+      <li>Журнал исправлений в данных</li>
+      <li>График A/R, резерв и списание</li>
+      <li>График кредита (PMT) и амортизация</li>
+      <li>Проводки по запасам с недостачей</li>
+      <li>График предоплаченной страховки</li>
+      <li>P&amp;L, движение денег и баланс на 12 месяцев</li>
+    </ul>
+  </section>
+
+  <div class="end">
+    <h2>Посмотреть файл целиком</h2>
+    <p>Все формулы, проводки и графики есть в таблице. Буду рада обратной связи от бухгалтеров.</p>
+    <div class="end-actions">
+      <a class="btn btn-primary" href="#spreadsheet" target="_blank" rel="noopener">Открыть таблицу</a>
+      <a href="#" class="btn btn-ghost copy-email" data-email="volkova.workpost@gmail.com" title="Нажмите, чтобы скопировать"><span class="copy-text">volkova.workpost@gmail.com</span><span class="copy-hint">Копировать</span></a>
+    </div>
+  </div>
+
+  <div class="footer">Финансовый кейс · Excel</div>
+
+</template>
+
+<script>
+(function(){
+  var LANG_KEY='siteLang';
+  var meta={"en": {"title": "Sales analysis and cash forecast — Finance & Accounting case", "desc": "13,031 sales lines turned into an owner report, plus journal entries and a 12-month cash forecast. A case by Anastasia Volkova."}, "ru": {"title": "Анализ продаж и прогноз денег — финансовый кейс", "desc": "13 031 строка продаж превращена в отчёт для владельца, плюс проводки и прогноз денег на 12 месяцев. Кейс Анастасии Волковой."}};
+  var main=document.querySelector('main');
+  var tplRu=document.getElementById('main-ru');
+  var mainEn=main.innerHTML;
+  var current='en';
+
+  function blocks(){ return Array.prototype.slice.call(main.children); }
+  function position(){
+    var bs=blocks(), y=window.scrollY+90, i=0;
+    for(var k=0;k<bs.length;k++){ if(bs[k].offsetTop<=y) i=k; }
+    var b=bs[i]; return {i:i, r: b && b.offsetHeight ? (window.scrollY-b.offsetTop)/b.offsetHeight : 0, top: window.scrollY<5};
+  }
+  function restore(p){
+    if(!p || p.top) return;
+    var b=blocks()[p.i]; if(!b) return;
+    var html=document.documentElement, prev=html.style.scrollBehavior;
+    html.style.scrollBehavior='auto';
+    window.scrollTo(0, Math.max(0, b.offsetTop + p.r*b.offsetHeight));
+    html.style.scrollBehavior=prev;
+  }
+  function apply(lang, keepPos){
+    if(lang===current) return;
+    var p=keepPos ? position() : null;
+    main.innerHTML = lang==='ru' ? tplRu.innerHTML : mainEn;
+    main.querySelectorAll('.reveal').forEach(function(el){ el.classList.add('in-view'); });
+    document.querySelectorAll('[data-ru]').forEach(function(el){
+      if(!el.hasAttribute('data-en')) el.setAttribute('data-en', el.innerHTML);
+      el.innerHTML = lang==='ru' ? el.getAttribute('data-ru') : el.getAttribute('data-en');
+    });
+    document.querySelectorAll('[data-ru-label]').forEach(function(el){
+      if(!el.hasAttribute('data-en-label')) el.setAttribute('data-en-label', el.getAttribute('aria-label'));
+      el.setAttribute('aria-label', lang==='ru' ? el.getAttribute('data-ru-label') : el.getAttribute('data-en-label'));
+    });
+    document.documentElement.lang=lang;
+    document.title=meta[lang].title;
+    var d=document.querySelector('meta[name="description"]'); if(d) d.setAttribute('content', meta[lang].desc);
+    document.querySelectorAll('.lang-switch button').forEach(function(b){ b.classList.toggle('on', b.dataset.lang===lang); });
+    current=lang;
+    try{ sessionStorage.setItem(LANG_KEY, lang); }catch(e){}
+    if(p) restore(p);
+  }
+  document.querySelectorAll('.lang-switch button').forEach(function(b){
+    b.addEventListener('click', function(){ apply(b.dataset.lang, true); });
+  });
+  var saved=null; try{ saved=sessionStorage.getItem(LANG_KEY); }catch(e){}
+  if(saved==='ru') apply('ru', false);
+
+  // copy email / phone (works after language swap too)
+  document.addEventListener('click', function(e){
+    var el=e.target.closest('.copy-email'); if(!el) return;
+    e.preventDefault();
+    var hint=el.querySelector('.copy-hint');
+    try{ navigator.clipboard.writeText(el.dataset.email); }catch(err){}
+    el.classList.add('copied'); hint.textContent = current==='ru' ? 'Скопировано' : 'Copied';
+    clearTimeout(el._t); el._t=setTimeout(function(){ el.classList.remove('copied'); hint.textContent = current==='ru' ? 'Копировать' : 'Copy'; }, 1800);
+  });
+})();
+</script>
+</body>
+</html>
